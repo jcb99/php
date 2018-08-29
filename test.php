@@ -5,7 +5,6 @@
 
 echo "This is some PHP code...Oh yeahhhhhh";
 
-<hr>
 
 $avariable = "jacob";
 
