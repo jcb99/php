@@ -7,7 +7,7 @@ echo "This is some PHP code...Oh yeahhhhhh";
 
 <hr>
 
-$avariable = gmp_jacob
+$avariable = "jacob";
 
-echo $avariable
+echo $avariable;
 ?>
