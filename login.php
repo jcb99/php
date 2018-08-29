@@ -9,5 +9,5 @@
       <input type="text" name="first"> <br />
       <input type="text" name="last">
     </form>
-  </body>
+  </body> 
 </html>
