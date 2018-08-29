@@ -11,5 +11,6 @@ $avariable = "jacob";
 
 
 echo $avariable;
+echo "\n";
 echo "more stuff";
 ?>
