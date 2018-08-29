@@ -10,6 +10,6 @@ $avariable = "jacob";
 
 
 
-echo $avariable "\n";
+echo $avariable;
 echo "more stuff";
 ?>
