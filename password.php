@@ -7,7 +7,7 @@
   <body>
     <form action="" method="get">
       <input type="text" name="first" placeholder="First"> <br />
-      <input type="text" name="last" value="LAST">
+      <input type="password" name="password">
       <input type="submit" value="go">
     </form>
 
