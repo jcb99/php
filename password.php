@@ -6,7 +6,7 @@
   </head>
   <body>
     <form action="" method="get">
-      <input type="text" name="first" placeholder="First"> <br />
+      <input type="text" name="username" placeholder="First"> <br />
       <input type="password" name="password">
       <input type="submit" value="go">
     </form>
