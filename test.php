@@ -14,6 +14,4 @@ echo $avariable;
 echo "<br>";
 echo "more stuff";
 
-$number = readline("Enter a number: ");
-echo 'You picked the number: '.$number;
 ?>
