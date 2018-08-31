@@ -6,11 +6,11 @@
   </head>
 
   <?php
-  $username = $_GET['username'];
-  $password = $_GET['password'];
+  $username = $_POST['username'];
+  $password = $_POST['password'];
    ?>
   <body>
-    <form action="" method="get">
+    <form action="" method="post">
       <input type="text" name="username" placeholder="Username"> <br />
       <input type="password" name="password">
       <br>
