@@ -29,6 +29,7 @@
         echo "Your password was $password";
       }
 
+      echo "Logged in as: " . $_SESSION['username'];
      ?>
 
   </body>
