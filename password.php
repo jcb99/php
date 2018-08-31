@@ -13,7 +13,6 @@
     <form action="" method="post">
       <input type="text" name="username" placeholder="Username"> <br />
       <input type="password" name="password">
-      <br>
       <input type ="submit" value="go">
       <br>
     </form>
@@ -21,7 +20,7 @@
     <?php
 
       if (isset($username) && isset($password)) {
-
+        echo "<br>";
         echo "Your username was $username";
         echo"<br>";
         echo "Your password was $password";
