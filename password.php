@@ -20,6 +20,9 @@
     <?php
 
       if (isset($username) && isset($password)) {
+        if ($username == "jake" && password == "password") {
+          $_SESSION['username'] = $username
+        }
         echo "<br>";
         echo "Your username was $username";
         echo"<br>";
