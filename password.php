@@ -23,10 +23,10 @@
         if ($username == "jake" && password == "password") {
           $_SESSION['username'] = $username;
         }
-        echo "<br>";
+        /*echo "<br>";
         echo "Your username was $username";
         echo"<br>";
-        echo "Your password was $password";
+        echo "Your password was $password"; */
       }
 
       echo "Logged in as: " . $_SESSION['username'];
