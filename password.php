@@ -19,10 +19,10 @@
 
     <?php
 
-      if (isset($username) && isset ($password)) {
+      if (isset($username) && isset($password)) {
         "Your username was $username";
         echo"<br>";
-        echo "Your password was $password";...
+        echo "Your password was $password";
       }
 
      ?>
