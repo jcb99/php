@@ -18,9 +18,13 @@
     </form>
 
     <?php
-      echo "Your username was $username";
-      echo"<br>";
-      echo "Your password was $password";
+
+      if (isset($username) && isset ($password)) {
+        "Your username was $username";
+        echo"<br>";
+        echo "Your password was $password";...
+      }
+
      ?>
 
   </body>
