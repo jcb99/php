@@ -20,6 +20,7 @@
     <?php
 
       if (isset($username) && isset($password)) {
+        echo"<br>";
         echo "Your username was $username";
         echo"<br>";
         echo "Your password was $password";
