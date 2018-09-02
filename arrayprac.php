@@ -9,9 +9,9 @@
     <?php
     $states = array("Alaska", "Alabama", "Arkansas");
 
-    echo $states[0];
-    echo $states[1];
-    echo $states [2];
+    echo $states[0] . "<br />";
+    echo $states[1] . "<br />";
+    echo $states [2] . "<br />";
 
 
      ?>
