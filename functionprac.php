@@ -15,11 +15,11 @@
 
       //Creating your own funciton
       echo "<br /> <br />";
-      echo distance(); // Here is where the funciton "distance" is actually called
-      
-      function distance(){
-        $rate = 50;
-        $time = 4;
+      distance(25, 40); // Here is where the funciton "distance" is actually called
+
+      function distance($rate, $time){
+        //$rate = 50; //Instead we can use these as parameters
+        //$time = 4;
         echo $rate * $time ;
 
       }
