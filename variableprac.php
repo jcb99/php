@@ -13,12 +13,12 @@ $paperwork = True; //bool
 $date = Null; //null
 
 
-echo $hours <br />;
-echo $rate <br />;
-echo $name <br />;
-echo $paperwork <br />;
-echo $date <br />;
-echo <br />;
+echo $hours "<br />";
+echo $rate "<br />";
+echo $name "<br />";
+echo $paperwork "<br />";
+echo $date "<br />";
+echo "<br />";
 echo $hours * $rate;
  ?>
 
