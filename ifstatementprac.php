@@ -20,8 +20,8 @@
       }
 
       else {
-        echo "<br />";
-        echo "This distance is too little.";
+        //echo "<br />";
+        echo "<br />This distance is too little.";
       }
 
      ?>
