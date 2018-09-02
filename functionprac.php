@@ -15,6 +15,8 @@
 
       //Creating your own funciton
       echo "<br /> <br />";
+      echo distance(); // Here is where the funciton "distance" is actually called
+      
       function distance(){
         $rate = 50;
         $time = 4;
