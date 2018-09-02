@@ -20,7 +20,8 @@
       function distance($rate, $time){
         //$rate = 50; //Instead we can use these as parameters
         //$time = 4;
-        echo $rate * $time ;
+        $distance = $rate * $time ; //The function now runs and stores the value of rate * time in the distance variable
+        return $distance; //returns this value
 
       }
     ?>
