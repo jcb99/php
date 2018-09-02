@@ -14,7 +14,7 @@
       echo count($nflTeams); //predeterminied count funciton tells you how many elements are in that array
 
       //Creating your own funciton
-      echo "<br /> <br />"
+      echo "<br /> <br />";
       function distance(){
         $rate = 50;
         $time = 4;
