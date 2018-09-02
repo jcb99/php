@@ -14,8 +14,8 @@
     <form action="" method="post">
       <input type="text" name="username" placeholder="Username"> <br />
       <input type="password" name="password">
-      <br>
-      <input type ="submit" value="go">
+      <br />
+      <input type ="submit" value="Go">
     </form>
 
     <?php
