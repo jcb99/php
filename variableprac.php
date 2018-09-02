@@ -24,6 +24,7 @@ echo "<br />";
 echo $date;
 echo "<br />";
 echo "<br />";
+echo $name . "earns $rate per hour."
 echo $hours * $rate;
  ?>
 
