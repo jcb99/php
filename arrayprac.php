@@ -13,11 +13,13 @@
     echo $states[1] . "<br />";
     echo $states [2] . "<br />";
 //OR =================================
-    $nflTeams[] = "Broncos" . "<br />";
-    $nflTeams[] = "Bears" . "<br />";
-    $nflTeams[] = "Titans" . "<br />";
+    $nflTeams[] = "Broncos";
+    $nflTeams[] = "Bears";
+    $nflTeams[] = "Titans";
 
-    echo
+    echo $nflTeams[0] . "<br />";
+    echo $nflTeams[1] . "<br />";
+    echo $nflTeams[2] . "<br />";
 
 
      ?>
