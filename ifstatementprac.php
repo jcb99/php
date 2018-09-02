@@ -15,7 +15,7 @@
       echo distance(44, 5);
 
       if (220>200) {
-        echo "<br /> . This distance is too far"
+        echo "<br /> . This distance is too far";
       }
 
      ?>
