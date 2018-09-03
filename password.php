@@ -30,7 +30,7 @@
         echo "Your password was $password"; */
       }
 
-      echo "Logged in as: " . $_SESSION['username'];
+      /*echo "Logged in as: " . $_SESSION['username']; PROBLEM HERE*/
      ?>
 
   </body>
