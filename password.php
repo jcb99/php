@@ -13,7 +13,7 @@
   if (isset ($_POST['logout'])) { //if the post variable has been set,
     unset($_SESSION['username']);
   }
-  
+
    ?>
   <body>
     <form action="" method="post">
@@ -37,7 +37,7 @@
         echo "Your password was $password"; */
       }
 
-      /*echo "Logged in as: " . $_SESSION['username'];*/
+      echo "Logged in as: " . $_SESSION['username'];
      ?>
 
   </body>
