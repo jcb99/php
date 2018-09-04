@@ -16,6 +16,8 @@
       <input type="password" name="password">
       <br />
       <input type ="submit" value="Go">
+      <br />
+      <input type="submit" name="logout" value="logout"> <!--Submit button makes the page reload !-->
     </form>
 
     <?php
