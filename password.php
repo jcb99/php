@@ -2,6 +2,10 @@
  //Go load page...IF its not there..Oh stats_cdf_well
 require('dbconnection.php'); //Go to load page...If its not ther...Get it..It needs to be there
 
+if(isset ($_POST['username'])){ //executes only if the page has been set
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+}
  ?>
 
 
@@ -14,8 +18,7 @@ require('dbconnection.php'); //Go to load page...If its not ther...Get it..It ne
   </head>
 
   <?php
-  $username = $_POST['username'];
-  $password = $_POST['password'];
+
 
   if (isset ($_POST['logout'])) { //if the post variable has been set,
     unset($_SESSION['username']);
