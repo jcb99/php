@@ -1,8 +1,8 @@
 <?php session_start() //starts the PHP session
 include() //Go load page...IF its not there..Oh stats_cdf_well
-require() //Go to load page...If its not ther...Get it..It needs to be there
+require('dbconnection.php'); //Go to load page...If its not ther...Get it..It needs to be there
 
- ?> 
+ ?>
 
 
 
