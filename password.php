@@ -48,9 +48,11 @@ if(isset ($_POST['username'])){ //executes only if the page has been set
         echo "Your username was $username";
         echo"<br>";
         echo "Your password was $password"; */
+
+        echo "Logged in as: " . $_SESSION['username'];
       }
 
-      echo "Logged in as: " . $_SESSION['username'];
+
      ?>
 
   </body>
