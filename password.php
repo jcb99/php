@@ -5,6 +5,9 @@ require('dbconnection.php'); //Go to load page...If its not ther...Get it..It ne
 if(isset ($_POST['username'])){ //executes only if the page has been set
   $username = $_POST['username'];
   $password = $_POST['password'];
+
+
+  $sql = "SELECT username, password FROM users WHERE username = $username";
 }
  ?>
 
