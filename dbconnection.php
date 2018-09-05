@@ -9,5 +9,9 @@ $conn = new mysqli($db_host, $db_user, $db_password, $db_name);// This is passin
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error); //Die kills the entire page..Nothing else executes...Then we append the error
 }
+
+else {
+  echo "Connection successful!";
+}
 //We want the mysqli not mysql
  ?>
