@@ -7,7 +7,7 @@ $db_name = "jake"; //name of DB within mysql
 $conn = new mysqli($db_host, $db_user, $db_password, $db_name);// This is passing in the 4 parameters defined above..Conn is short for connection
 
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error) //Die kills the entire page..Nothing else executes...Then we append the error
+  die("Connection failed: " . $conn->connect_error); //Die kills the entire page..Nothing else executes...Then we append the error
 }
 //We want the mysqli not mysql
  ?>
