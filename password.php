@@ -54,7 +54,6 @@ if(isset ($_POST['username'])){ //executes only if the page has been set
 
     <?php
       echo "Logged in as: " . $_SESSION['username'];
-
      ?>
 
   </body>
