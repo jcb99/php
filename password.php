@@ -16,8 +16,6 @@ if(isset ($_POST['username'])){ //executes only if the page has been set
     if ($username == $row['username'] && $password == $row['password']) //THE STUFF IN YELLOW 'USERNAME' AND PASSWORD MUST BE THE SAME AS THE DB FIELDS
     {
       $_SESSION ['username'] = $username;
-
-
     }
 
   }
