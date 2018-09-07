@@ -1,4 +1,5 @@
-<?php session_start(); //starts the PHP session
+<?php
+session_start(); //starts the PHP session
  //Go load page...IF its not there..Oh stats_cdf_well
 require('dbconnection.php'); //Go to load page...If its not ther...Get it..It needs to be there
 
@@ -7,7 +8,7 @@ if(isset ($_POST['username'])){ //executes only if the page has been set
   $password = $_POST['password'];
 
   //SQL statement to execute
-  $sql = "SELECT username, password FROM users WHERE username = $username";
+  $sql = "SELECT username, password FROM users WHERE username = $username"; //SURROUND VARIABLES WITH SINGLE QUOTES
 
   //Execute the SQL and return array to $result
   $result = $conn->query($sql); //this says take the connection we have and execute the named query....In this case it is called sql..Then stored in a variable called result
