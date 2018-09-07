@@ -8,7 +8,7 @@ if(isset ($_POST['username'])){ //executes only if the page has been set
   $password = $_POST['password'];
 
   //SQL statement to execute
-  $sql = "SELECT username, password FROM users WHERE username = ''$username'"; //SURROUND VARIABLES WITH SINGLE QUOTES
+  $sql = "SELECT username, password FROM users WHERE username = '$username'"; //SURROUND VARIABLES WITH SINGLE QUOTES
 
   //Execute the SQL and return array to $result
   $result = $conn->query($sql); //this says take the connection we have and execute the named query....In this case it is called sql..Then stored in a variable called result
