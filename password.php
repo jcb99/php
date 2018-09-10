@@ -14,7 +14,7 @@ if(isset ($_POST['username'])){ //executes only if the page has been set
   $result = $conn->query($sql); //this says take the connection we have and execute the named query....In this case it is called sql..Then stored in a variable called result
 
   while ($row = $result->fetch_assoc()){ //fetch all the info and store it in a result called row..It pulls individually from result one by one
-    if ($username == $row['username'] && $password == $row['password']) //THE STUFF IN YELLOW 'USERNAME' AND PASSWORD MUST BE THE SAME AS THE DB FIELDS
+    if ($username == $row['username'] && password_verify($password, $row['password'])) //THE STUFF IN YELLOW 'USERNAME' AND PASSWORD MUST BE THE SAME AS THE DB FIELDS
     {
       $_SESSION ['username'] = $username;
     }
