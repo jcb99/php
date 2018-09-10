@@ -3,6 +3,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { //THIS SAYS ONLY IF THERE IS ANY POS
   require('dbconnection.php');
   $username = $_POST['username'];
   $password = $_POST['password'];
+  $password = password_hash($password, PASSWORD_BCRYPT); //This is for PHP version 5.5 and up....5.4 and down doesn't recognize this password hash function
   $sql = "INSERT INTO users (username,password) VALUES ('$username','$password')"; //Insert whatever is in the variables above
   $conn->query($sql); //to run the query
 }
