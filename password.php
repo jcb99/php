@@ -30,7 +30,7 @@ if(isset ($_POST['username'])){ //executes only if the page has been set
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>fucking nerd</title>
   </head>
 
   <?php

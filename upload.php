@@ -6,11 +6,14 @@
 
   if (!isset($_SESSION['username'])) //someone must be logged in to proceed
   // you could do this.....die ("No");
-  header('password.php'); //this kicks the user back to the login screen
+  header('Location: password.php'); //this kicks the user back to the login screen....whenever you use header, it is a string but you must use "Location: " in fron of it
   //This can't be executed after HTML has been loaded so it must be before the HTML
 
+var_dump($_POST['upload']);
+echo "<hr />";
+var_dump($_FILES['upload']); //Takes whatever is in the parans and tells you all about it
 //The below is only submitted when someone hits the submit button..does not run as soon as the page loads
-  if (isset($_POST['upload'])) { //This checks to see if post data has been submitted into upload....In the form below the input typ is called upload..Thats what we're referring to
+  if (isset($_FILES['upload'])) { //This checks to see if post data has been submitted into upload....In the form below the input type is called upload..Thats what we're referring to
     $target_dir = "uploads/"; //the target directory of the file...will be on the server in the same PHP directory as this file
     $target_file = $target_dir . basename($_FILES['upload']['name']); //The actual file name is pulled from the basename...The basename function pulls the rest of the file path out and keeps just the name and extension
     move_uploaded_file($_FILES['upload']['tmp_name'], $target_file); //moves the uploaded file from memory to this location
