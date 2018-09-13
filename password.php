@@ -42,6 +42,11 @@ if(isset ($_POST['username'])){ //executes only if the page has been set
 
    ?>
   <body>
+
+    <a href="register.php">Register</a>
+    <a href="upload.php"> | Upload</a>
+    <br />
+
     <form action="" method="post">
       <input type="text" name="username" placeholder="Username"> <br />
       <input type="password" name="password">
