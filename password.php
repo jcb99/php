@@ -48,7 +48,7 @@ if(isset ($_POST['username'])){ //executes only if the page has been set
     <?php
       if(isset($_SESSION['username'])){
         echo "<a href=\"upload.php\"> | Upload</a>";
-      } 
+      }
       ?>
 
     <br />
