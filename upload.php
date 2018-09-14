@@ -19,11 +19,17 @@ var_dump($_FILES['upload']); //Takes whatever is in the parans and tells you all
 
     $uploadVerification = true;
 
-    //Check to see if the file already exists
+    //Check to see if the file already exists..if it does it sets the uploadVerification to false and it wont enter the if statement for if($uploadVerification == true)
     if (file_exists($target_file)){
         $uploadVerification = false;
         $ret = "This file already exists.";
     }
+
+    if ($_FILES['upload']['size'] > 2000000) {
+      $uploadVerification = false;
+      $ret = "This file is too large. Please upload a smaller file.";
+    }
+
 
 //If the target file name already exists the $uploadVerification will be false and will not upload the file and won't execute the code below
     if ($uploadVerification) { //if this value is true
