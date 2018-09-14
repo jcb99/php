@@ -22,9 +22,10 @@ var_dump($_FILES['upload']); //Takes whatever is in the parans and tells you all
     //Check to see if the file already exists
     if file_exists($target_file){
         $uploadVerification = false;
-        $ret = "This file already exists."
+        $ret = "This file already exists.";
     }
 
+//If the target file name already exists the $uploadVerification will be false and will not upload the file and won't execute the code below
     if ($uploadVerification) { //if this value is true
         move_uploaded_file($_FILES['upload']['tmp_name'], $target_file); //moves the uploaded file from memory to this location
     }
