@@ -44,6 +44,6 @@ var_dump($_FILES['upload']); //Takes whatever is in the parans and tells you all
 
  <h5 style="color: blue;">
    <?php
-    if ($ret) {echo $ret;}
+    if ($ret) {echo $ret;};
    ?>
  </h5>
