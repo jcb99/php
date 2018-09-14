@@ -16,7 +16,19 @@ var_dump($_FILES['upload']); //Takes whatever is in the parans and tells you all
   if (isset($_FILES['upload'])) { //This checks to see if post data has been submitted into upload....In the form below the input type is called upload..Thats what we're referring to
     $target_dir = "uploads/"; //the target directory of the file...will be on the server in the same PHP directory as this file
     $target_file = $target_dir . basename($_FILES['upload']['name']); //The actual file name is pulled from the basename...The basename function pulls the rest of the file path out and keeps just the name and extension
-    move_uploaded_file($_FILES['upload']['tmp_name'], $target_file); //moves the uploaded file from memory to this location
+
+    $uploadVerification = true;
+
+    //Check to see if the file already exists
+    if file_exists($target_file){
+        $uploadVerification = false;
+        $ret = "This file already exists."
+    }
+
+    if ($uploadVerification) { //if this value is true
+        move_uploaded_file($_FILES['upload']['tmp_name'], $target_file); //moves the uploaded file from memory to this location
+    }
+
   }
  ?>
 
@@ -28,3 +40,9 @@ var_dump($_FILES['upload']); //Takes whatever is in the parans and tells you all
    <br>
    <input type="submit" name="Submit">
  </form>
+
+ <h5 style="color: blue;">
+   <?php
+    if ($ret) {echo $ret;}
+   ?>
+ </h5>
