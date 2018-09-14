@@ -20,7 +20,7 @@ var_dump($_FILES['upload']); //Takes whatever is in the parans and tells you all
     $uploadVerification = true;
 
     //Check to see if the file already exists
-    if file_exists($target_file){
+    if (file_exists($target_file)){
         $uploadVerification = false;
         $ret = "This file already exists.";
     }
@@ -44,6 +44,6 @@ var_dump($_FILES['upload']); //Takes whatever is in the parans and tells you all
 
  <h5 style="color: blue;">
    <?php
-    if ($ret) {echo $ret;};
+    if ($ret) {echo $ret;}
    ?>
  </h5>
