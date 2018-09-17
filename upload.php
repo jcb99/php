@@ -56,9 +56,6 @@ var_dump($_FILES['upload']); //Takes whatever is in the parans and tells you all
     }
 
 
-
-
-
 //If the target file name already exists the $uploadVerification will be false and will not upload the file and won't execute the code below
     if ($uploadVerification) { //if this value is true
         move_uploaded_file($_FILES['upload']['tmp_name'], $target_file); //moves the uploaded file from memory to this location
@@ -76,7 +73,7 @@ var_dump($_FILES['upload']); //Takes whatever is in the parans and tells you all
    <input type="submit" name="Submit">
  </form>
 
- <h5 style="color: blue;">
+ <h5 style="color: red;">
    <?php
     if ($ret) {echo $ret;}
    ?>
