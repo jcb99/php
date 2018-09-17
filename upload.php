@@ -25,7 +25,7 @@ var_dump($_FILES['upload']); //Takes whatever is in the parans and tells you all
         $ret = "This file already exists.";
     }
 
-    if ($_FILES['upload']['size'] > 2000000) {
+    if ($_FILES['upload']['size'] > 1000000) {
       $uploadVerification = false;
       $ret = "This file is too large. Please upload a smaller file.";
     }
