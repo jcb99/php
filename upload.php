@@ -25,10 +25,38 @@ var_dump($_FILES['upload']); //Takes whatever is in the parans and tells you all
         $ret = "This file already exists.";
     }
 
+    //Checks the file type to see if it is an approved type
+    $file_type = $_FILES['upload']['type'];
+
+    switch ($file_type) {
+      case 'image/jpeg':
+        $uploadVerification = true;
+        break;
+
+      case 'image/png':
+        $uploadVerification = true;
+        break;
+
+      case 'image/gif':
+        $uploadVerification = true;
+        break;
+
+      case 'application/pdf':
+        $uploadVerification = true;
+        break;
+
+      default:
+        $uploadVerification = false;
+        $ret = "Sorry! It appears your file type is not supported! Only JPEGs, PNGs, PDFs, and GIFs.";
+    }
+
     if ($_FILES['upload']['size'] > 1000000) {
       $uploadVerification = false;
       $ret = "This file is too large. Please upload a smaller file.";
     }
+
+
+
 
 
 //If the target file name already exists the $uploadVerification will be false and will not upload the file and won't execute the code below
