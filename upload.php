@@ -14,6 +14,11 @@ echo "<hr />";
 var_dump($_FILES['upload']); //Takes whatever is in the parans and tells you all about it
 //The below is only submitted when someone hits the submit button..does not run as soon as the page loads
   if (isset($_FILES['upload'])) { //This checks to see if post data has been submitted into upload....In the form below the input type is called upload..Thats what we're referring to
+
+    if (!file_exists("uploads")){ //if the uploads directory does not exist
+        mkdir("uploads/");
+    }
+
     $target_dir = "uploads/"; //the target directory of the file...will be on the server in the same PHP directory as this file
     $target_file = $target_dir . basename($_FILES['upload']['name']); //The actual file name is pulled from the basename...The basename function pulls the rest of the file path out and keeps just the name and extension
 
@@ -28,7 +33,7 @@ var_dump($_FILES['upload']); //Takes whatever is in the parans and tells you all
     //Checks the file type to see if it is an approved type
     $file_type = $_FILES['upload']['type'];
 
-    switch ($file_type) {
+    switch ($file_type) { //Switch case for the file types that are allowed to be uploaded
       case 'image/jpeg':
         $uploadVerification = true;
         break;
