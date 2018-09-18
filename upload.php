@@ -15,7 +15,7 @@ var_dump($_FILES['upload']); //Takes whatever is in the parans and tells you all
 //The below is only submitted when someone hits the submit button..does not run as soon as the page loads
   if (isset($_FILES['upload'])) { //This checks to see if post data has been submitted into upload....In the form below the input type is called upload..Thats what we're referring to
 
-    if (!file_exists("uploads")){ //if the uploads directory does not exist
+    if (!file_exists("uploads")){ //if the uploads directory does not exist, create it
         mkdir("uploads/");
     }
 
