@@ -50,7 +50,7 @@ if(isset ($_POST['username'])){ //executes only if the page has been set
         echo "<a href=\"upload.php\"> | Upload</a>";
       }
       if(isset($_SESSION['username'])){ //Show the users button when logged in
-        echo "<a href=\"upload.php\"> | Users</a>";
+        echo "<a href=\"users.php\"> | Users</a>";
       }
       ?>
 
