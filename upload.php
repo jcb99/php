@@ -19,7 +19,11 @@ var_dump($_FILES['upload']); //Takes whatever is in the parans and tells you all
         mkdir("uploads/");
     }
 
-    $target_dir = "uploads/"; //the target directory of the file...will be on the server in the same PHP directory as this file
+    if(!file_exists("uploads/" . $_SESSION['username'])){
+      mkdir("uploads/" . $_SESSION['username']);
+    }
+
+    $target_dir = "uploads/" . $_SESSION['username']; //the target directory of the file...will be on the server in the same PHP directory as this file
     $target_file = $target_dir . basename($_FILES['upload']['name']); //The actual file name is pulled from the basename...The basename function pulls the rest of the file path out and keeps just the name and extension
 
     $uploadVerification = true;
