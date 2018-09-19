@@ -19,7 +19,7 @@ var_dump($_FILES['upload']); //Takes whatever is in the parans and tells you all
         mkdir("uploads/");
     }
 
-    if(!file_exists("uploads/" . $_SESSION['username'])){
+    if(!file_exists("uploads/" . $_SESSION['username'])){ //if uploads/student does not exist..we create it..this is dynamic..dependent on the username
       mkdir("uploads/" . $_SESSION['username']);
     }
 
