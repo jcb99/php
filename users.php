@@ -9,7 +9,7 @@ if(!isset($_SESSION['username'])){
 }
 
 //Bring in database connection
-require('dbconnection.php')
+require('dbconnection.php');
 
 
 //Create the SQL query
