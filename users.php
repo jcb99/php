@@ -4,7 +4,7 @@ if (!isset($_SESSION)){  //If the session variable is not set, then set it..else
   session_start();
 }
 
-if(isset($_SESSION['username'])){
+if(!isset($_SESSION['username'])){
   header('Location: login.php');
 }
 
