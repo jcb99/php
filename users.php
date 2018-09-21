@@ -51,10 +51,12 @@ $conn->close();
               echo //This is a form created to delete records from the DB...We have "hidden" which is a hidden textbox
               "<td>
                 <form action=\"\" method=\"post\">
-                <input type=\"hidden\" value=\"" . $row['userid'] . "\">
-                <input type=\"submit\" value=\"DELETE\" style=\"color: red;\"> 
+                <input name = \"userid\" type=\"hidden\" value=\"" . $row['userid'] . "\">
+                <input type=\"submit\" value=\"DELETE\" style=\"color: red;\">
                 </form>
               </td>";
+              //could also end php if we wanted to and do it that way..Then we don't have to echo everything out
+
             echo "</tr>";
           }
 
