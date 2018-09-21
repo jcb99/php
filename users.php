@@ -36,6 +36,7 @@ $conn->close();
           <th>User ID</th>
           <th>Username</th>
           <th>Password Hash</th>
+          <th>Actions</th>
         </tr>
 
 
@@ -47,7 +48,13 @@ $conn->close();
               echo "<td>" . $row['userid'] . "</td>";
               echo "<td>" . $row['username'] . "</td>";
               echo "<td>" . $row['password'] . "</td>";
-
+              echo //This is a form created to delete records from the DB...We have "hidden" which is a hidden textbox
+              "<td>
+                <form action=\"\" method=\"post\">
+                <input type=\"hidden\" value=\"" . $row['userid'] . "\">
+                <input type=\"submit\" value=\"DELETE\" style=\"color: red;\"> 
+                </form>
+              </td>";
             echo "</tr>";
           }
 
