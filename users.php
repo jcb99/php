@@ -11,6 +11,10 @@ if(!isset($_SESSION['username'])){
 //Bring in database connection
 require('dbconnection.php');
 
+if (isset($_POST['id']) && isset($_POST['delete'])){ 
+  $sql = "DELETE FROM users WHERE userid = " . $_POST['userid'];
+  $result = $conn->query($sql);
+}
 
 //Create the SQL query
 $sql = "SELECT * FROM users";
@@ -52,7 +56,7 @@ $conn->close();
               "<td>
                 <form action=\"\" method=\"post\">
                 <input name = \"userid\" type=\"hidden\" value=\"" . $row['userid'] . "\">
-                <input type=\"submit\" value=\"DELETE\" style=\"color: red;\">
+                <input type=\"submit\" value=\"DELETE\" style=\"color: red;\" name=\"kill\">
                 </form>
               </td>";
               //could also end php if we wanted to and do it that way..Then we don't have to echo everything out
