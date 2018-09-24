@@ -55,7 +55,7 @@ $conn->close();
               echo //This is a form created to delete records from the DB...We have "hidden" which is a hidden textbox
               "<td>
                 <form action=\"\" method=\"post\">
-                <input name = \"userid\" type=\"hidden\" value=\"" . $row['userid'] . "\">
+                <input name = \"id\" type=\"hidden\" value=\"" . $row['userid'] . "\">
                 <input type=\"submit\" value=\"DELETE\" style=\"color: red;\" name=\"kill\">
                 </form>
               </td>";
