@@ -54,8 +54,8 @@ $conn->close();
               echo "<td>" . $row['password'] . "</td>";
               echo "<td>
                 <form action=\"edituser.php\" method=\"get\">
-                <input type=\"hidden\" name=\"id\" value=\"" . $row['userid'] . "\">
-                <input type=\"submit\" value=\"edit\" name=\"edit\">
+                <input name=\"id\" type=\"hidden\" value=\"" . $row['userid'] . "\">
+                <input type=\"submit\" value=\"EDIT\" style=\"color: blue;\" name=\"edit\">
                 </form>
               </td>";
 
