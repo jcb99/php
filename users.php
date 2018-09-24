@@ -11,7 +11,7 @@ if(!isset($_SESSION['username'])){
 //Bring in database connection
 require('dbconnection.php');
 
-if (isset($_POST['id']) && isset($_POST['delete'])){
+if (isset($_POST['id']) && isset($_POST['kill'])){
   $sql = "DELETE FROM users WHERE userid = " . $_POST['id'];
   $result = $conn->query($sql);
 }
