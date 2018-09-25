@@ -55,7 +55,7 @@ $conn->close();
               echo "<td>
                 <form action=\"edituser.php\" method=\"get\">
                 <input name=\"id\" type=\"hidden\" value=\"" . $row['userid'] . "\">
-                <input type=\"submit\" value=\"edit\" style=\"color: blue;\" name=\"edit\">
+                <input type=\"submit\" value=\"EDIT\" style=\"color: blue;\" name=\"edit\">
                 </form>
               </td>";
 
