@@ -18,6 +18,11 @@ echo "<form action = "\"\ method = \"post\">";
 
 while ($row = $result->fetch_assoc()) {
   echo "<input type=\"text\" disabled value = \"" . $row['userid'] . "\">";
+  echo "<br />";
+  echo "<input type=\"text\" disabled value = \"" . $row['username'] . "\">";
+  echo "<br />";
+  echo "<input type=\"text\" disabled value = \"" . $row['password'] . "\">";
+
 }
 
 else{
