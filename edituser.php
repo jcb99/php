@@ -21,7 +21,12 @@ while ($row = $result->fetch_assoc()) {
   echo "<input name = \"username\" type=\"text\" disabled value = \"" . $row['username'] . "\">";
   echo "<br />";
   echo "<input name = \"password\" type=\"text\" disabled value = \"" . $row['password'] . "\">";
+  echo "<br />";
+  echo "<input type=\"submit\" name=\"submit\" value=\"change\">";
+
 }
+
+echo "</form>";
 
 
 }
