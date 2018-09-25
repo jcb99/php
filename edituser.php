@@ -8,7 +8,7 @@ if(!isset($_SESSION['username'])){ //send em back to log in
   header('Location: login.php');
 }
 
-if(isset($_GET['id']) && $_GET['edit']=="edit"){
+if(isset($_GET['id']) && $_GET['edit']=="EDIT"){
 require('dbconnection.php'); //bring in database connection
 $sql = "SELECT * FROM users WHERE userid = " . $_GET['id'];
 $result = $conn->query($sql);
