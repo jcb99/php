@@ -14,8 +14,8 @@ $sql = "SELECT * FROM users WHERE userid = " . $_GET['id'];
 $result = $conn->query($sql);
 
 if (isset($_POST['id']) && isset($_POST['submit'])){
-  $update = "UPDATE users SET $username = $_POST['id'] where $username = " . $_POST['id'];
-  $result = $conn->query($sql);
+  $update = "UPDATE users SET username = " . $_POST['id'] . "WHERE username = " . $_POST['id'];
+  $result = $conn->query($update);
 }
 
 
