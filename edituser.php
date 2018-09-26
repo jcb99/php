@@ -23,7 +23,7 @@ while ($row = $result->fetch_assoc()) {
   echo "<br />";
   echo "<input name = \"username\" type=\"text\" value = \"" . $row['username'] . "\">";
   echo "<br />";
-  echo "<input name = \"password\" type=\"text\" value = \"" . $row['password'] . "\">";
+  echo "<input name = \"password\" type=\"text\" value = \" placeholder=\"New Password\"" . $row['password'] . "\">";
   echo "<br />";
   echo "<input type=\"submit\" name=\"submit\" value=\"change\">";
 
