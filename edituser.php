@@ -13,10 +13,7 @@ require('dbconnection.php'); //bring in database connection
 $sql = "SELECT * FROM users WHERE userid = " . $_GET['id'];
 $result = $conn->query($sql);
 
-if (isset($_POST['id']) && isset($_GET['submit'])){
-  $update = "UPDATE users SET username = " . $_GET['id'] . "WHERE username = " . $_GET['id'];
-  $result = $conn->query($update);
-}
+
 
 
 echo "<form action = \"\" method = \"post\">";
@@ -37,8 +34,14 @@ echo "</form>";
 
 }
 
+
 else{
   echo "You should not be here...";
+}
+
+if (isset($_POST['username']) && isset($_POST['submit'])){
+  $update = "UPDATE users SET username = \"$_POST['username']\" WHERE username = " . $_GET['id'];
+  $result = $conn->query($update);
 }
 
 ?>
