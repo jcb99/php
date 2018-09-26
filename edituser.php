@@ -15,7 +15,7 @@ $result = $conn->query($sql);
 
 if (isset($_POST['id']) && isset($_POST['submit'])){
   $update = "UPDATE users SET username = " . $_POST['id'] . "WHERE username = " . $_POST['id'] . ";
-  $query = mysql_query("UPDATE article set com_count = ". $comments_count . " WHERE article_id = " . $art_id . ");
+
   $result = $conn->query($update);
 }
 
