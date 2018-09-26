@@ -13,8 +13,8 @@ require('dbconnection.php'); //bring in database connection
 $sql = "SELECT * FROM users WHERE userid = " . $_GET['id'];
 $result = $conn->query($sql);
 
-if (isset($_POST['userid']) && isset($_POST['submit'])){
-  $update = "UPDATE users SET username = " . $_POST['userid'] . "WHERE username = " . $_POST['userid'];
+if (isset($_POST['userid']) && isset($_GET['submit'])){
+  $update = "UPDATE users SET username = " . $_GET['userid'] . "WHERE username = " . $_GET['userid'];
   $result = $conn->query($update);
 }
 
