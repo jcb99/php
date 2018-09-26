@@ -40,7 +40,7 @@ else{
 }
 
 if (isset($_POST['username']) && isset($_POST['submit'])){
-  $update = "UPDATE users SET username = \"$_POST['username']\" WHERE userid = " . $_GET['id'];
+  $update = "UPDATE users SET username = \"" .  $_POST['username'] . "\" WHERE userid = " . $_GET['id'];
   $conn->query($update);
 }
 
