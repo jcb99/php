@@ -44,7 +44,7 @@ if (isset($_POST['username']) && isset($_POST['submit'])){
 
   $uname = $_POST['username'];
   $uname = str_replace(" ", "", $uname);
-  $uname = strip_tags($uname);
+  $uname = strip_tags($uname); //Keeps the user from entering space inside of tags and being able to put spaces as names
 
       if($uname != ""){
         $uname = $_POST['username'];
