@@ -13,7 +13,11 @@ require('dbconnection.php'); //bring in database connection
 $sql = "SELECT * FROM users WHERE userid = " . $_GET['id'];
 $result = $conn->query($sql);
 
+//Checks to see if there is any post information that would could from the change form
+if(isset($_POST)){
 
+
+}
 
 
 echo "<form action = \"\" method = \"post\">";
@@ -53,6 +57,7 @@ if (isset($_POST['username']) && isset($_POST['submit'])){
         //$uname = trim($uname);
         $update = "UPDATE users SET username = \"" .  $uname . "\" WHERE userid = " . $_GET['id'];
         $conn->query($update);
+        header('Location: users.php');
       }
 
 
@@ -69,9 +74,10 @@ if (isset($_POST['password']) && isset($_POST['submit'])){
     $password = password_hash($password, PASSWORD_BCRYPT);
     $update = "UPDATE users SET password = \"" .  $password . "\" WHERE userid = " . $_GET['id'];
     $conn->query($update);
+    header('Location: users.php');
   }
 
 }
 
-header('Location: users.php');
+
 ?>
