@@ -46,9 +46,10 @@ $uname = $_POST['username'];
 $test = trim($uname);
 
 //if ($_POST['username'] != ""){
-if($test!="")
+if($test != ""){
   $update = "UPDATE users SET username = \"" .  $_POST['username'] . "\" WHERE userid = " . $_GET['id'];
   $conn->query($update);
+}
   }
 
 else{
