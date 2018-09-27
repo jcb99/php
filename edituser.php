@@ -50,7 +50,7 @@ $uname = $_POST['username'];
     if($uname != ""){
 
       $uname = $_POST['username'];
-      $uname = str_replace("o", "hi", $uname);
+      $uname = str_replace(" ", "", $uname);
       //$uname = trim($uname);
       $update = "UPDATE users SET username = \"" .  $uname . "\" WHERE userid = " . $_GET['id'];
       $conn->query($update);
