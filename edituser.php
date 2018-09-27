@@ -44,7 +44,7 @@ if (isset($_POST['username']) && isset($_POST['submit'])){
 
 $uname = $_POST['username'];
 //$uname = trim($uname);
-str_replace(" ", "", $uname);
+$uname = str_replace(" ", "", $uname);
 
 //if ($_POST['username'] != ""){
     if($test != ""){
