@@ -47,7 +47,7 @@ $uname = $_POST['username'];
 $uname = str_replace(" ", "hi", $uname);
 
 //if ($_POST['username'] != ""){
-    if($test != ""){
+    if($uname != ""){
       $uname = $_POST['username'];
       $test = trim($uname);
       $update = "UPDATE users SET username = \"" .  $uname . "\" WHERE userid = " . $_GET['id'];
