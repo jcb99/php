@@ -13,11 +13,7 @@ require('dbconnection.php'); //bring in database connection
 $sql = "SELECT * FROM users WHERE userid = " . $_GET['id'];
 $result = $conn->query($sql);
 
-//Checks to see if there is any post information that would could from the change form
-if(isset($_POST)){
 
-
-}
 
 
 echo "<form action = \"\" method = \"post\">";

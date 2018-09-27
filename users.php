@@ -5,7 +5,7 @@ if (!isset($_SESSION)){  //If the session variable is not set, then set it..else
 }
 
 if(!isset($_SESSION['username'])){
-  header('Location: login.php');
+  header('Location: password.php');
 }
 
 //Bring in database connection
