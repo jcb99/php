@@ -46,7 +46,7 @@ if (isset($_POST['username']) && isset($_POST['submit'])){
   $uname = str_replace(" ", "", $uname);
   //$uname = trim($uname);
 
-      if ($_POST['username'] != ""){
+      //if ($_POST['username'] != ""){
           if($uname != ""){
             $uname = $_POST['username'];
             $uname = str_replace(" ", "", $uname);
@@ -54,8 +54,8 @@ if (isset($_POST['username']) && isset($_POST['submit'])){
             $update = "UPDATE users SET username = \"" .  $uname . "\" WHERE userid = " . $_GET['id'];
             $conn->query($update);
           }
-      }
-      
+      //}
+
       else{
         echo "Yo idiot that is not a username";
     }
