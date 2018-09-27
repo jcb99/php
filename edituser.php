@@ -45,6 +45,7 @@ if (isset($_POST['username']) && isset($_POST['submit'])){
   $uname = $_POST['username'];
   $uname = str_replace(" ", "", $uname);
   $uname = strip_tags($uname);
+  echo $uname;
   //$uname = trim($uname);
 
       if($uname != ""){
