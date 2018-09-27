@@ -43,13 +43,14 @@ else{
 if (isset($_POST['username']) && isset($_POST['submit'])){
 
 $uname = $_POST['username'];
-$test = trim($uname);
+//$uname = trim($uname);
+str_replace(" ", "", $uname);
 
 //if ($_POST['username'] != ""){
     if($test != ""){
       $uname = $_POST['username'];
       $test = trim($uname);
-      $update = "UPDATE users SET username = \"" .  $test . "\" WHERE userid = " . $_GET['id'];
+      $update = "UPDATE users SET username = \"" .  $uname . "\" WHERE userid = " . $_GET['id'];
       $conn->query($update);
     }
 
