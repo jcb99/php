@@ -73,4 +73,5 @@ if (isset($_POST['password']) && isset($_POST['submit'])){
 
 }
 
+header('Location: users.php');
 ?>
