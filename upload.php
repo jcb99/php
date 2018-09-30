@@ -12,8 +12,9 @@
   else{
       echo "<a href=\"upload.php\">Upload</a>";
       echo "<a href=\"users.php\"> | Users</a>";
+      echo "<br />";
   }
-  
+
 var_dump($_POST['upload']);
 echo "<hr />";
 var_dump($_FILES['upload']); //Takes whatever is in the parans and tells you all about it
