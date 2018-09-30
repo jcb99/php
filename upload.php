@@ -13,7 +13,7 @@
       echo "<a href=\"password.php\">Home</a>";
       echo "<a href=\"upload.php\"> | Upload</a>";
       echo "<a href=\"users.php\"> | Users</a>";
-      echo "<br />";
+      echo "<br />"; echo "<br />";
   }
 
 var_dump($_POST['upload']);
