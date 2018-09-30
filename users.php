@@ -60,7 +60,7 @@ $conn->close();
           //Loops through all of the table records
 
           while ($row = $result->fetch_assoc()) {
-            echo "<tr align=\"center\">";
+            echo "<tr>";
               echo "<td>" . $row['userid'] . "</td>";
               echo "<td>" . $row['username'] . "</td>";
               echo "<td>" . $row['password'] . "</td>";
