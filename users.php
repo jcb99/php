@@ -70,7 +70,7 @@ $conn->close();
               </td>";
 
               echo
-              "<td>
+              "<td align=\"center\">
                 <form action=\"\" method=\"post\">
                 <input name = \"id\" type=\"hidden\" value=\"" . $row['userid'] . "\">
                 <input type=\"submit\" value=\"DELETE\" style=\"color: red;\" name=\"kill\">
