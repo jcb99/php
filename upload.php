@@ -10,11 +10,13 @@
   //This can't be executed after HTML has been loaded so it must be before the HTML
 
   else{
+      echo "<div align=\"center\">";
       echo "<a href=\"password.php\">Home</a>";
       echo "<a href=\"register.php\"> | Register</a>";
       echo "<a href=\"upload.php\"> | Upload</a>";
       echo "<a href=\"users.php\"> | Users</a>";
       echo "<br />"; echo "<br />";
+      echo "</div>";
   }
 
 var_dump($_POST['upload']);

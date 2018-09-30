@@ -42,7 +42,7 @@ if(isset ($_POST['username'])){ //executes only if the page has been set
 
    ?>
   <body>
-
+    <a href='password.php'>Home</a>
     <a href='register.php'>Register</a>
 
     <?php
