@@ -38,11 +38,9 @@ $conn->close();
      <?php
        if(isset($_SESSION['username'])){ //Show the upload button when logged in
          echo "<a href=\"upload.php\">Upload</a>";
-       }
-       
-       if(isset($_SESSION['username'])){ //Show the users button when logged in
          echo "<a href=\"users.php\"> | Users</a>";
        }
+
       ?>
 
       <table>

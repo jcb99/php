@@ -9,6 +9,11 @@
   header('Location: password.php'); //this kicks the user back to the login screen....whenever you use header, it is a string but you must use "Location: " in fron of it
   //This can't be executed after HTML has been loaded so it must be before the HTML
 
+  else{
+      echo "<a href=\"upload.php\">Upload</a>";
+      echo "<a href=\"users.php\"> | Users</a>";
+  }
+  
 var_dump($_POST['upload']);
 echo "<hr />";
 var_dump($_FILES['upload']); //Takes whatever is in the parans and tells you all about it
