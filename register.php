@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { //THIS SAYS ONLY IF THERE IS ANY POS
     <form action="" method="post">
         <input type="text" name="username"><br>
         <input type="password" name="password"><br>
-        <input type="submit">
+        <input type="submit" value="Sign Up!">
     </form>
   </body>
 </html>
