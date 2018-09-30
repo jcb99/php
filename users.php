@@ -38,6 +38,7 @@ $conn->close();
      <?php
        if(isset($_SESSION['username'])){ //Show the upload button when logged in
          echo "<a href=\"password.php\">Home</a>";
+         echo "<a href=\"register.php\"> | Register</a>";
          echo "<a href=\"upload.php\"> | Upload</a>";
          echo "<a href=\"users.php\"> | Users</a>";
        }
