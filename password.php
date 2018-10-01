@@ -56,8 +56,8 @@ if(isset ($_POST['username'])){ //executes only if the page has been set
     </div>
 
     <form action="" method="post">
-      <h5>Login to the site!</h5>
-      <input type="text" name="username" placeholder="Username"> <br /><br />
+      <h4>Login to the site!</h4>
+      <input type="text" name="username" placeholder="Username"> <br />
       <input type="password" name="password" placeholder="Password">
       <br />
       <input type ="submit" value="Login">
