@@ -36,6 +36,8 @@ $conn->close();
    </head>
    <body>
      <?php
+     require('navbar.php');
+
        // if(isset($_SESSION['username'])){ //Show the upload button when logged in
        //   echo "<div align=\"center\">";
        //   echo "<a href=\"password.php\">Home</a>";
