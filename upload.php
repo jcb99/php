@@ -9,7 +9,7 @@
   header('Location: password.php'); //this kicks the user back to the login screen....whenever you use header, it is a string but you must use "Location: " in fron of it
   //This can't be executed after HTML has been loaded so it must be before the HTML
 
-  //else{
+  else{
      require('navbar.php');
       // echo "<div align=\"center\">";
       // echo "<a href=\"password.php\">Home</a>";
@@ -18,7 +18,7 @@
       // echo "<a href=\"users.php\"> | Users</a>";
       // echo "<br />"; echo "<br />";
       // echo "</div>";
-  //}
+  }
 
 var_dump($_POST['upload']);
 echo "<hr />";
