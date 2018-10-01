@@ -7,7 +7,7 @@
   <body>
     <div align="center">
       <?php
-      echo (basename($_SERVER['PHP_SELF']) == "password.php") ? "<strong><a href=password.php style=\"text-decoration: none\">|Home</a></strong>" : "<a href=password.php style=\"text-decoration: none\">|Home</a>";
+      echo (basename($_SERVER['PHP_SELF']) == "password.php") ? "<strong><a href=password.php style=\"text-decoration: none\" style=\"font-size:50px;\">|Home</a></strong>" : "<a href=password.php style=\"text-decoration: none\">|Home</a>";
       echo "|&nbsp&nbsp";
       echo (basename($_SERVER['PHP_SELF']) == "register.php") ? "<strong><a href=register.php style=\"text-decoration: none\">|Register</a style=\"text-decoration: none\"></strong>" : "<a href=register.php style=\"text-decoration: none\">|Register</a>";
       echo "|&nbsp&nbsp";
