@@ -15,9 +15,9 @@
           echo (basename($_SERVER['PHP_SELF']) == "upload.php") ? "<strong><a href=upload.php>|Upload</a></strong>" : "<a href=upload.php>|Upload</a>";
           echo "|&nbsp&nbsp";
           echo (basename($_SERVER['PHP_SELF']) == "users.php") ? "<strong><a href=users.php>|Users|</a></strong>" : "<a href=users.php>|Users|</a>";
-
         }
        ?>
+       <br /><br />
     </div>
   </body>
 </html>
