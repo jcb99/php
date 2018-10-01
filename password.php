@@ -43,8 +43,8 @@ if(isset ($_POST['username'])){ //executes only if the page has been set
    ?>
   <body>
     <div align="center">
-    <a href='password.php'>Home</a>
-    <a href='register.php'> | Register</a>
+    <!-- <a href='password.php'>Home</a>
+    <a href='register.php'> | Register</a> -->
 
     <?php
       require('navbar.php');
