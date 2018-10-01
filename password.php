@@ -48,10 +48,10 @@ if(isset ($_POST['username'])){ //executes only if the page has been set
 
     <?php
       require('navbar.php');
-      if(isset($_SESSION['username'])){ //Show the upload button when logged in
-          echo "<a href=\"upload.php\"> | Upload</a>";
-          echo "<a href=\"users.php\"> | Users</a>";
-      }
+      // if(isset($_SESSION['username'])){ //Show the upload button when logged in
+      //     echo "<a href=\"upload.php\"> | Upload</a>";
+      //     echo "<a href=\"users.php\"> | Users</a>";
+      // }
       ?>
     </div>
 
