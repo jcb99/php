@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { //THIS SAYS ONLY IF THERE IS ANY POS
   <body>
     <?php require('navbar.php');  ?>
     <form action="" method="post">
-        <h4>Register Here!</h4> <br><br>
+        <h4>Register Here!</h4>
         Enter a username:
         <input type="text" name="username" placeholder="Username"><br>
         Enter a password:
