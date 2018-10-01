@@ -58,10 +58,10 @@ if(isset ($_POST['username'])){ //executes only if the page has been set
     <form action="" method="post">
       <input type="text" name="username" placeholder="Username"> <br />
       <input type="password" name="password">
+      &nbsp&nbsp&nbsp&nbsp&nbsp
+      <input type ="submit" value="Login">
       <br />
-      <input type ="submit" value="Go">
-      <br />
-      <input type="submit" name="logout" value="logout"> <!--Submit button makes the page reload !-->
+      <input type="submit" name="logout" value="Logout"> <!--Submit button makes the page reload !-->
     </form>
 
     <?php
