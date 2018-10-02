@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { //THIS SAYS ONLY IF THERE IS ANY POS
     $username = filter_var($username, FILTER_SANITIZE_STRING); //gRABS POST DATA AND AVOIDS CROSS SITE SCRIPTING AND SQL INJECTION
     $username = trim($username);  //trims white space off of either side
     $username = stripslashes($username);//Does not let username contain slashes
-    $uname = str_replace(" ", "", $username); //replaces whitespace with nothing
+    $username = str_replace(" ", "", $username); //replaces whitespace with nothing
   $password = $_POST['password']; //dont need to sanitize password bc it is being hashed
   $password = password_hash($password, PASSWORD_BCRYPT); //This is for PHP version 5.5 and up....5.4 and down doesn't recognize this password hash function
   $sql = "INSERT INTO users (username,password) VALUES ('$username','$password')"; //Insert whatever is in the variables above
