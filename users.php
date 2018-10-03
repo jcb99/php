@@ -86,7 +86,6 @@ $conn->close();
 
 
         ?>
-        <br />
 
 
       </table>
