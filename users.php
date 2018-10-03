@@ -63,7 +63,6 @@ $conn->close();
           //Loops through all of the table records
 
           while ($row = $result->fetch_assoc()) {
-            echo "<br>";
             echo "<tr>";
               echo "<td>" . $row['userid'] . "</td>";
               echo "<td>" . $row['username'] . "</td>";
@@ -73,6 +72,7 @@ $conn->close();
                 <input name=\"id\" type=\"hidden\" value=\"" . $row['userid'] . "\">
                 <input type=\"submit\" value=\"EDIT\" style=\"color: blue;\" name=\"edit\">
                 </form>
+                <br>
               </td>";
 
               echo
