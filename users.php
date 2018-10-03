@@ -56,13 +56,14 @@ $conn->close();
           <th>Password Hash</th>
           <th>Actions</th>
         </tr>
-        <br>
+
 
 
         <?php
           //Loops through all of the table records
 
           while ($row = $result->fetch_assoc()) {
+            echo "<br>";
             echo "<tr>";
               echo "<td>" . $row['userid'] . "</td>";
               echo "<td>" . $row['username'] . "</td>";
