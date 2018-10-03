@@ -64,11 +64,8 @@ $conn->close();
           while ($row = $result->fetch_assoc()) {
             echo "<tr>";
               echo "<td>" . $row['userid'] . "</td>";
-              echo "<br />";
               echo "<td>" . $row['username'] . "</td>";
-              echo "<br />";
               echo "<td>" . $row['password'] . "</td>";
-              echo "<br />";
               echo "<td>
                 <form action=\"edituser.php\" method=\"get\">
                 <input name=\"id\" type=\"hidden\" value=\"" . $row['userid'] . "\">
