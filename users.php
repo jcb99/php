@@ -83,6 +83,7 @@ $conn->close();
               //could also end php if we wanted to and do it that way..Then we don't have to echo everything out
 
             echo "</tr>";
+            echo "<br />";
           }
 
         ?>
