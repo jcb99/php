@@ -81,6 +81,7 @@ $conn->close();
                 <input name = \"id\" type=\"hidden\" value=\"" . $row['userid'] . "\">
                 <input type=\"submit\" value=\"DELETE\" style=\"color: red;\" name=\"kill\">
                 </form>
+                <br>
               </td>";
               //could also end php if we wanted to and do it that way..Then we don't have to echo everything out
             echo "</tr>";
