@@ -56,6 +56,7 @@ $conn->close();
           <th>Password Hash</th>
           <th>Actions</th>
         </tr>
+        <br>
 
 
         <?php
@@ -63,7 +64,6 @@ $conn->close();
 
           while ($row = $result->fetch_assoc()) {
             echo "<tr>";
-            echo "<br />";
               echo "<td>" . $row['userid'] . "</td>";
               echo "<td>" . $row['username'] . "</td>";
               echo "<td>" . $row['password'] . "</td>";
