@@ -18,8 +18,8 @@ $cookie_value = "johnny5";
 
      else{
        echo "Welcome. This is your first time here...";
-       setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); //86400 is the number of seconds in a day ....the slash means if it is multiple directories we can read it
-       
+       setcookie($cookie_name, $cookie_value, time() + (60), "/"); //86400 is the number of seconds in a day ....the slash means if it is multiple directories we can read it...86400 * 30
+
      }
 
      ?>
