@@ -1,6 +1,7 @@
 <?php
 $cookie_name = "user";
 $cookie_value = "johnny5";
+//$cookie_last_visit = setcookie('')
  ?>
 
  <!DOCTYPE html>
@@ -14,6 +15,7 @@ $cookie_value = "johnny5";
      if (isset ($_COOKIE['user'])) //cookie name variable in the brackets
      {
        echo "You have been here before...";
+       echo time();
      }
 
      else{
