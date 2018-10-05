@@ -15,7 +15,7 @@ $cookie_value = "johnny5";
      if (isset ($_COOKIE['user'])) //cookie name variable in the brackets
      {
        echo "You have been here before...";
-       echo time("G:i m/d/y");
+       echo time("G:i - m/d/y");
      }
 
      else{
