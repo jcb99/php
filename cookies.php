@@ -22,7 +22,7 @@ $last_visited_cookie = "lastvisit";
      if (isset ($_COOKIE['user']) && (isset ($_COOKIE['lastvisit']))) //cookie name variable in the brackets
      {
       $last_visited = $_COOKIE['lastvisit'];
-      $instant = 31536000 + time();
+      $instant = date() + time();
        echo "You have been here before... Your last visit was..." . $instant;
      }
 
