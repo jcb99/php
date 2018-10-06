@@ -24,6 +24,7 @@ $last_visited_cookie = "lastvisit";
       $last_visited = $_COOKIE['lastvisit'];
       $instant = date("F j, Y, g:i a", $last_visited );
        echo "You have been here before... Your last visit was..." . $instant;
+       setcookie($last_visited_cookie, $instant);
      }
 
      else{
