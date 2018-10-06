@@ -2,6 +2,8 @@
 $cookie_name = "user";
 $cookie_value = "johnny5";
 
+$last_visited_cookie = "lastvisit";
+
  ?>
 
  <!DOCTYPE html>
@@ -13,18 +15,22 @@ $cookie_value = "johnny5";
    <body>
      <?php  //checking to see if a cookie has been mb_ereg_search_setpos
 
-     $year = 31536000 + time() ;
 
-     if (isset ($_COOKIE['user'])) //cookie name variable in the brackets
+
+
+
+     if (isset ($_COOKIE['user']) && (isset ($_COOKIE['lastvisit']))) //cookie name variable in the brackets
      {
-       echo "You have been here before...";
-       echo date();
+      $last_visited = $_COOKIE['lastvisit'];
+      $instant = 31536000 + time();
+       echo "You have been here before... Your last visit was..." . $instant;
+
      }
 
      else{
        echo "Welcome. This is your first time here...";
        setcookie($cookie_name, $cookie_value, time() + (86400), "/"); //86400 * 30 is 30 days...we currently have it set to 60 seconds...86400 is the number of seconds in a day ....the slash means if it is multiple directories we can read it...
-       echo $year;
+       setcookie($last_visit, time(), $year);
      }
 
      ?>
