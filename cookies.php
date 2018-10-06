@@ -3,7 +3,7 @@ $cookie_name = "user";
 $cookie_value = "johnny5";
 
 $last_visited_cookie = "lastvisit";
-$last_visited_cookie_val = "something";
+$last_visited_cookie_val = date("F j, Y, g:i a");
  ?>
 
  <!DOCTYPE html>
