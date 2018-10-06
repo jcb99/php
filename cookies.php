@@ -23,17 +23,15 @@ $last_visited_cookie_val = date("F j, Y, g:i a");
 
        if (isset ($last_visited))
           {
-
-      //$instant = date("F j, Y, g:i a", $last_visited );
        echo "You have been here before... Your last visit was..." . $last_visited ;
-       //setcookie($last_visited_cookie, $instant, time() + (86400), "/");
+       setcookie($last_visited_cookie, $last_visited_cookie_val, time() + (86400), "/");
      }
    }
 
      else{
        echo "Welcome. This is your first time here...";
        setcookie($cookie_name, $cookie_value, time() + (86400), "/"); //86400 * 30 is 30 days...we currently have it set to 60 seconds...86400 is the number of seconds in a day ....the slash means if it is multiple directories we can read it...
-
+       setcookie($last_visited_cookie, $last_visited_cookie_val, time() + (86400), "/");
      }
 
      ?>
