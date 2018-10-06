@@ -2,7 +2,7 @@
 $cookie_name = "user";
 $cookie_value = "johnny5";
 
-$last_visited_cookie = "lastvisit";
+//$last_visited_cookie = "lastvisit";
 
  ?>
 
