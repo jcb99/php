@@ -21,6 +21,7 @@ $last_visited_cookie_val = date("F j, Y, g:i a");
        $last_visited = $_COOKIE['lastvisit'];
        echo "You have been here before... Your last visit was..." . $last_visited ;
        setcookie($last_visited_cookie, $last_visited_cookie_val, 31536000 + time(), "/");
+       setcookie($cookie_name, $cookie_value, time() + (31536000), "/");
    }
 
      else{
