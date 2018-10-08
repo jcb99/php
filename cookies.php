@@ -18,8 +18,9 @@ $last_visited_cookie_val = date("F j, Y, g:i a");
 
      if (isset ($_COOKIE['user']) && (isset ($_COOKIE['lastvisit']))) //cookie name variable in the brackets
      {
-       $seconds = time() - $last_visited_cookie_val;
+
        $last_visited = $_COOKIE['lastvisit'];
+       $seconds = time() - $last_visited;
        echo "You have been here before... Your last visit was..." . $last_visited ;
        echo "<br />";
        echo "It has been " . $seconds . " seconds since the last time you were here.";
