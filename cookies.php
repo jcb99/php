@@ -48,7 +48,7 @@ $time_cookie_val = time();
        $dt2 = new DateTime("@$seconds_diff");
        return $dt1->diff($dt2)->format('%a days, %h hours, %i minutes and %s seconds');
        }
-     echo convert_seconds(200000)."\n";
+     echo convert_seconds($seconds_diff)."\n";
      ?>
    </body>
  </html>
