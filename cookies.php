@@ -18,6 +18,7 @@ $last_visited_cookie_val = date("F j, Y, g:i a");
 
      if (isset ($_COOKIE['user']) && (isset ($_COOKIE['lastvisit']))) //cookie name variable in the brackets
      {
+       echo time();
        $seconds = (time() - $last_visited);
        $last_visited = $_COOKIE['lastvisit'];
 
