@@ -18,14 +18,9 @@ $last_visited_cookie_val = date("F j, Y, g:i a");
 
      if (isset ($_COOKIE['user']) && (isset ($_COOKIE['lastvisit']))) //cookie name variable in the brackets
      {
-
-       //$starttime = microtime(true);
-       //$endtime = microtime(true);
-       //$timediff = $endtime - $starttime;
-
-
-       echo date();
-       echo "date is above";
+       $thetime = time() - $initial;
+       $initial = microtime(true);
+       echo $thetime;
        echo "<br>";
 
 
