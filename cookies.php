@@ -29,7 +29,8 @@ $last_visited_cookie_val = date("F j, Y, g:i a");
 
 
        $last_visited = $_COOKIE['lastvisit'];
-
+       echo $last_visited;
+       echo "<br>";
        echo time() - $last_visited;
        echo "<br>";
        echo microtime(true);
