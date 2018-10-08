@@ -20,22 +20,14 @@ $time_cookie_val = time();
 
      if (isset ($_COOKIE['user']) && (isset ($_COOKIE['lastvisit']))) //cookie name variable in the brackets
      {
-
-       $time = $_COOKIE['time'];
-       $avalue = time() - $time;
-       echo "Its been" . $avalue . "seconds";
-
-
+       $old_time = $_COOKIE['time'];
+       $seconds_diff = time() - $old_time;
 
        $last_visited = $_COOKIE['lastvisit'];
 
-
-
-
-
        echo "You have been here before... Your last visit was..." . $last_visited ;
        echo "<br /><br />";
-       echo "It has been " . $thetime . " seconds since the last time you were here.";
+       echo "It has been " . $seconds_diff . " seconds since the last time you were here.";
        setcookie($last_visited_cookie, $last_visited_cookie_val, 31536000 + time(), "/");
        setcookie($cookie_name, $cookie_value, time() + (31536000), "/");
        setcookie($time_cookie, $time_cookie_val, time() + (31536000), "/");
