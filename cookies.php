@@ -23,6 +23,7 @@ $last_visited_cookie_val = date("F j, Y, g:i a");
        //$endtime = microtime(true);
        //$timediff = $endtime - $starttime;
        echo time();
+       echo "<br>";
        echo microtime(true);
 
 
