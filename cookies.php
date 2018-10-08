@@ -25,6 +25,8 @@ $last_visited_cookie_val = date("F j, Y, g:i a");
 
 
        echo date();
+       echo "date is above";
+       echo "<br>";
 
 
 
