@@ -24,7 +24,7 @@ $last_visited_cookie_val = date("F j, Y, g:i a");
        //$timediff = $endtime - $starttime;
 
 
-
+       echo date();
 
 
 
