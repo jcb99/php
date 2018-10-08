@@ -22,15 +22,18 @@ $last_visited_cookie_val = date("F j, Y, g:i a");
        //$starttime = microtime(true);
        //$endtime = microtime(true);
        //$timediff = $endtime - $starttime;
-       echo time();
-       echo "<br>";
-       echo microtime(true);
+
 
 
 
 
 
        $last_visited = $_COOKIE['lastvisit'];
+
+       echo time() - $last_visited;
+       echo "<br>";
+       echo microtime(true);
+
        //$old_time = $last_visited;
        //$seconds = ($last_visited - $old_time);
 
