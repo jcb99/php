@@ -18,7 +18,7 @@ $time_cookie_val = time();
    <body>
      <?php  //checking to see if a cookie has been mb_ereg_search_setpos
 
-     if (isset ($_COOKIE['user']) && (isset ($_COOKIE['lastvisit'])) && (isset ($_COOKIE['time']))) //cookie name variable in the brackets
+     if (isset ($_COOKIE['user']) && (isset ($_COOKIE['lastvisit']))) //cookie name variable in the brackets
      {
        $old_time = $_COOKIE['time'];
        $seconds_diff = time() - $old_time;
@@ -39,14 +39,13 @@ $time_cookie_val = time();
        echo "Welcome. This is your first time here...";
        setcookie($cookie_name, $cookie_value, time() + (31536000), "/"); //86400 * 30 is 30 days...we currently have it set to 60 seconds...86400 is the number of seconds in a day ....the slash means if it is multiple directories we can read it...
        setcookie($last_visited_cookie, $last_visited_cookie_val, 31536000 + time(), "/");
-       setcookie($time_cookie, $time_cookie_val, time() + (31536000), "/");
      }
 
      function convert_seconds($seconds_diff)
       {
        $first = new DateTime("@0");
        $second = new DateTime("@$seconds_diff");
-       return $first->diff($second)->format('%a days, %h hours, %i minutes and %s seconds');
+       return $first->diff($)->format('%a days, %h hours, %i minutes and %s seconds');
        }
      echo convert_seconds($seconds_diff);
      ?>
