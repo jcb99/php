@@ -20,10 +20,10 @@ $time_cookie_val = time();
 
      if (isset ($_COOKIE['user']) && (isset ($_COOKIE['lastvisit']))) //cookie name variable in the brackets
      {
-
-       $time = $_COOKIE['time'];
-       $avalue = microtime(true) - $time;
-       echo $avalue;
+       echo "This is the time " . time();
+       // $time = $_COOKIE['time'];
+       // $avalue = microtime(true) - $time;
+       // echo $avalue;
 
 
 
