@@ -15,27 +15,18 @@ $last_visited_cookie_val = date("F j, Y, g:i a");
    <body>
      <?php  //checking to see if a cookie has been mb_ereg_search_setpos
 
-     $thetime = time() - $last_visited;
-     echo "This is the time";
-     echo $thetime;
      if (isset ($_COOKIE['user']) && (isset ($_COOKIE['lastvisit']))) //cookie name variable in the brackets
      {
 
-       // $initial = microtime(true);
-       // echo $thetime;
-       // echo "<br>";
+
 
 
 
        $last_visited = $_COOKIE['lastvisit'];
-       echo $last_visited;
-       echo "<br>";
-       echo time() - $last_visited;
-       echo "<br>";
-       echo microtime(true);
+    
 
-       //$old_time = $last_visited;
-       //$seconds = ($last_visited - $old_time);
+
+
 
        echo "You have been here before... Your last visit was..." . $last_visited ;
        echo "<br /><br />";
