@@ -4,6 +4,9 @@ $cookie_value = "johnny5";
 
 $last_visited_cookie = "lastvisit";
 $last_visited_cookie_val = date("F j, Y, g:i a");
+
+$time_cookie = "time";
+$time_cookie_val = time();
  ?>
 
  <!DOCTYPE html>
@@ -18,12 +21,14 @@ $last_visited_cookie_val = date("F j, Y, g:i a");
      if (isset ($_COOKIE['user']) && (isset ($_COOKIE['lastvisit']))) //cookie name variable in the brackets
      {
 
-
+       $time = $_COOKIE['time'];
+       $avalue = microtime(true) - $time;
+       echo $avalue;
 
 
 
        $last_visited = $_COOKIE['lastvisit'];
-    
+
 
 
 
