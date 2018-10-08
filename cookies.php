@@ -20,7 +20,7 @@ $last_visited_cookie_val = date("F j, Y, g:i a");
      {
        $last_visited = $_COOKIE['lastvisit'];
        echo "You have been here before... Your last visit was..." . $last_visited ;
-       $seconds = $last_visited - date() + time();
+       $seconds = date() - time();
        echo "<br />";
        echo "It has been" . $seconds . "seconds since the last time you were here.";
        setcookie($last_visited_cookie, $last_visited_cookie_val, 31536000 + time(), "/");
