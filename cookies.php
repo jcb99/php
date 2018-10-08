@@ -18,7 +18,7 @@ $time_cookie_val = time();
    <body>
      <?php  //checking to see if a cookie has been mb_ereg_search_setpos
 
-     if (isset($_COOKIE['user']) && isset($_COOKIE['lastvisit'])) //cookie name variable in the brackets
+     if ((isset($_COOKIE['user'])) && (isset($_COOKIE['lastvisit']))) //cookie name variable in the brackets
      {
        $old_time = $_COOKIE['time'];
        $seconds_diff = time() - $old_time;
