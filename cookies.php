@@ -53,5 +53,6 @@ $time_cookie_val = time();
       echo convert_seconds($seconds_diff);
 
      ?>
+     <img src="/images/cookie_monster.png">
    </body>
  </html>
