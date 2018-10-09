@@ -50,9 +50,7 @@ $time_cookie_val = time();
        return $first->diff($second)->format('%a days, %h hours, %i minutes and %s seconds');
       }
 
-      if ($old_time != 0){
-        echo convert_seconds($seconds_diff);
-      }
+      echo convert_seconds($seconds_diff);
 
      ?>
    </body>
