@@ -45,9 +45,11 @@ $time_cookie_val = time();
      }
 
      function convert_seconds($seconds_diff){
-       $first = new DateTime("@0");
-       $second = new DateTime("@$seconds_diff");
-       return $first->diff($second)->format('%a days, %h hours, %i minutes and %s seconds');
+       //$first = new DateTime("@0");
+       //$second = new DateTime("@$seconds_diff");
+       //return $first->diff($second)->format('%a days, %h hours, %i minutes and %s seconds');
+
+       return $second->format('%a days, %h hours, %i minutes and %s seconds');
       }
 
       echo convert_seconds($seconds_diff);
