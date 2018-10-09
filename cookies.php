@@ -34,10 +34,6 @@ $time_cookie_val = time();
        setcookie($cookie_name, $cookie_value, time() + (31536000), "/");
        setcookie($time_cookie, $time_cookie_val, time() + (31536000), "/");
 
-
-     else{
-       echo "dunno";
-     }
    }
 
      else{
@@ -47,17 +43,16 @@ $time_cookie_val = time();
        setcookie($time_cookie, $time_cookie_val, time() + (31536000), "/");
      }
 
-     function convert_seconds($seconds_diff)
-      {
+     function convert_seconds($seconds_diff){
        $first = new DateTime("@0");
        $second = new DateTime("@$seconds_diff");
        return $first->diff($second)->format('%a days, %h hours, %i minutes and %s seconds');
-       }
+      }
 
+      if ($old_time != 0){
+        echo convert_seconds($seconds_diff);
+      }
 
-
-         echo convert_seconds($seconds_diff);
-      
      ?>
    </body>
  </html>
