@@ -54,6 +54,6 @@ $time_cookie_val = time();
 
      ?>
      <br />
-     <img src="images/cookie_monster.png">
+     <img src="images/ostrich.gif">
    </body>
  </html>
