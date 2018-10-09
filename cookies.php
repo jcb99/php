@@ -24,7 +24,8 @@ $time_cookie_val = time();
      {
        $old_time = $_COOKIE['time'];
        $seconds_diff = time() - $old_time;
-
+       $something = new DateInterval($seconds_diff);
+       echo $something>format('%a days, %h hours, %i minutes and %s seconds');
        $last_visited = $_COOKIE['lastvisit'];
 
        echo "You have been here before... Your last visit was..." . $last_visited ;
@@ -44,11 +45,11 @@ $time_cookie_val = time();
        setcookie($time_cookie, $time_cookie_val, time() + (31536000), "/");
      }
 
-     function convert_seconds($seconds_diff){
-       $first = new DateTime("@0");
-       $second = new DateTime("@$seconds_diff");
-       return $first->diff($second)->format('%a days, %h hours, %i minutes and %s seconds');
-      }
+     // function convert_seconds($seconds_diff){
+     //   //$first = new DateTime("@0");
+     //   //$second = new DateTime("@$seconds_diff");
+     //   //return $first->diff($second)->format('%a days, %h hours, %i minutes and %s seconds');
+     //  }
 
       echo convert_seconds($seconds_diff);
 
