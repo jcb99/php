@@ -20,7 +20,7 @@ $time_cookie_val = time();
    <body>
      <?php  //checking to see if a cookie has been mb_ereg_search_setpos
 
-     if ((isset($_COOKIE['user'])) && (isset($_COOKIE['lastvisit']))) //cookie name variable in the brackets
+     if ((isset($_COOKIE['user'])) && (isset($_COOKIE['lastvisit'])) && (isset($_COOKIE['time']))) //cookie name variable in the brackets
      {
        $old_time = $_COOKIE['time'];
        $seconds_diff = time() - $old_time;
@@ -29,6 +29,7 @@ $time_cookie_val = time();
 
        echo "You have been here before... Your last visit was..." . $last_visited ;
        echo "<br /><br />";
+
        echo "The following amount of time has passed since your last visit:<br>";
        setcookie($last_visited_cookie, $last_visited_cookie_val, 31536000 + time(), "/");
        setcookie($cookie_name, $cookie_value, time() + (31536000), "/");
