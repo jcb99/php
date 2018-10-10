@@ -14,6 +14,6 @@ if (is_dir($pwd . '/' . 'testing')){
 else{
   echo "This is not a directory!";
   exec('mkdir testing');
-  echo "We have created it for you!"
+  echo "We have created it for you!";
 }
  ?>
