@@ -7,7 +7,7 @@ $pwd = rtrim($pwd);
 echo "<pre>$pwd</pre>";
 
 echo $pwd . '/' . 'test';
-if (is_dir($pwd . '/' . 'test')){
+if (is_dir($pwd . '/' . 'test1')){
   echo "<br>This directory exists!";
 }
 
