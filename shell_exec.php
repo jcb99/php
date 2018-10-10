@@ -4,7 +4,7 @@ echo "<pre>$output</pre>"; //displays the code as it appears in the terminal inc
 
 $pwd = shell_exec('pwd');
 //$pwd = str_replace(" ", "", $pwd);
-$pwd = rtrim($pwd," ");
+$pwd = rtrim($pwd);
 echo "<pre>$pwd</pre>";
 
 echo $pwd . '/' . 'test';
