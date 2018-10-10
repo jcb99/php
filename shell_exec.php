@@ -13,5 +13,6 @@ if (is_dir($pwd . '/' . 'test1')){
 
 else{
   echo "This is not a directory!";
+  exec('mkdir testing');
 }
  ?>
