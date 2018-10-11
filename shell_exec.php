@@ -13,7 +13,7 @@ if (is_dir($pwd . '/' . 'test')){
   $dirArray = scandir("test/");
 
   //var_dump($dirArray);
-  echo "<br><br>The following is a list of all of the items in this directory:<br><br>";
+  echo "<br><br>The following is a list of all of the items in this directory:<br>";
   foreach ($dirArray as $key => $value) {  //Goes through each array element of dirArray...should be the number in the index
     if ($value == "." || $value == ".."){continue;}
     echo $value . "<br>";
