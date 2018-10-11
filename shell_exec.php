@@ -6,14 +6,14 @@ $pwd = shell_exec('pwd');
 $pwd = rtrim($pwd);
 echo "<pre>$pwd</pre>";
 
-echo $pwd . '/' . 'testing';
-if (is_dir($pwd . '/' . 'testing')){
+echo $pwd . '/' . 'test';
+if (is_dir($pwd . '/' . 'test')){
   echo "<br>This directory exists!";
 }
 
 else{
   echo "This is not a directory!";
-  exec('mkdir testing');
+  exec('mkdir test');
   echo "We have created it for you!";
 }
  ?>
