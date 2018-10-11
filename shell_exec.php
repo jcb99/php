@@ -9,6 +9,8 @@ echo "<pre>$pwd</pre>";
 echo $pwd . '/' . 'test';
 if (is_dir($pwd . '/' . 'test')){
   echo "<br>This directory exists!";
+  $a=array="Hi", "Hello";
+  echo array_values($a);
 }
 
 else{
