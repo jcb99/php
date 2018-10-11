@@ -9,13 +9,17 @@ echo "<pre>$pwd</pre>";
 echo $pwd . '/' . 'test';
 if (is_dir($pwd . '/' . 'test')){
   echo "<br>This directory exists!";
-  $a=array="Hi", "Hello";
-  echo array_values($a);
+
+  $dirArray = scandir("test/");
+
+  var_dump($dirArray);
+
+
 }
 
 else{
-  echo "This is not a directory!";
+  echo "<br>This is not a directory!";
   exec('mkdir test');
-  echo "We have created it for you!";
+  echo "<br>We have created it for you!";
 }
  ?>
