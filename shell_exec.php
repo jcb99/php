@@ -12,7 +12,12 @@ if (is_dir($pwd . '/' . 'test')){
 
   $dirArray = scandir("test/");
 
-  var_dump($dirArray);
+  //var_dump($dirArray);
+
+  foreach ($dirArray as $key => $value) {  //Goes through each array element of dirArray...should be the number in the index
+    if ($value == "." || $value == ".."){continue;}
+    echo $value . "<br>";
+  }
 
 
 }
