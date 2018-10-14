@@ -12,7 +12,7 @@ if (is_dir($pwd . '/' . 'test')){
 
   $dirArray = scandir("test/");
 
-  $hi = shell_exec("w");
+  $hi = shell_exec("who");
   echo $hi;
 
   //var_dump($dirArray);
