@@ -22,6 +22,7 @@ if (is_dir($pwd . '/' . 'test')){
   $users = shell_exec('w');
   $users_exploded = explode("\n", $users);
 
+echo "The following is a list of users who are currently logged into 23.30.218.171";
   foreach ($users_exploded as $key => $value) {
     if ($key == "0" || $key == "1") { continue; }
       $username = substr($value, 0, strpos($value, ' '));
