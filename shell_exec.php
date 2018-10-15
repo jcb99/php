@@ -24,7 +24,7 @@ if (is_dir($pwd . '/' . 'test')){
 
   foreach ($users_exploded as $key => $value) {
     if ($key == "0") || ($key == "1") { continue; }
-      $username = ubstr($value, 0, strrpos($value, ' '));
+      $username = ubstr($value, 0, strpos($value, ' '));
       echo $username . "<br>";
   }
 }
