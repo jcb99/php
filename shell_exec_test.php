@@ -14,9 +14,9 @@ if (is_dir($pwd . '/' . 'test')){
 
 echo "<br><br>The following is a list of all of the users who are currently logged into 23.30.218.171:<br>";
 $hi = shell_exec("who -q");
-echo $hi . "<br>";
+echo $hi;
   foreach ($hi as $key => $value) {
-    echo $value;
+    echo $value . "<br>";
   }
 
 
