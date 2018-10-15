@@ -19,9 +19,7 @@
 
     echo $nflTeams[0] . "<br />";
     echo $nflTeams[1] . "<br />";
-    echo $nflTeams[2] . "<br />";
-
-
+    echo $nflTeams[2] . "<br />"; 
      ?>
   </body>
 </html>
