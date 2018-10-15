@@ -18,6 +18,15 @@ if (is_dir($pwd . '/' . 'test')){
     if ($value == "." || $value == ".."){continue;}
     echo $value . "<br>";
   }
+
+  $users = shell_exec('w');
+  $users_exploded = explode("\n", $users);
+
+  foreach ($users_exploded as $key => $value) {
+    if ($key == "0") || ($key == "1") { continue; }
+      $username = ubstr($value, 0, strrpos($value, ' '));
+      echo $username . "<br>";
+  }
 }
 
 else{
