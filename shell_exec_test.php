@@ -12,8 +12,13 @@ if (is_dir($pwd . '/' . 'test')){
 
   $dirArray = scandir("test/");
 
-  $hi = shell_exec("who");
-  echo $hi;
+echo "<br><br>The following is a list of all of the users who are currently logged into 23.30.218.171:<br>";
+$hi = shell_exec("who");
+echo $hi;
+  foreach ($hi as $key => $value) {
+    echo $value;
+  }
+
 
   //var_dump($dirArray);
   echo "<br><br>The following is a list of all of the items in this directory:<br>";
