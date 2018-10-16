@@ -43,8 +43,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 </head>
 <body>
   <form action="" method="post">
-
-
     <nav class="navbar navbar-expand-md fixed-top navbar-transparent">
         <div class="container">
 			<div class="navbar-translate">
