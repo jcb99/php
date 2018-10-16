@@ -1,16 +1,3 @@
-<?php
-session_start();
-
-if(isset ($_POST['username'])){
-  $username = $_POST['username'];
-  $password = $_POST['password'];
-
-  $sql = "SELECT username, password FROM users WHERE username = '$username'";
-
-
-  header('Location: login.php');
-} ?>
-
 <!doctype html>
 <html lang="en">
 
