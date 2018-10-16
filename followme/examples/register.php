@@ -12,8 +12,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   $password = $_POST['password'];
   $password = password_hash($password, PASSWORD_BCRYPT);
   $sql = "INSERT INTO fm_users (email,password) VALUES ('$email','$password')";
-  $conn->query($sql); //to run the query
+  $conn->query($sql);
   header('Location: register.php');
+}
+
+else{
+  echo "Not a valid username. Please re-enter.";
 }
 }?>
 
