@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   $password = password_hash($password, PASSWORD_BCRYPT);
   $sql = "INSERT INTO users (username,password) VALUES ('$username','$password')";
   $conn->query($sql); //to run the query
-  header('Location: login.php');
+  header('Location: register.php');
 }?>
 
 
