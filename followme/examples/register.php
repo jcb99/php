@@ -1,12 +1,12 @@
 <?php
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
   require('sitedbconn.php');
-  $email = $_POST['email'];
-  $email = filter_var($email, FILTER_SANITIZE_STRING);
-  $email = trim($email);
-  $email = str_replace("\\", "", $email);
-  $email = str_replace("/", "", $email);
-  $email = preg_replace("/\s+/", "", $email);
+  // $email = $_POST['email'];
+  // $email = filter_var($email, FILTER_SANITIZE_STRING);
+  // $email = trim($email);
+  // $email = str_replace("\\", "", $email);
+  // $email = str_replace("/", "", $email);
+  // $email = preg_replace("/\s+/", "", $email);
 
   if($email!=""){
     $email = $_POST['email'];
