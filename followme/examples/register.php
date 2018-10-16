@@ -1,15 +1,18 @@
 <?php
-session_start();
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+  require('sitedbconn.php');
+  $email = $_POST['email'];
+  $email = trim($email);
+  $email = str_replace("\\", "", $email);
+  $email = str_replace("/", "", $email);
+  $email = preg_replace("/\s+/", "", $email);
 
-if(isset ($_POST['username'])){
-  $username = $_POST['username'];
   $password = $_POST['password'];
-
-  $sql = "SELECT username, password FROM users WHERE username = '$username'";
-
-
+  $password = password_hash($password, PASSWORD_BCRYPT);
+  $sql = "INSERT INTO users (username,password) VALUES ('$username','$password')";
+  $conn->query($sql); //to run the query
   header('Location: login.php');
-} ?>
+}?>
 
 
 <!doctype html>
@@ -39,6 +42,9 @@ if(isset ($_POST['username'])){
 
 </head>
 <body>
+  <form action="" method="post">
+
+
     <nav class="navbar navbar-expand-md fixed-top navbar-transparent">
         <div class="container">
 			<div class="navbar-translate">
@@ -124,6 +130,7 @@ if(isset ($_POST['username'])){
                 </div>
         </div>
     </div>
+  </form>
 </body>
 
 <!-- Core JS Files -->
