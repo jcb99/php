@@ -8,11 +8,21 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   $email = str_replace("/", "", $email);
   $email = preg_replace("/\s+/", "", $email);
 
+  if($email!=""){
+    $email = $_POST['email'];
+    $email = filter_var($email, FILTER_SANITIZE_STRING);
+    $email = trim($email);
+    $email = str_replace("\\", "", $email);
+    $email = str_replace("/", "", $email);
+    $email = preg_replace("/\s+/", "", $email);
+
+
   $password = $_POST['password'];
   $password = password_hash($password, PASSWORD_BCRYPT);
   $sql = "INSERT INTO fm_users (email,password) VALUES ('$email','$password')";
   $conn->query($sql); //to run the query
   header('Location: register.php');
+}
 }?>
 
 
