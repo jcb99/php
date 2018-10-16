@@ -2,11 +2,11 @@
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
   require('sitedbconn.php');
   $email = $_POST['email'];
-  //$email = filter_var($email, FILTER_SANITIZE_STRING);
-  //$email = trim($email);
-  //$email = str_replace("\\", "", $email);
-  //$email = str_replace("/", "", $email);
-  //$email = preg_replace("/\s+/", "", $email);
+  $email = filter_var($email, FILTER_SANITIZE_STRING);
+  $email = trim($email);
+  $email = str_replace("\\", "", $email);
+  $email = str_replace("/", "", $email);
+  $email = preg_replace("/\s+/", "", $email);
 
   $password = $_POST['password'];
   $password = password_hash($password, PASSWORD_BCRYPT);
@@ -111,10 +111,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                 </div>
                                 <form class="register-form">
                                     <label>Email</label>
-                                    <input type="text" class="form-control" placeholder="Email">
+                                    <input type="text" class="form-control" placeholder="Email" name="email">
 
                                     <label>Password</label>
-                                    <input type="password" class="form-control" placeholder="Password">
+                                    <input type="password" class="form-control" placeholder="Password" name="password">
                                     <button class="btn btn-danger btn-block btn-round">Register</button>
                                 </form>
                                 <div class="forgot">
