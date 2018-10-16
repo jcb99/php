@@ -1,6 +1,6 @@
 <?php
 
-$connection = new mysqli("localhost", "jake", "southhills#", "jake");
-if($connection->connect_error){
-  die("Cannot connect: " . $connection->connect_error);
+$conn = new mysqli('localhost', 'jake', 'southhills#', 'jake');
+if($conn->connect_error){
+  die("Cannot connect: " . $conn->connect_error);
 }?>
