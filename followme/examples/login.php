@@ -15,23 +15,6 @@ if(isset ($_POST['email'])){
   $password = $_POST['password'];
   $sql = "SELECT email, password FROM fm_users WHERE email = '$email'";
   $result = $conn->query($sql);
-  if (mysqli_num_rows($result) > 0){
-    echo "failed login.";
-
-    while ($row = $result->fetch_assoc()){
-      if($email == $row['email'] && password_verify($password, $row['password'])){
-        $_SESSION['email'] = $email;
-        echo "Logged in as: " . $_SESSION['email'];
-        header('Location: landing.html');
-      }
-    }
-  }
-
-  else{
-    echo "<script type='text/javascript'>alert('Failed login.');</script>";
-  }
-
-
 
 
 }
@@ -146,6 +129,21 @@ if (isset ($_POST['logout'])) { //if the post variable has been set,
 
                                     <label>Password</label>
                                     <input type="password" class="form-control" placeholder="Password" name="password">
+                                    <?php if (mysqli_num_rows($result) > 0){
+                                      echo "failed login.";
+
+                                      while ($row = $result->fetch_assoc()){
+                                        if($email == $row['email'] && password_verify($password, $row['password'])){
+                                          $_SESSION['email'] = $email;
+                                          echo "Logged in as: " . $_SESSION['email'];
+                                          header('Location: landing.html');
+                                        }
+                                      }
+                                    }
+
+                                    else{
+                                      echo "Login failed";
+                                    } ?>
                                     <button class="btn btn-danger btn-block btn-round">Login</button>
                                     <input type="submit" name="logout" value="Logout">
                                 </form>
