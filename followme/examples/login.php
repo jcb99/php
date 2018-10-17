@@ -16,15 +16,20 @@ if(isset ($_POST['email'])){
   $sql = "SELECT email, password FROM fm_users WHERE email = '$email'";
   $queryres = $conn->query($sql);
   echo "This is the value of the result " . $queryres;
-  // if ($queryres==""){
-  //   echo "failed login.";
-  // }
-  while ($row = $queryres->fetch_assoc()){
-    if($email == $row['email'] && password_verify($password, $row['password'])){
-      $_SESSION['email'] = $email;
-      echo "Logged in as: " . $_SESSION['email'];
-      header('Location: landing.html');
+  if (mysqli_num_rows($queryres) > 0){
+    echo "failed login.";
+
+    while ($row = $queryres->fetch_assoc()){
+      if($email == $row['email'] && password_verify($password, $row['password'])){
+        $_SESSION['email'] = $email;
+        echo "Logged in as: " . $_SESSION['email'];
+        header('Location: landing.html');
+      }
     }
+  }
+
+  else{
+    echo "login failed";
   }
 
 
