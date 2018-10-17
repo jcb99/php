@@ -23,13 +23,13 @@ if(isset ($_POST['email'])){
     }
   }
 
-  // if(isset($_SESSION['email'])){
-  //   echo "Yay! You successfully logged in!";
-  // }
-  //
-  // else{
-  //   echo "Incorrect. Please try again.";
-  // }
+  if(isset($_SESSION['email'])){
+    echo "Yay! You successfully logged in!";
+  }
+
+  else{
+    echo "Incorrect. Please try again.";
+  }
 
 }
 
@@ -66,12 +66,9 @@ else{
 </head>
 
 <?php
-
-
 if (isset ($_POST['logout'])) { //if the post variable has been set,
   unset($_SESSION['email']);
 }
-
  ?>
 
 <body>
