@@ -8,9 +8,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   $email = str_replace("/", "", $email);
   $email = preg_replace("/\s+/", "", $email);
 
-  if($email!=""){
+  if($email!="" && $password!=""){
   $password = $_POST['password'];
-  $sql = "SELECT (email, password) FROM fm_users WHERE email = '$email'";
+  $sql = "SELECT email, password FROM fm_users WHERE email = '$email'";
   $queryres = $conn->query($sql);
 
   while ($row = $queryres->fetch_assoc()){
