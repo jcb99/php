@@ -11,7 +11,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   if($email!=""){
   $password = $_POST['password'];
   $sql = "SELECT (email, password) FROM fm_users WHERE email = '$email'";
-  $conn->query($sql);
+  $passver = $conn->query($sql);
+
+  while ($row = $result->fetch_assoc()){
+    if($email == $row['email'] && password_verify($password $row['password'])){
+      $_SESSION['email'] = $email;
+    }
+  }
 
 
   header('Location: profile.html');
