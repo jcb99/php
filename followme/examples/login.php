@@ -24,7 +24,7 @@ if(isset ($_POST['email'])){
     }
   }
 
-  if(isset($_SESSION['email'])){
+  if($_SESSION['email'] != ""){
     echo "Yay! You successfully logged in!";
   }
 
