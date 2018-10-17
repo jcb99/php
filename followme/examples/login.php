@@ -19,7 +19,7 @@ if(isset ($_POST['email'])){
   while ($row = $queryres->fetch_assoc()){
     if($email == $row['email'] && password_verify($password, $row['password'])){
       $_SESSION['email'] = $email;
-      header('Location: profile.html');
+      header('Location: login.php');
     }
   }
 
