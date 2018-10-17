@@ -10,9 +10,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
   if($email!=""){
   $password = $_POST['password'];
-  $password = password_hash($password, PASSWORD_BCRYPT);
   $sql = "SELECT (email, password) FROM fm_users WHERE email = '$email'";
   $conn->query($sql);
+
+
   header('Location: profile.html');
 }
 
