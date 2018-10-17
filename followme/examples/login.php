@@ -24,7 +24,7 @@ if(isset ($_POST['email'])){
     }
 
     else{
-      echo "Failed login attempt."
+      echo "Failed login attempt.";
     }
   }
 
