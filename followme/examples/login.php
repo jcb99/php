@@ -1,6 +1,9 @@
 <?php
+session_start();
+require('sitedbconn.php');
+
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-  require('sitedbconn.php');
+
   $email = $_POST['email'];
   $email = filter_var($email, FILTER_SANITIZE_STRING);
   $email = trim($email);
@@ -14,7 +17,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   $queryres = $conn->query($sql);
 
   while ($row = $queryres->fetch_assoc()){
-    if($email == $row['email'] && password_verify($password $row['password'])){
+    if($email == $row['email'] && password_verify($password, $row['password'])){
       $_SESSION['email'] = $email;
     }
   }
