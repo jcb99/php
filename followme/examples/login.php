@@ -22,15 +22,19 @@ if(isset ($_POST['email'])){
       echo "Logged in as: " . $_SESSION['email'];
       header('Location: landing.html');
     }
+
+    else{
+      echo "Failed login attempt."
+    }
   }
 
-  if($_SESSION['email'] != ""){
-    echo "Yay! You successfully logged in!";
-  }
-
-  else{
-    echo "Incorrect. Please try again.";
-  }
+  // if($_SESSION['email'] != ""){
+  //   echo "Yay! You successfully logged in!";
+  // }
+  //
+  // else{
+  //   echo "Incorrect. Please try again.";
+  // }
 
 }
 
