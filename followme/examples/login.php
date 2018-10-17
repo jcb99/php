@@ -22,10 +22,10 @@ if(isset ($_POST['email'])){
       echo "Logged in as: " . $_SESSION['email'];
       header('Location: landing.html');
     }
-    if($email != $row['email'])
-    {
-      echo "Failed login attempt.";
-    }
+  }
+
+  if ($sql == ""){
+    echo "Failed login";
   }
 
   // if($_SESSION['email'] != ""){
