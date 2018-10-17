@@ -69,11 +69,11 @@ else{
 
 
 if (isset ($_POST['logout'])) { //if the post variable has been set,
-  unset($_SESSION['username']);
+  unset($_SESSION['email']);
 }
 
  ?>
- 
+
 <body>
     <nav class="navbar navbar-expand-md fixed-top navbar-transparent">
         <div class="container">
