@@ -18,11 +18,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   while ($row = $queryres->fetch_assoc()){
     if($email == $row['email'] && password_verify($password, $row['password'])){
       $_SESSION['email'] = $email;
+      header('Location: login.php');
     }
   }
 
+  if(isset($_SESSION['email']){
+    echo "Yay! You successfully logged in!";
+  }
 
-  header('Location: profile.html');
+  else{
+    echo "Incorrect. Please try again.";
+  }
+
 }
 
 else{
