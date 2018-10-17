@@ -15,10 +15,10 @@ if(isset ($_POST['email'])){
   $password = $_POST['password'];
   $sql = "SELECT email, password FROM fm_users WHERE email = '$email'";
   $queryres = $conn->query($sql);
-  echo $queryres;
-  if ($queryres==""){
-    echo "failed login.";
-  }
+  echo "This is the value of the result " . $queryres;
+  // if ($queryres==""){
+  //   echo "failed login.";
+  // }
   while ($row = $queryres->fetch_assoc()){
     if($email == $row['email'] && password_verify($password, $row['password'])){
       $_SESSION['email'] = $email;
