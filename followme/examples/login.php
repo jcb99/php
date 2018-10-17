@@ -20,7 +20,7 @@ if(isset ($_POST['email'])){
     if($email == $row['email'] && password_verify($password, $row['password'])){
       $_SESSION['email'] = $email;
       echo "Logged in as: " . $_SESSION['email'];
-      header('Location: login.php');
+      header('Location: landing.html');
     }
   }
 
