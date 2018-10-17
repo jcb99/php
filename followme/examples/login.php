@@ -15,7 +15,7 @@ if(isset ($_POST['email'])){
   $password = $_POST['password'];
   $sql = "SELECT email, password FROM fm_users WHERE email = '$email'";
   $queryres = $conn->query($sql);
-  echo "This is the value of the result " . $queryres;
+  //echo "This is the value of the result " . $queryres;
   // if ($queryres==""){
   //   echo "failed login.";
   // }
