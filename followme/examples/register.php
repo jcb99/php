@@ -93,6 +93,28 @@
 									<a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon">
 										<i class="fa fa-twitter"></i>
 									</a>
+                  <?php
+                  if($_SERVER['REQUEST_METHOD'] == 'POST'){
+                    require('sitedbconn.php');
+                    $email = $_POST['email'];
+                    $email = filter_var($email, FILTER_SANITIZE_STRING);
+                    $email = trim($email);
+                    $email = str_replace("\\", "", $email);
+                    $email = str_replace("/", "", $email);
+                    $email = preg_replace("/\s+/", "", $email);
+
+                    if($email!=""){
+                    $password = $_POST['password'];
+                    $password = password_hash($password, PASSWORD_BCRYPT);
+                    $sql = "INSERT INTO fm_users (email,password) VALUES ('$email','$password')";
+                    $conn->query($sql);
+                    header('Location: landing.html');
+                  }
+
+                  else{
+                    echo "Not a valid username. Please re-enter.";
+                  }
+                  }?>
                                 </div>
                                 <form class="register-form">
                                     <label>Email</label>
@@ -102,28 +124,7 @@
                                     <input type="password" class="form-control" placeholder="Password" name="password">
                                     <button class="btn btn-danger btn-block btn-round">Register</button>
                                 </form>
-                                <?php
-                                if($_SERVER['REQUEST_METHOD'] == 'POST'){
-                                  require('sitedbconn.php');
-                                  $email = $_POST['email'];
-                                  $email = filter_var($email, FILTER_SANITIZE_STRING);
-                                  $email = trim($email);
-                                  $email = str_replace("\\", "", $email);
-                                  $email = str_replace("/", "", $email);
-                                  $email = preg_replace("/\s+/", "", $email);
 
-                                  if($email!=""){
-                                  $password = $_POST['password'];
-                                  $password = password_hash($password, PASSWORD_BCRYPT);
-                                  $sql = "INSERT INTO fm_users (email,password) VALUES ('$email','$password')";
-                                  $conn->query($sql);
-                                  header('Location: landing.html');
-                                }
-
-                                else{
-                                  echo "Not a valid username. Please re-enter.";
-                                }
-                                }?>
                                 <div class="forgot">
                                     <a href="#" class="btn btn-link btn-danger">Forgot password?</a>
                                 </div>
