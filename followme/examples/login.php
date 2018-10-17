@@ -17,7 +17,7 @@ if(isset ($_POST['email'])){
   $result = $conn->query($sql);
 
 
-    if (mysqli_num_rows($result) > 0){
+    if (mysqli_num_rows($result) > 0 || ($email != "")){
       echo "failed login.";
 
       while ($row = $result->fetch_assoc()){
