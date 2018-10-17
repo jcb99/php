@@ -120,7 +120,7 @@ else{
 
                                     <label>Password</label>
                                     <input type="password" class="form-control" placeholder="Password" name="password">
-                                    <button class="btn btn-danger btn-block btn-round" type="submit">Register</button>
+                                    <button class="btn btn-danger btn-block btn-round">Register</button>
                                 </form>
 
                                 <div class="forgot">
