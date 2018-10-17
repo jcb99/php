@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   $email = str_replace("/", "", $email);
   $email = preg_replace("/\s+/", "", $email);
 
-  if($email!="" && $password!=""){
+  if($email!=""){
   $password = $_POST['password'];
   $sql = "SELECT email, password FROM fm_users WHERE email = '$email'";
   $queryres = $conn->query($sql);
@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 }
 
 else{
-  echo "Not a valid username. Please re-enter.";
+  echo "Not a valid email or password. Please re-enter.";
 }
 }?>
 
