@@ -64,6 +64,16 @@ else{
 	<link href="../assets/css/nucleo-icons.css" rel="stylesheet">
 
 </head>
+
+<?php
+
+
+if (isset ($_POST['logout'])) { //if the post variable has been set,
+  unset($_SESSION['username']);
+}
+
+ ?>
+ 
 <body>
     <nav class="navbar navbar-expand-md fixed-top navbar-transparent">
         <div class="container">
@@ -137,6 +147,7 @@ else{
                                     <label>Password</label>
                                     <input type="password" class="form-control" placeholder="Password" name="password">
                                     <button class="btn btn-danger btn-block btn-round">Login</button>
+                                    <input type="submit" name="logout" value="Logout">
                                 </form>
 
                                 <div class="forgot">
