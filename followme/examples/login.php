@@ -23,7 +23,7 @@ if(isset ($_POST['email'])){
     }
   }
 
-  if($email!=""){
+  if(isset($_SESSION['email']) && email !=""){
     echo "Yay! You successfully logged in!";
   }
 
