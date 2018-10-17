@@ -114,7 +114,7 @@ else{
 										<i class="fa fa-twitter"></i>
 									</a>
                                 </div>
-                                <form class="register-form">
+                                <form class="register-form" action="" method="post">
                                     <label>Email</label>
                                     <input type="text" class="form-control" placeholder="Email" name="email">
 
