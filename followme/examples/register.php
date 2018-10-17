@@ -48,7 +48,7 @@ else{
 
 </head>
 <body>
-  <form action="" method="post">
+
     <nav class="navbar navbar-expand-md fixed-top navbar-transparent">
         <div class="container">
 			<div class="navbar-translate">
@@ -120,7 +120,7 @@ else{
 
                                     <label>Password</label>
                                     <input type="password" class="form-control" placeholder="Password" name="password">
-                                    <button class="btn btn-danger btn-block btn-round">Register</button>
+                                    <button class="btn btn-danger btn-block btn-round" type="submit">Register</button>
                                 </form>
 
                                 <div class="forgot">
@@ -135,7 +135,7 @@ else{
                 </div>
         </div>
     </div>
-  </form>
+
 </body>
 
 <!-- Core JS Files -->
