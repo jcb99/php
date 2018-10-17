@@ -102,7 +102,7 @@ else{
                     <div class="row">
                         <div class="col-lg-4 ml-auto mr-auto">
                             <div class="card card-register">
-                                <h3 class="title">Welcome</h3>
+                                <h3 class="title">Login!</h3>
 								<div class="social-line text-center">
                                     <a href="#pablo" class="btn btn-neutral btn-facebook btn-just-icon">
                                         <i class="fa fa-facebook-square"></i>
@@ -120,11 +120,11 @@ else{
 
                                     <label>Password</label>
                                     <input type="password" class="form-control" placeholder="Password" name="password">
-                                    <button class="btn btn-danger btn-block btn-round">Register</button>
+                                    <button class="btn btn-danger btn-block btn-round">Login</button>
                                 </form>
 
                                 <div class="forgot">
-                                    <a href="#" class="btn btn-link btn-danger">Forgot password?</a>
+                                    <a href="#" class="btn btn-link btn-danger">Register?</a>
                                 </div>
                             </div>
                         </div>
