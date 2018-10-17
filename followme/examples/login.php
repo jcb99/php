@@ -32,13 +32,7 @@ if(isset ($_POST['email'])){
   }
 
 
-  // if($_SESSION['email'] != ""){
-  //   echo "Yay! You successfully logged in!";
-  // }
-  //
-  // else{
-  //   echo "Incorrect. Please try again.";
-  // }
+
 
 }
 
@@ -157,7 +151,7 @@ if (isset ($_POST['logout'])) { //if the post variable has been set,
                                 </form>
 
                                 <div class="forgot">
-                                    <a href="#" class="btn btn-link btn-danger">Register?</a>
+                                    <a href="register.php" class="btn btn-link btn-danger">Register?</a>
                                 </div>
                             </div>
                         </div>
