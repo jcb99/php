@@ -6,7 +6,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   //$email = trim($email);
   //$email = str_replace("\\", "", $email);
   //$email = str_replace("/", "", $email);
-  $email = preg_replace("/\s+/", "", $email);
+  //$email = preg_replace("/\s+/", "", $email);
 
   if(filter_var($email, FILTER_VALIDATE_EMAIL)){
   $password = $_POST['password'];
