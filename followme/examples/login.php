@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   $sql = "SELECT (email, password) FROM fm_users WHERE email = '$email'";
   $passver = $conn->query($sql);
 
-  while ($row = $result->fetch_assoc()){
+  while ($row = $passver->fetch_assoc()){
     if($email == $row['email'] && password_verify($password $row['password'])){
       $_SESSION['email'] = $email;
     }
