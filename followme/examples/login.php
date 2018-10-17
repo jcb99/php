@@ -129,17 +129,20 @@ if (isset ($_POST['logout'])) { //if the post variable has been set,
 
                                     <label>Password</label>
                                     <input type="password" class="form-control" placeholder="Password" name="password">
-                                    <?php if (mysqli_num_rows($result) > 0){
-                                      echo "failed login.";
+                                    <?php
+                                    if(isset ($_POST['email'])){
+                                      if (mysqli_num_rows($result) > 0){
+                                        echo "failed login.";
 
-                                      while ($row = $result->fetch_assoc()){
-                                        if($email == $row['email'] && password_verify($password, $row['password'])){
-                                          $_SESSION['email'] = $email;
-                                          echo "Logged in as: " . $_SESSION['email'];
-                                          header('Location: landing.html');
+                                        while ($row = $result->fetch_assoc()){
+                                          if($email == $row['email'] && password_verify($password, $row['password'])){
+                                            $_SESSION['email'] = $email;
+                                            echo "Logged in as: " . $_SESSION['email'];
+                                            header('Location: landing.html');
+                                          }
                                         }
                                       }
-                                    }
+                                  }
 
                                     else{
                                       echo "Login failed";
