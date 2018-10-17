@@ -14,6 +14,7 @@ if(isset ($_POST['email'])){
 
   $password = $_POST['password'];
   $sql = "SELECT email, password FROM fm_users WHERE email = '$email'";
+  echo "this is the value of sql " . $sql;
   $queryres = $conn->query($sql);
 
   while ($row = $queryres->fetch_assoc()){
@@ -24,9 +25,6 @@ if(isset ($_POST['email'])){
     }
   }
 
-  if ($sql == ""){
-    echo "Failed login";
-  }
 
   // if($_SESSION['email'] != ""){
   //   echo "Yay! You successfully logged in!";
