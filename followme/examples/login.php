@@ -28,7 +28,7 @@ if(isset ($_POST['email'])){
   }
 
   else{
-    echo "login failed";
+    echo "<script type='text/javascript'>alert('Failed login.');</script>";
   }
 
 
