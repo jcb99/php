@@ -17,7 +17,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 }
 
 else{
-  echo "Not a valid email. Please re-enter.";
+  echo $email . "is not a valid email address. Please enter a valid email address.";
 }
 }?>
 
