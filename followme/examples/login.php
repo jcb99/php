@@ -4,7 +4,7 @@ require('sitedbconn.php');
 
 if($email!=""){
 
-  $email = $_POST['email'];
+  $email = $_GET['email'];
   // $email = filter_var($email, FILTER_SANITIZE_STRING);
   // $email = trim($email);
   // $email = str_replace("\\", "", $email);
