@@ -22,7 +22,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     }
   }
 
-  if(isset($_SESSION['email']){
+  if(isset($_SESSION['email'])){
     echo "Yay! You successfully logged in!";
   }
 
