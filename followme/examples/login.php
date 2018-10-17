@@ -22,8 +22,8 @@ if(isset ($_POST['email'])){
       echo "Logged in as: " . $_SESSION['email'];
       header('Location: landing.html');
     }
-
-    else{
+    if($email != $row['email'])
+    {
       echo "Failed login attempt.";
     }
   }
