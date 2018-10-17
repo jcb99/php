@@ -22,13 +22,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     }
   }
 
-  if(isset($_SESSION['email'])){
-    echo "Yay! You successfully logged in!";
-  }
-
-  else{
-    echo "Incorrect. Please try again.";
-  }
+  // if(isset($_SESSION['email'])){
+  //   echo "Yay! You successfully logged in!";
+  // }
+  //
+  // else{
+  //   echo "Incorrect. Please try again.";
+  // }
 
 }
 
@@ -64,7 +64,6 @@ else{
 
 </head>
 <body>
-  <form action="" method="post">
     <nav class="navbar navbar-expand-md fixed-top navbar-transparent">
         <div class="container">
 			<div class="navbar-translate">
@@ -130,7 +129,7 @@ else{
 										<i class="fa fa-twitter"></i>
 									</a>
                                 </div>
-                                <form class="register-form">
+                                <form class="register-form" action="" method="post">
                                     <label>Email</label>
                                     <input type="text" class="form-control" placeholder="Email" name="email">
 
@@ -151,7 +150,10 @@ else{
                 </div>
         </div>
     </div>
-  </form>
+
+  <?php
+    echo "Logged in as: " . $_SESSION['email'];
+   ?>
 </body>
 
 <!-- Core JS Files -->
