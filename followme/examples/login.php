@@ -33,10 +33,10 @@ if(isset ($_POST['email'])){
 
 }
 
-else{
-  echo "Not a valid email or password. Please re-enter.";
-
-}?>
+// else{
+//   echo "Not a valid email or password. Please re-enter.";
+//
+// }?>
 
 <!doctype html>
 <html lang="en">
