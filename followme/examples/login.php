@@ -19,11 +19,12 @@ if(isset ($_POST['email'])){
   while ($row = $queryres->fetch_assoc()){
     if($email == $row['email'] && password_verify($password, $row['password'])){
       $_SESSION['email'] = $email;
+      echo "Logged in as: " . $_SESSION['email'];
       //header('Location: login.php');
     }
   }
 
-  if(isset($_SESSION['email']) && email !=""){
+  if(isset($_SESSION['email'])){
     echo "Yay! You successfully logged in!";
   }
 
@@ -160,9 +161,6 @@ if (isset ($_POST['logout'])) { //if the post variable has been set,
         </div>
     </div>
 
-  <?php
-    echo "Logged in as: " . $_SESSION['email'];
-   ?>
 </body>
 
 <!-- Core JS Files -->
