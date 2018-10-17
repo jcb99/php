@@ -2,7 +2,7 @@
 session_start();
 require('sitedbconn.php');
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+if($email!=""){
 
   $email = $_POST['email'];
   // $email = filter_var($email, FILTER_SANITIZE_STRING);
@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   // $email = str_replace("/", "", $email);
   // $email = preg_replace("/\s+/", "", $email);
 
-  //if($email!=""){
+
   $password = $_POST['password'];
   $sql = "SELECT email, password FROM fm_users WHERE email = '$email'";
   $queryres = $conn->query($sql);
@@ -31,11 +31,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   //   echo "Incorrect. Please try again.";
   // }
 
-//}
+}
 
 else{
   echo "Not a valid email or password. Please re-enter.";
-}
+
 }?>
 
 <!doctype html>
