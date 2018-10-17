@@ -8,7 +8,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   $email = str_replace("/", "", $email);
   $email = preg_replace("/\s+/", "", $email);
 
-  if($email!=""){
+  if(filter_var($email, FILTER_VALIDATE_EMAIL)){
   $password = $_POST['password'];
   $password = password_hash($password, PASSWORD_BCRYPT);
   $sql = "INSERT INTO fm_users (email,password) VALUES ('$email','$password')";
@@ -17,7 +17,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 }
 
 else{
-  echo "Not a valid username. Please re-enter.";
+  echo "Not a valid email. Please re-enter.";
 }
 }?>
 
