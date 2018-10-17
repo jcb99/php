@@ -48,7 +48,6 @@ else{
 
 </head>
 <body>
-  <form action="" method="post">
     <nav class="navbar navbar-expand-md fixed-top navbar-transparent">
         <div class="container">
 			<div class="navbar-translate">
@@ -135,7 +134,6 @@ else{
                 </div>
         </div>
     </div>
-  </form>
 </body>
 
 <!-- Core JS Files -->
