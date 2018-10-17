@@ -2,7 +2,7 @@
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
   require('sitedbconn.php');
   $email = $_POST['email'];
-  $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+  //$email = filter_var($email, FILTER_SANITIZE_EMAIL);
   $email = trim($email);
   $email = str_replace("\\", "", $email);
   $email = str_replace("/", "", $email);
@@ -17,7 +17,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 }
 
 else{
-  echo $email . "is not a valid email address. Please enter a valid email address.";
+  echo $email . " is not a valid email address. Please enter a valid email address.";
 }
 }?>
 
