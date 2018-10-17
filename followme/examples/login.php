@@ -16,8 +16,8 @@ if(isset ($_POST['email'])){
   $sql = "SELECT email, password FROM fm_users WHERE email = '$email'";
   $result = $conn->query($sql);
 
-  if($email!=""){
-    if (mysqli_num_rows($result) > 0){
+
+    if (mysqli_num_rows($result) > 0 || $email==""){
       echo "failed login.";
 
       while ($row = $result->fetch_assoc()){
@@ -28,7 +28,7 @@ if(isset ($_POST['email'])){
         }
       }
     }
-}
+
 
 else {
   echo "Failed Login.";
