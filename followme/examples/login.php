@@ -144,7 +144,7 @@ if (isset ($_POST['logout'])) { //if the post variable has been set,
                                     <label>Password</label>
                                     <input type="password" class="form-control" placeholder="Password" name="password">
                                     <button class="btn btn-danger btn-block btn-round">Login</button>
-                                    <input align="center" type="submit" name="logout" value="Logout">
+                                    <!-- <input type="submit" name="logout" value="Logout"> -->
                                 </form>
 
                                 <div class="forgot">
