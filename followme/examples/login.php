@@ -16,9 +16,9 @@ if(isset ($_POST['email'])){
   $sql = "SELECT email, password FROM fm_users WHERE email = '$email'";
   $result = $conn->query($sql);
 
-    if ($email== ""){
-      echo "Email is blank";
-    }
+    // if ($email== ""){
+    //   echo "Email is blank";
+    // }
 
     if (mysqli_num_rows($result) > 0){
 
