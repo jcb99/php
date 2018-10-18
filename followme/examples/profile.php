@@ -40,6 +40,13 @@
 	                <li class="nav-item">
 	                    <a href="login.php" class="nav-link">Login</a>
 	                </li>
+
+									<li class="nav-item">
+											<a href="#" class="nav-link">
+												Welcome <?php
+												echo $email;
+												  ?></a>
+									</li>
 	            </ul>
 	        </div>
 		</div>
