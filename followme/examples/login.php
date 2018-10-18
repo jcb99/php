@@ -6,32 +6,31 @@ if(isset ($_POST['email'])){
 
   $email = $_POST['email'];
   $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-  $email = trim($email);
+  //$email = trim($email);
   // $email = str_replace("\\", "", $email);
   // $email = str_replace("/", "", $email);
   // $email = preg_replace("/\s+/", "", $email);
-
 
   $password = $_POST['password'];
   $sql = "SELECT email, password FROM fm_users WHERE email = '$email'";
   $result = $conn->query($sql);
 
-    if (mysqli_num_rows($result) > 0){
+  if (mysqli_num_rows($result) > 0){
 
 
-      while ($row = $result->fetch_assoc()){
-        if($email == $row['email'] && password_verify($password, $row['password'])){
-          $_SESSION['email'] = $email;
-          echo "Logged in as: " . $_SESSION['email'];
-          header('Location: landing.html');
-        }
+    while ($row = $result->fetch_assoc()){
+      if($email == $row['email'] && password_verify($password, $row['password'])){
+        $_SESSION['email'] = $email;
+        echo "Logged in as: " . $_SESSION['email'];
+        header('Location: landing.html');
       }
     }
+  }
 
 
-else {
-  echo "Login failed. Email or password is incorrect.";
-}
+  else {
+    echo "Login failed. Email or password is incorrect.";
+  }
 
 }
 
