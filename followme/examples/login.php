@@ -112,7 +112,7 @@ if(isset ($_POST['email']) && isset ($_POST['password'])){
 		</div>
     </nav>
     <div class="wrapper">
-        <div class="page-header" style="background-image: url('../assets/img/login-image.jpg');">
+        <div class="page-header" style="background-image: url('../assets/img/loginimg.jpg');">
             <div class="filter"></div>
                 <div class="container">
                     <div class="row">
