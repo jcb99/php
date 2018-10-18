@@ -2,7 +2,7 @@
 session_start();
 require('sitedbconn.php');
 
-if(isset ($_POST['email'])){
+if($email!=""){ //isset ($_POST['email'])
 
   $email = $_POST['email'];
   $email = filter_var($email, FILTER_SANITIZE_EMAIL);
@@ -15,7 +15,7 @@ if(isset ($_POST['email'])){
   $sql = "SELECT email, password FROM fm_users WHERE email = '$email'";
   $result = $conn->query($sql);
 
-  if (mysqli_num_rows($result) > 0 && email !=""){
+  if (mysqli_num_rows($result) > 0){
 
 
     while ($row = $result->fetch_assoc()){
