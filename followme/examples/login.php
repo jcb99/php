@@ -18,7 +18,7 @@ if(isset ($_POST['email'])){
 
 
     if (mysqli_num_rows($result) > 0 || $email==""){
-      echo "failed login.";
+      echo "Login failed. Email or password is incorrect.";
 
       while ($row = $result->fetch_assoc()){
         if($email == $row['email'] && password_verify($password, $row['password'])){
