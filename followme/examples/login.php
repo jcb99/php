@@ -10,13 +10,13 @@ if(isset ($_POST['email']) && isset ($_POST['password'])){
    $email = str_replace("\\", "", $email);
    $email = str_replace("/", "", $email);
    $email = preg_replace("/\s+/", "", $email);
+   echo $email;
 
-
+   $password = $_POST['password'];
+   $sql = "SELECT email, password FROM fm_users WHERE email = '$email'";
+   $result = $conn->query($sql);
 
   if (mysqli_num_rows($result) > 0){
-    $password = $_POST['password'];
-    $sql = "SELECT email, password FROM fm_users WHERE email = '$email'";
-    $result = $conn->query($sql);
 
     while ($row = $result->fetch_assoc()){
       if($email == $row['email'] && password_verify($password, $row['password'])){
