@@ -2,7 +2,7 @@
 session_start();
 require('sitedbconn.php');
 
-if(isset ($_POST['email']) && isset ($_POST['password'])){ 
+if(isset ($_POST['email']) && isset ($_POST['password'])){
 
   $email = $_POST['email'];
   $email = filter_var($email, FILTER_SANITIZE_EMAIL);
@@ -34,9 +34,9 @@ if(isset ($_POST['email']) && isset ($_POST['password'])){
 
 }
 
-else {
-  echo "Login failed. Email or password is incorrect.";
-}
+// else {
+//   echo "Login failed. Email or password is incorrect.";
+// }
 
 ?>
 
