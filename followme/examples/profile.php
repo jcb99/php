@@ -1,7 +1,11 @@
 <?php
 session_start(); //Start session_start
 
-//Uses the $_SESSION['email'] POST variable to display the email in the nav bar at the top (WElcome $_SESSION['email']) ?>
+//Uses the $_SESSION['email'] POST variable to display the email in the nav bar at the top (Welcome $_SESSION['email'])
+
+//Modify fm_users to image_url...load it to the $_SESSION['email'] variable
+
+//Modify the fm_users table to include first and last name....Use the session variable first name and last name ?>
 
 <!doctype html>
 <html lang="en">
@@ -49,7 +53,7 @@ session_start(); //Start session_start
 									<li class="nav-item">
 											<a href="#" class="nav-link">
 												Welcome <?php
-												echo " " . $_SESSION['email']; //WE need to use the session variable here because we don't have a variable called email on this page
+												echo " " . $_SESSION['first_name']; //WE need to use the session variable here because we don't have a variable called email on this page
 												  ?></a>
 									</li>
 	            </ul>
@@ -65,10 +69,10 @@ session_start(); //Start session_start
             <div class="container">
                 <div class="owner">
                     <div class="avatar">
-                        <img src="../assets/img/faces/joe-gardner-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                        <img src="<?php echo $_SESSION['image_url']; ?>" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                     </div>
                     <div class="name">
-                        <h4 class="title">Jane Faker<br /></h4>
+                        <h4 class="title"><?php echo $_SESSION['first_name'] . " " . $_SESSION['last_name']; ?><br /></h4>
 						<h6 class="description">Music Producer</h6>
                     </div>
                 </div>
