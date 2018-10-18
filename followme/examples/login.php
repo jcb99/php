@@ -15,11 +15,10 @@ if(isset ($_POST['email']) && isset ($_POST['password'])){
   if (mysqli_num_rows($result) > 0){
 
     while ($row = $result->fetch_assoc()){
-      if($email == $row['email'] && password_verify($password, $row['password'])){
+      if(password_verify($password, $row['password'])){
         $_SESSION['email'] = $email;
-
-        header('Location: profile.html');
         echo "Logged in as: " . $_SESSION['email'];
+        header('Location: profile.html');
       }
 
       else {
