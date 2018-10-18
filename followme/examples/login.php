@@ -16,9 +16,12 @@ if(isset ($_POST['email'])){
   $sql = "SELECT email, password FROM fm_users WHERE email = '$email'";
   $result = $conn->query($sql);
 
+    if ($email== ""){
+      echo "Email is blank";
+    }
 
-    if (mysqli_num_rows($result) > 0 || $email==""){
-      //echo "Login failed. Email or password is incorrect.";
+    if (mysqli_num_rows($result) > 0){
+
 
       while ($row = $result->fetch_assoc()){
         if($email == $row['email'] && password_verify($password, $row['password'])){
