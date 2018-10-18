@@ -8,7 +8,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   $email = str_replace("/", "", $email);
   //$email = preg_replace("/\s+/", "", $email);
 
-  if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+  if(filter_var($email, FILTER_SANITIZE_EMAIL)){
   $password = $_POST['password'];
   $password = password_hash($password, PASSWORD_BCRYPT);
   $sql = "INSERT INTO fm_users (email,password) VALUES ('$email','$password')";
