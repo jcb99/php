@@ -2,7 +2,7 @@
 session_start();
 require('sitedbconn.php');
 
-if($email!=""){ //isset ($_POST['email'])
+if(isset ($_POST['email']) && (isset ($_POST)['password'])){ 
 
   $email = $_POST['email'];
   $email = filter_var($email, FILTER_SANITIZE_EMAIL);
