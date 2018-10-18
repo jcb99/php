@@ -34,6 +34,10 @@ if(isset ($_POST['email'])){
 
 }
 
+else {
+  echo "Login failed. Email or password is incorrect.";
+}
+
 ?>
 
 <!doctype html>
