@@ -4,8 +4,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   $email = $_POST['email'];
   $email = filter_var($email, FILTER_SANITIZE_EMAIL);
   //$email = trim($email);
-  $email = str_replace("\\", "", $email);
-  $email = str_replace("/", "", $email);
+  //$email = str_replace("\\", "", $email);
+  //$email = str_replace("/", "", $email);
   //$email = preg_replace("/\s+/", "", $email);
 
   if(filter_var($email, FILTER_VALIDATE_EMAIL)){
