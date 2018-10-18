@@ -3,10 +3,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   require('sitedbconn.php');
   $email = $_POST['email'];
   $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-  //$email = trim($email);
-  //$email = str_replace("\\", "", $email);
-  //$email = str_replace("/", "", $email);
-  //$email = preg_replace("/\s+/", "", $email);
 
   if(filter_var($email, FILTER_VALIDATE_EMAIL)){
   $password = $_POST['password'];
@@ -14,11 +10,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   $sql = "INSERT INTO fm_users (email,password) VALUES ('$email','$password')";
   $conn->query($sql);
   header('Location: login.php');
-}
+  }
 
-else{
-  echo $email . " is not a valid email address. Please enter a valid email address.";
-}
+  else{
+    echo $email . " is not a valid email address. Please enter a valid email address.";
+  }
 }?>
 
 <!doctype html>

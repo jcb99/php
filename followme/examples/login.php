@@ -6,12 +6,9 @@ if(isset ($_POST['email']) && isset ($_POST['password'])){
 
   $email = $_POST['email'];
   $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-  // $email = trim($email);
-  //  $email = str_replace("\\", "", $email);
-  //  $email = str_replace("/", "", $email);
-  //  $email = preg_replace("/\s+/", "", $email);
 
    $password = $_POST['password'];
+
    $sql = "SELECT email, password FROM fm_users WHERE email = '$email'";
    $result = $conn->query($sql);
 
