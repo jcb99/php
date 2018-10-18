@@ -2,13 +2,13 @@
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
   require('sitedbconn.php');
   $email = $_POST['email'];
-  //$email = filter_var($email, FILTER_SANITIZE_EMAIL);
+  $email = filter_var($email, FILTER_SANITIZE_EMAIL);
   //$email = trim($email);
   $email = str_replace("\\", "", $email);
   $email = str_replace("/", "", $email);
   //$email = preg_replace("/\s+/", "", $email);
 
-  if(filter_var($email, FILTER_SANITIZE_EMAIL)){
+  if(filter_var($email, FILTER_VALIDATE_EMAIL)){
   $password = $_POST['password'];
   $password = password_hash($password, PASSWORD_BCRYPT);
   $sql = "INSERT INTO fm_users (email,password) VALUES ('$email','$password')";
