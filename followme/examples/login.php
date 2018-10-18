@@ -17,8 +17,9 @@ if(isset ($_POST['email']) && isset ($_POST['password'])){
     while ($row = $result->fetch_assoc()){
       if($email == $row['email'] && password_verify($password, $row['password'])){
         $_SESSION['email'] = $email;
-        echo "Logged in as: " . $_SESSION['email'];
+
         header('Location: profile.html');
+        echo "Logged in as: " . $_SESSION['email'];
       }
 
       else {
