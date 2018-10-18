@@ -24,6 +24,11 @@ if(isset ($_POST['email']) && isset ($_POST['password'])){
         echo "Logged in as: " . $_SESSION['email'];
         header('Location: landing.html');
       }
+
+      else {
+        echo "Login failed. Email or password is incorrect.";
+      }
+
     }
   }
 
