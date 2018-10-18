@@ -1,7 +1,7 @@
 <?php
 session_start(); //Start session_start
 
-//Uses the $_SESSION['email'] POST variable to display the email in the nav bar at the top (Welcome $_SESSION['email'])
+//Uses the $_SESSION['email'] POST variable to display the email in the nav bar at the top (Welcome $_SESSION['image_url'])
 
 //Modify fm_users to image_url...load it to the $_SESSION['email'] variable
 
