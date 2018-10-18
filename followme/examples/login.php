@@ -10,7 +10,6 @@ if(isset ($_POST['email']) && isset ($_POST['password'])){
    $email = str_replace("\\", "", $email);
    $email = str_replace("/", "", $email);
    $email = preg_replace("/\s+/", "", $email);
-   echo $email;
 
    $password = $_POST['password'];
    $sql = "SELECT email, password FROM fm_users WHERE email = '$email'";
@@ -39,9 +38,6 @@ if(isset ($_POST['email']) && isset ($_POST['password'])){
 
 }
 
-// else {
-//   echo "Login failed. Email or password is incorrect.";
-// }
 
 ?>
 
