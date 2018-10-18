@@ -1,3 +1,8 @@
+<?php
+session_start(); //Start session_start
+
+//Uses the $_SESSION['email'] POST variable to display the email in the nav bar at the top (WElcome $_SESSION['email']) ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -44,7 +49,7 @@
 									<li class="nav-item">
 											<a href="#" class="nav-link">
 												Welcome <?php
-												echo $email;
+												echo " " . $_SESSION['email']; //WE need to use the session variable here because we don't have a variable called email on this page
 												  ?></a>
 									</li>
 	            </ul>
