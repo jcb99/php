@@ -9,7 +9,7 @@ if(isset ($_POST['email']) && isset ($_POST['password'])){
 
    $password = $_POST['password'];
 
-   $sql = "SELECT email, password, description FROM fm_users WHERE email = '$email'";
+   $sql = "SELECT * FROM fm_users WHERE email = '$email'";
    $result = $conn->query($sql);
 
   if (mysqli_num_rows($result) > 0){
