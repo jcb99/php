@@ -18,6 +18,8 @@ if(isset ($_POST['email']) && isset ($_POST['password'])){
       if(password_verify($password, $row['password'])){
         $_SESSION['email'] = $email;
         $_SESSION['description'] = $description;
+        $_SESSION['img_url'] = $img_url;
+
         echo "Logged in as: " . $_SESSION['email'];
         header('Location: profile.php');
       }
