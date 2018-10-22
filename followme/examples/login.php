@@ -9,7 +9,7 @@ if(isset ($_POST['email']) && isset ($_POST['password'])){
 
    $password = $_POST['password'];
 
-   $sql = "SELECT * FROM fm_users WHERE email = '$email'";
+   $sql = "SELECT email, password, description FROM fm_users WHERE email = '$email'";
    $result = $conn->query($sql);
 
   if (mysqli_num_rows($result) > 0){
@@ -18,6 +18,7 @@ if(isset ($_POST['email']) && isset ($_POST['password'])){
       if(password_verify($password, $row['password'])){
         $_SESSION['email'] = $email;
         $_SESSION['description'] = $row['description'];
+        $_SESSION['title'] = $row['title'];
         $_SESSION['img_url'] = $img_url;
 
         echo "Logged in as: " . $_SESSION['email'];
