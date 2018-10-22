@@ -54,8 +54,8 @@ session_start(); //Start session_start
 
 									<li class="nav-item">
 											<a href="#" class="nav-link">
-												Welcome <?php
-												echo " " . $_SESSION['first_name']; //WE need to use the session variable here because we don't have a variable called email on this page
+												Welcome<?php
+												echo " " . $_SESSION['email']; //WE need to use the session variable here because we don't have a variable called email on this page
 												  ?></a>
 									</li>
 	            </ul>
