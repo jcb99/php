@@ -19,7 +19,7 @@ if(isset ($_POST['email']) && isset ($_POST['password'])){
         $_SESSION['email'] = $email;
         $_SESSION['description'] = $row['description'];
         $_SESSION['title'] = $row['title'];
-        $_SESSION['img_url'] = $img_url;
+        $_SESSION['img_url'] = $row['img_url'];
 
         echo "Logged in as: " . $_SESSION['email'];
         header('Location: profile.php');
