@@ -21,7 +21,7 @@ if(isset ($_POST['email']) && isset ($_POST['password'])){
         $_SESSION['last_name'] = $last_name;
         $_SESSION['description'] = $row['description'];
         $_SESSION['title'] = $row['title'];
-        $_SESSION['img_url'] = $row['image_url'];
+        $_SESSION['image_url'] = $row['image_url'];
 
         echo "Logged in as: " . $_SESSION['email'];
         header('Location: profile.php');
