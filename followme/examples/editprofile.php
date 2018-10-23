@@ -79,29 +79,29 @@ session_start(); //Start session_start
 
 
 														<div class="col-md-6">
-																<label>Name</label>
+																<label>First Name</label>
 																<div class="input-group">
 																	<span class="input-group-addon">
 																			<i class="nc-icon nc-single-02"></i>
 																	</span>
-																	<input type="text" class="form-control" placeholder="Name">
+																	<input type="text" class="form-control" placeholder="First Name">
 																</div>
 														</div>
 
 
 														<div class="col-md-6">
-																<label>Email</label>
+																<label>Last Name</label>
 																<div class="input-group">
 																	<span class="input-group-addon">
 																		<i class="nc-icon nc-email-85"></i>
 																	</span>
-																	<input type="text" class="form-control" placeholder="Email">
+																	<input type="text" class="form-control" placeholder="Last Name">
 																</div>
 														</div>
 
 												</div> <!--Ends the first row -->
-												<label>Message</label>
-												<textarea class="form-control" rows="4" placeholder="Tell us your thoughts and feelings..."></textarea>
+												<label>Description</label>
+												<textarea class="form-control" rows="4" placeholder="Tell everyone a little bit about you..."></textarea>
 												<div class="row">
 														<div class="col-md-4 ml-auto mr-auto">
 																<button class="btn btn-danger btn-lg btn-fill">Save</button>
