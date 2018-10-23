@@ -73,7 +73,7 @@ session_start(); //Start session_start
 				<div class="container">
 						<div class="row">
 								<div class="col-md-8 ml-auto mr-auto">
-										<h2 class="text-center">Keep in touch?</h2>
+										<h2 class="text-center">Edit Profile</h2>
 										<form class="contact-form">
 												<div class="row">
 														<div class="col-md-6">
@@ -99,7 +99,7 @@ session_start(); //Start session_start
 												<textarea class="form-control" rows="4" placeholder="Tell us your thoughts and feelings..."></textarea>
 												<div class="row">
 														<div class="col-md-4 ml-auto mr-auto">
-																<button class="btn btn-danger btn-lg btn-fill">Send Message</button>
+																<button class="btn btn-danger btn-lg btn-fill">Save</button>
 														</div>
 												</div>
 										</form>
