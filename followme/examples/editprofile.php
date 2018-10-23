@@ -104,7 +104,7 @@ session_start(); //Start session_start
 												<label>Description</label>
 												<textarea class="form-control" rows="4" placeholder="Tell everyone a little bit about you..."></textarea>
 												<div class="row">
-														<div class="col-md-12 ml-auto mr-auto">
+														<div class="col-md-1 ml-auto mr-auto">
 																<button class="btn btn-danger btn-lg btn-fill">Save</button>
 														</div>
 												</div>
