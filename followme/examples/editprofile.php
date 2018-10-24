@@ -18,7 +18,7 @@ if (!isset($_SESSION)){
 //Set default values for each form element from $_SESSION
 //Update submitted values to SQLiteDatabase
 //Update submitted value to $_SESSION
-if (isset($_POST['savebutton'])){
+if (isset($_POST['savebutton']))   {
 	$sql="UPDATE fm_users SET first_name=$first_name WHERE email=$_SESSION['email']";
 	$conn->query($sql);
   //header('Location: profile.php');
@@ -123,7 +123,7 @@ if (isset($_POST['savebutton'])){
 														<!-- <i class="nc-icon nc-email-85"></i> -->
 														<i class="nc-icon nc-tag-content"></i>
 													</span>
-													<input type="text" class="form-control" placeholder="Title" value=""<?php echo $_SESSION['title']; ?>"  name="title">
+													<input type="text" class="form-control" placeholder="Title" value="<?php echo $_SESSION['title']; ?>"  name="title">
 												</div>
 
 												<label>Description</label>
