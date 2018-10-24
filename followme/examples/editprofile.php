@@ -18,11 +18,11 @@ if (!isset($_SESSION)){
 //Set default values for each form element from $_SESSION
 //Update submitted values to SQLiteDatabase
 //Update submitted value to $_SESSION
-// if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-// 	$sql="UPDATE fm_users SET email=$email WHERE email=$_SESSION['email']";
-// 	$conn->query($sql);
-//   header('Location: profile.php');
-// }
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+	$sql="UPDATE fm_users SET first_name=$first_name WHERE email=$_SESSION['email']";
+	$conn->query($sql);
+  header('Location: profile.php');
+}
 ?>
 
 <!doctype html>
