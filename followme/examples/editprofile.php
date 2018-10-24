@@ -106,15 +106,15 @@ session_start(); //Start session_start
 												<div class="input-group">
 													<span class="input-group-addon">
 														<!-- <i class="nc-icon nc-email-85"></i> -->
-														<i class="nc-icon nc-single-02"></i>
+														<i class="nc-shop nc-single-02"></i>
 													</span>
-													<input type="text" class="form-control" placeholder="Last Name">
+													<input type="text" class="form-control" placeholder="Title">
 												</div>
 
 												<label>Description</label>
 												<textarea class="form-control" rows="4" placeholder="Tell everyone a little bit about you..."></textarea>
 												<div class="row">
-														<div class="col-md-2 ml-auto mr-auto">
+														<div class="col-md-4 ml-auto mr-auto text-center">
 																<button class="btn btn-danger btn-lg btn-fill">Save</button>
 														</div>
 												</div>
