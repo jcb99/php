@@ -72,7 +72,7 @@ session_start(); //Start session_start
 		<div class="section landing-section">
 				<div class="container">
 						<div class="row">
-								<div class="col-md-8 ml-auto mr-auto">
+								<div class="col-md-12 ml-auto mr-auto">
 										<h2 class="text-center">Edit Profile</h2>
 										<form class="contact-form" action="" method="post">
 												<div class="row">
