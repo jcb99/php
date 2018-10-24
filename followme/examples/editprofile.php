@@ -8,7 +8,15 @@ session_start(); //Start session_start
 
 //Modify the fm_users table to include first and last name....Use the session variable first name and last name
 //Modify fm_users to add title and then load it to the $_SESSION['title']
-//Modify fm_users to add description and then load it to the $_SESSION['description']?>
+//Modify fm_users to add description and then load it to the $_SESSION['description']
+
+
+
+//Start the session if not running
+//Add name attributes to form elements
+//Set default values for each form element from $_SESSION
+//Update submitted values to SQLiteDatabase
+//Update submitted value to $_SESSION?>
 
 <!doctype html>
 <html lang="en">
