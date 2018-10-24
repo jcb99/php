@@ -18,7 +18,7 @@ if (!isset($_SESSION)){
 //Set default values for each form element from $_SESSION
 //Update submitted values to SQLiteDatabase
 //Update submitted value to $_SESSION
-if (isset($_POST['email']) && isset($_POST['savebutton']))   {
+if (isset($_POST['savebutton']))   {
 	$first_name=$_POST['first_name'];
 	$email=$_SESSION['email'];
 	require('sitedbconn.php');
