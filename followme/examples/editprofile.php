@@ -106,7 +106,7 @@ session_start(); //Start session_start
 												<div class="input-group">
 													<span class="input-group-addon">
 														<!-- <i class="nc-icon nc-email-85"></i> -->
-														<i class="nc-shop nc-tag-content"></i>
+														<i class="nc-icon nc-tag-content"></i>
 													</span>
 													<input type="text" class="form-control" placeholder="Title">
 												</div>
