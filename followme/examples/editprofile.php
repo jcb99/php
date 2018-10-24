@@ -19,6 +19,8 @@ if (!isset($_SESSION)){
 //Update submitted values to SQLiteDatabase
 //Update submitted value to $_SESSION
 if (isset($_POST['savebutton']))   {
+	$first_name=$_POST['first_name'];
+	$email=$_SESSION['email'];
 	$updatedb="UPDATE fm_users SET first_name=\"" .  $first_name . "\" WHERE email = " . $_SESSION['email'];
 	$conn->query($updatedb);
   //header('Location: profile.php');
