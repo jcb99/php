@@ -111,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 																		<!-- <i class="nc-icon nc-email-85"></i> -->
 																		<i class="nc-icon nc-single-02"></i>
 																	</span>
-																	<input type="text" class="form-control" placeholder="Last Name" value=<?php echo $_SESSION['last_name']; ?>  name="last_name">
+																	<input type="text" class="form-control" placeholder="Last Name" name="last_name" value="<?php echo $_SESSION['last_name']; ?>">
 																</div>
 														</div>
 
