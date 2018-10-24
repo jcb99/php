@@ -72,7 +72,7 @@ session_start(); //Start session_start
 		<div class="section landing-section">
 				<div class="container">
 						<div class="row">
-								<div class="col-md-12 ml-auto mr-auto">
+								<div class="col-md-8 ml-auto mr-auto">
 										<h2 class="text-center">Edit Profile</h2>
 										<form class="contact-form" action="" method="post">
 												<div class="row">
@@ -101,6 +101,16 @@ session_start(); //Start session_start
 														</div>
 
 												</div> <!--Ends the first row -->
+
+												<label>Title</label>
+												<div class="input-group">
+													<span class="input-group-addon">
+														<!-- <i class="nc-icon nc-email-85"></i> -->
+														<i class="nc-icon nc-single-02"></i>
+													</span>
+													<input type="text" class="form-control" placeholder="Last Name">
+												</div>
+
 												<label>Description</label>
 												<textarea class="form-control" rows="4" placeholder="Tell everyone a little bit about you..."></textarea>
 												<div class="row">
