@@ -20,6 +20,9 @@ if (!isset($_SESSION)){
 //Update submitted value to $_SESSION
 if (isset($_SESSION['email']) && isset($_POST['savebutton']))   {
 	$first_name=$_POST['first_name'];
+	$last_name=$_POST['last_name'];
+	$title=$_POST['title'];
+
 	$email=$_SESSION['email'];
 	require('sitedbconn.php');
 	$updatedb="UPDATE fm_users SET first_name=\"" .  $first_name . "\" WHERE email = \"" . $email . "\"";
