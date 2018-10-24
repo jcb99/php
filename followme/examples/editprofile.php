@@ -22,6 +22,7 @@ if (isset($_SESSION['email']) && isset($_POST['savebutton']))   {
 	$first_name=$_POST['first_name'];
 	$last_name=$_POST['last_name'];
 	$title=$_POST['title'];
+	$description=$_POST['description'];
 
 	$email=$_SESSION['email'];
 	require('sitedbconn.php');
