@@ -19,7 +19,7 @@ if (!isset($_SESSION)){
 //Update submitted values to SQLiteDatabase
 //Update submitted value to $_SESSION
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-	$sql="UPDATE fm_users SET email=$email WHERE email=$email";
+	$sql="UPDATE fm_users SET email=$email WHERE email=$_SESSION['email']";
 	$conn->query($sql);
   header('Location: profile.php');
 }
@@ -99,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 																	<span class="input-group-addon">
 																			<i class="nc-icon nc-single-02"></i>
 																	</span>
-																	<input type="text" class="form-control" placeholder="First Name" value=<?php echo $_SESSION['first_name']; ?>>
+																	<input type="text" class="form-control" placeholder="First Name" value=<?php echo $_SESSION['first_name']; ?> name="first_name">
 																</div>
 														</div>
 
@@ -111,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 																		<!-- <i class="nc-icon nc-email-85"></i> -->
 																		<i class="nc-icon nc-single-02"></i>
 																	</span>
-																	<input type="text" class="form-control" placeholder="Last Name" value=<?php echo $_SESSION['last_name']; ?>>
+																	<input type="text" class="form-control" placeholder="Last Name" value=<?php echo $_SESSION['last_name']; ?>  name="last_name">
 																</div>
 														</div>
 
@@ -123,11 +123,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 														<!-- <i class="nc-icon nc-email-85"></i> -->
 														<i class="nc-icon nc-tag-content"></i>
 													</span>
-													<input type="text" class="form-control" placeholder="Title" value="<?php echo $_SESSION['title']; ?>">
+													<input type="text" class="form-control" placeholder="Title" value="<?php echo $_SESSION['title']; ?>"  name="title">
 												</div>
 
 												<label>Description</label>
-												<textarea class="form-control" rows="4" placeholder="Tell everyone a little bit about you..."><?php echo $_SESSION['description'];?></textarea>
+												<textarea class="form-control" rows="4" placeholder="Tell everyone a little bit about you..." name="description"><?php echo $_SESSION['description'];?></textarea>
 												<div class="row">
 														<div class="col-md-4 ml-auto mr-auto text-center">
 																<button class="btn btn-danger btn-lg btn-fill" name="savebutton">Save</button>
