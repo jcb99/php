@@ -21,7 +21,7 @@ if (!isset($_SESSION)){
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$sql="UPDATE fm_users SET first_name=$first_name WHERE email=$_SESSION['email']";
 	$conn->query($sql);
-  header('Location: profile.php');
+  //header('Location: profile.php');
 }
 ?>
 
