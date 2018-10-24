@@ -104,7 +104,7 @@ session_start(); //Start session_start
 																		<!-- <i class="nc-icon nc-email-85"></i> -->
 																		<i class="nc-icon nc-single-02"></i>
 																	</span>
-																	<input type="text" class="form-control" placeholder="Last Name">
+																	<input type="text" class="form-control" placeholder="Last Name" value=<?php echo $_SESSION['last_name']; ?>>
 																</div>
 														</div>
 
@@ -116,7 +116,7 @@ session_start(); //Start session_start
 														<!-- <i class="nc-icon nc-email-85"></i> -->
 														<i class="nc-icon nc-tag-content"></i>
 													</span>
-													<input type="text" class="form-control" placeholder="Title">
+													<input type="text" class="form-control" placeholder="Title" value=<?php echo $_SESSION['title']; ?>>
 												</div>
 
 												<label>Description</label>
