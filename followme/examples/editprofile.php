@@ -18,11 +18,11 @@ if (!isset($_SESSION)){
 //Set default values for each form element from $_SESSION
 //Update submitted values to SQLiteDatabase
 //Update submitted value to $_SESSION
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-	$sql="UPDATE fm_users SET email=$email WHERE email=$_SESSION['email']";
-	$conn->query($sql);
-  header('Location: profile.php');
-}
+// if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+// 	$sql="UPDATE fm_users SET email=$email WHERE email=$_SESSION['email']";
+// 	$conn->query($sql);
+//   header('Location: profile.php');
+// }
 ?>
 
 <!doctype html>
@@ -99,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 																	<span class="input-group-addon">
 																			<i class="nc-icon nc-single-02"></i>
 																	</span>
-																	<input type="text" class="form-control" placeholder="First Name" value="<?php echo $_SESSION['first_name']; ?>">
+																	<input type="text" class="form-control" placeholder="First Name"  name="first_name" value="<?php echo $_SESSION['first_name']; ?>">
 																</div>
 														</div>
 
@@ -111,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 																		<!-- <i class="nc-icon nc-email-85"></i> -->
 																		<i class="nc-icon nc-single-02"></i>
 																	</span>
-																	<input type="text" class="form-control" placeholder="Last Name" value="<?php echo $_SESSION['last_name']; ?>">
+																	<input type="text" class="form-control" placeholder="Last Name" name="last_name" value="<?php echo $_SESSION['last_name']; ?>">
 																</div>
 														</div>
 
@@ -123,7 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 														<!-- <i class="nc-icon nc-email-85"></i> -->
 														<i class="nc-icon nc-tag-content"></i>
 													</span>
-													<input type="text" class="form-control" placeholder="Title" value="<?php echo $_SESSION['title']; ?>">
+													<input type="text" class="form-control" placeholder="Title" value=""<?php echo $_SESSION['title']; ?>"  name="title">
 												</div>
 
 												<label>Description</label>
