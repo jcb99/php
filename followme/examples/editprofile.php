@@ -23,6 +23,7 @@ if (isset($_SESSION['email']) && isset($_POST['savebutton']))   {
 	$email=$_SESSION['email'];
 	require('sitedbconn.php');
 	$updatedb="UPDATE fm_users SET first_name=\"" .  $first_name . "\" WHERE email = " . $email;
+	vardump($sql);
 	$conn->query($updatedb);
   header('Location: profile.php');
 }
