@@ -99,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 																	<span class="input-group-addon">
 																			<i class="nc-icon nc-single-02"></i>
 																	</span>
-																	<input type="text" class="form-control" placeholder="First Name" value=<?php echo $_SESSION['first_name']; ?> name="first_name">
+																	<input type="text" class="form-control" placeholder="First Name"  name="first_name" value="<?php echo $_SESSION['first_name']; ?>">
 																</div>
 														</div>
 
