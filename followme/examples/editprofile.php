@@ -18,7 +18,7 @@ if (!isset($_SESSION)){
 //Set default values for each form element from $_SESSION
 //Update submitted values to SQLiteDatabase
 //Update submitted value to $_SESSION
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+if (isset($_POST['savebutton'])){
 	$sql="UPDATE fm_users SET first_name=$first_name WHERE email=$_SESSION['email']";
 	$conn->query($sql);
   //header('Location: profile.php');
