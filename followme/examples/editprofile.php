@@ -25,8 +25,8 @@ if (isset($_SESSION['email']) && isset($_POST['savebutton']))   {
 
 	$email=$_SESSION['email'];
 	require('sitedbconn.php');
-	$updatedb="UPDATE fm_users SET first_name=\"" .  $first_name .  "\" WHERE email = \"" . $email . "\"";
-$_SESSION['first_name'] = $row['first_name'];
+	$updatedb="UPDATE fm_users SET first_name=\"" .  $first_name . "\", last_name=\"" . $last_name .  "\" WHERE email = \"" . $email . "\""; //"UPDATE fm_users SET first_name=\"" .  $first_name .  "\" WHERE email = \"" . $email . "\"";
+
 	var_dump($updatedb);
 	var_dump($email);
 	$conn->query($updatedb);
