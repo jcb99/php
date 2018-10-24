@@ -1,7 +1,8 @@
 <?php
 
-session_start(); //Start session_start
-
+if (!isset($_SESSION)){
+	session_start(); //Start session_start
+}
 //Uses the $_SESSION['email'] POST variable to display the email in the nav bar at the top (Welcome $_SESSION['image_url'])
 
 //Modify fm_users to image_url...load it to the $_SESSION['email'] variable
@@ -12,11 +13,17 @@ session_start(); //Start session_start
 
 
 
-//Start the session if not running
+//Start the session if not running///
 //Add name attributes to form elements
 //Set default values for each form element from $_SESSION
 //Update submitted values to SQLiteDatabase
-//Update submitted value to $_SESSION?>
+//Update submitted value to $_SESSION
+if(isset(savebutton)){
+	$sql="UPDATE fm_users SET email=$email WHERE email=$email";
+	$conn->query($sql);
+  header('Location: profile.php');
+}
+?>
 
 <!doctype html>
 <html lang="en">
@@ -120,10 +127,10 @@ session_start(); //Start session_start
 												</div>
 
 												<label>Description</label>
-												<textarea class="form-control" rows="4" placeholder="Tell everyone a little bit about you..." value="<?php echo $_SESSION['description'];?>"></textarea>
+												<textarea class="form-control" rows="4" placeholder="Tell everyone a little bit about you..."><?php echo $_SESSION['description'];?></textarea>
 												<div class="row">
 														<div class="col-md-4 ml-auto mr-auto text-center">
-																<button class="btn btn-danger btn-lg btn-fill">Save</button>
+																<button class="btn btn-danger btn-lg btn-fill" name="savebutton">Save</button>
 														</div>
 												</div>
 										</form>
