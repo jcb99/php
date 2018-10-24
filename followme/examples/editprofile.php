@@ -18,11 +18,11 @@ if (!isset($_SESSION)){
 //Set default values for each form element from $_SESSION
 //Update submitted values to SQLiteDatabase
 //Update submitted value to $_SESSION
-if (isset($_POST['savebutton']))   {
+if (isset($_SESSION['email']) && isset($_POST['savebutton']))   {
 	$first_name=$_POST['first_name'];
 	$email=$_SESSION['email'];
 	require('sitedbconn.php');
-	$updatedb="UPDATE fm_users SET first_name=\"" .  $first_name . "\" WHERE email = " . $email;
+	$updatedb="UPDATE fm_users SET first_name=\"" .  $first_name . "\" WHERE email = " . $email];
 	$conn->query($updatedb);
   header('Location: profile.php');
 }
