@@ -105,60 +105,7 @@ header('Location: profile.php');
 			<div class="filter"></div>
 		</div>
 
-		<div class="section landing-section">
-				<div class="container">
-						<div class="row">
-								<div class="col-md-8 ml-auto mr-auto">
-										<h2 class="text-center">Edit Profile</h2>
-										<form class="contact-form" action="" method="post">
-												<div class="row">
 
-
-														<div class="col-md-6">
-																<label>First Name</label>
-																<div class="input-group">
-																	<span class="input-group-addon">
-																			<i class="nc-icon nc-single-02"></i>
-																	</span>
-																	<input type="text" class="form-control" placeholder="First Name"  name="first_name" value="<?php echo $_SESSION['first_name']; ?>">
-																</div>
-														</div>
-
-
-														<div class="col-md-6">
-																<label>Last Name</label>
-																<div class="input-group">
-																	<span class="input-group-addon">
-																		<!-- <i class="nc-icon nc-email-85"></i> -->
-																		<i class="nc-icon nc-single-02"></i>
-																	</span>
-																	<input type="text" class="form-control" placeholder="Last Name" name="last_name" value="<?php echo $_SESSION['last_name']; ?>">
-																</div>
-														</div>
-
-												</div> <!--Ends the first row -->
-
-												<label>Title</label>
-												<div class="input-group">
-													<span class="input-group-addon">
-														<!-- <i class="nc-icon nc-email-85"></i> -->
-														<i class="nc-icon nc-tag-content"></i>
-													</span>
-													<input type="text" class="form-control" placeholder="Title" value="<?php echo $_SESSION['title']; ?>"  name="title">
-												</div>
-
-												<label>Description</label>
-												<textarea class="form-control" rows="4" placeholder="Tell everyone a little bit about you..." name="description"><?php echo $_SESSION['description'];?></textarea>
-												<div class="row">
-														<div class="col-md-4 ml-auto mr-auto text-center">
-																<button class="btn btn-danger btn-lg btn-fill" name="savebutton">Save</button>
-														</div>
-												</div>
-										</form>
-								</div>
-						</div>
-				</div>
-		</div>
     </div>
 	<footer class="footer section-dark">
         <div class="container">
