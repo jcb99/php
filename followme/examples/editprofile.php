@@ -34,10 +34,7 @@ if (isset($_SESSION['email']) && isset($_POST['savebutton']))   {
 	$sql = "SELECT * FROM fm_users WHERE email = '$email'";
 	$result = $conn->query($sql);
 
- if (mysqli_num_rows($result) > 0){
-
 	 while ($row = $result->fetch_assoc()){
-		 if(password_verify($password, $row['password'])){
 			 $_SESSION['email'] = $email;
 			 $_SESSION['first_name'] = $row['first_name'];
 			 $_SESSION['last_name'] = $row['last_name'];
@@ -45,11 +42,8 @@ if (isset($_SESSION['email']) && isset($_POST['savebutton']))   {
 			 $_SESSION['title'] = $row['title'];
 			 $_SESSION['image_url'] = $row['image_url'];
 
-			 echo "Logged in as: " . $_SESSION['email'];
 			 header('Location: profile.php');
-		 }
-  header('Location: profile.php');
-}
+
 }
 ?>
 
