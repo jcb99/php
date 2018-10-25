@@ -31,6 +31,8 @@ if (isset($_SESSION['email']) && isset($_POST['savebutton']))   {
 
 	$conn->query($updatedb);
 	require('sitedbconn.php');
+	$sql = "SELECT * FROM fm_users WHERE email = '$email'";
+	$result = $conn->query($sql);
   header('Location: profile.php');
 }
 ?>
