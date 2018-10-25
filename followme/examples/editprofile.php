@@ -43,7 +43,7 @@ if (isset($_SESSION['email']) && isset($_POST['savebutton']))   {
 			 //$_SESSION['image_url'] = $row['image_url'];
 
 			 header('Location: profile.php');
-
+}
 }
 ?>
 
