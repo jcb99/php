@@ -30,7 +30,8 @@ if (isset($_SESSION['email']) && isset($_POST['savebutton']))   {
 
 
 	$conn->query($updatedb);
-  //header('Location: profile.php');
+	require('login.php');
+  header('Location: profile.php');
 }
 ?>
 
