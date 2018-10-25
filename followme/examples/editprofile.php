@@ -50,6 +50,7 @@ if (isset($_SESSION['email']) && isset($_POST['savebutton']))   {
 		 }
   header('Location: profile.php');
 }
+}
 ?>
 
 <!doctype html>
