@@ -40,7 +40,7 @@ if (isset($_SESSION['email']) && isset($_POST['savebutton']))   {
 			 $_SESSION['last_name'] = $row['last_name'];
 			 $_SESSION['description'] = $row['description'];
 			 $_SESSION['title'] = $row['title'];
-			 $_SESSION['image_url'] = $row['image_url'];
+			 //$_SESSION['image_url'] = $row['image_url'];
 
 			 header('Location: profile.php');
 
