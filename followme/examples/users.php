@@ -66,7 +66,7 @@ if (!isset($_SESSION)){
                                 <div class="col-md-6 ml-auto mr-auto">
                                         <ul class="list-unstyled follows">
                                           <?php
-                                          require(sitedbconn.php);
+                                          require('sitedbconn.php');
                                           $sql = "SELECT * FROM users";
 
                                           //Execute the SQL Query
