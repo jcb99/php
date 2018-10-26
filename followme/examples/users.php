@@ -76,7 +76,7 @@ if (!isset($_SESSION)){
                                                 echo "<li>
                                                         <div class=\"row\">
                                                                 <div class=\"col-md-2 col-sm-2 ml-auto mr-auto\">
-                                                                        <img src="../assets/img/faces/clem-onojeghuo-2.jpg" alt=\"Circle Image\" class=\"img-circle img-no-padding img-responsive\">
+                                                                        <img src=\"../assets/img/faces/clem-onojeghuo-2.jpg\" alt=\"Circle Image\" class=\"img-circle img-no-padding img-responsive\">
                                                                 </div>
                                                                 <div class=\"col-md-7 col-sm-4  ml-auto mr-auto\">";
                                                                       echo  "<h6>" . $row['first_name'] . ' ' . $row['last_name'] . "<br/><small>Musical Producer</small></h6>";
