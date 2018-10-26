@@ -90,7 +90,7 @@ if (!isset($_SESSION)){
                                                                         </div>
                                                                 </div>
                                                         </div>
-                                                </li>"
+                                                </li>";
                                               }?>
                                                 <hr />
                                         </ul>
