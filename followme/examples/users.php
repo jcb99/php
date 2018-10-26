@@ -67,7 +67,7 @@ if (!isset($_SESSION)){
                                         <ul class="list-unstyled follows">
                                           <?php
                                           require('sitedbconn.php');
-                                          $sql = "SELECT * FROM users";
+                                          $sql = "SELECT * FROM fm_users";
 
                                           //Execute the SQL Query
                                           $result = $conn->query($sql);
