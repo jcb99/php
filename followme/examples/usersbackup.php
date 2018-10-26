@@ -1,7 +1,3 @@
-<?php
-if (!isset($_SESSION)){
-	session_start(); //Start session_start
-} ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -65,15 +61,13 @@ if (!isset($_SESSION)){
                         <div class="row">
                                 <div class="col-md-6 ml-auto mr-auto">
                                         <ul class="list-unstyled follows">
-                                          <?php
-                                            while ($row = $result->fetch_assoc()) {
                                                 <li>
                                                         <div class="row">
                                                                 <div class="col-md-2 col-sm-2 ml-auto mr-auto">
                                                                         <img src="../assets/img/faces/clem-onojeghuo-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                                                                 </div>
                                                                 <div class="col-md-7 col-sm-4  ml-auto mr-auto">
-                                                                        <h6> . $row['first_name'] . <br/><small>Musical Producer</small></h6>
+                                                                        <h6>Flume<br/><small>Musical Producer</small></h6>
                                                                 </div>
                                                                 <div class="col-md-3 col-sm-2  ml-auto mr-auto">
                                                                         <div class="form-check">
@@ -85,7 +79,6 @@ if (!isset($_SESSION)){
                                                                 </div>
                                                         </div>
                                                 </li>
-                                              }?>
                                                 <hr />
                                         </ul>
                                 </div>
