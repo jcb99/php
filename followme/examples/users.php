@@ -73,14 +73,14 @@ if (!isset($_SESSION)){
                                           $result = $conn->query($sql);
 
                                             while ($row = $result->fetch_assoc()) {
-                                                <li>
+                                                echo "<li>
                                                         <div class="row">
                                                                 <div class="col-md-2 col-sm-2 ml-auto mr-auto">
                                                                         <img src="../assets/img/faces/clem-onojeghuo-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                                                                 </div>
-                                                                <div class="col-md-7 col-sm-4  ml-auto mr-auto">
-                                                                        <h6> . $row['first_name'] . <br/><small>Musical Producer</small></h6>
-                                                                </div>
+                                                                <div class="col-md-7 col-sm-4  ml-auto mr-auto">";
+                                                                      echo  "<h6>" . $row['first_name'] . "<br/><small>Musical Producer</small></h6>";
+                                                              echo "</div>
                                                                 <div class="col-md-3 col-sm-2  ml-auto mr-auto">
                                                                         <div class="form-check">
                                                                                 <label class="form-check-label">
@@ -90,7 +90,7 @@ if (!isset($_SESSION)){
                                                                         </div>
                                                                 </div>
                                                         </div>
-                                                </li>
+                                                </li>"
                                               }?>
                                                 <hr />
                                         </ul>
