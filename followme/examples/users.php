@@ -66,11 +66,12 @@ if (!isset($_SESSION)){
                                 <div class="col-md-6 ml-auto mr-auto">
                                         <ul class="list-unstyled follows">
                                           <?php
+                                          require(sitedbconn.php);
                                           $sql = "SELECT * FROM users";
 
                                           //Execute the SQL Query
                                           $result = $conn->query($sql);
-                                          
+
                                             while ($row = $result->fetch_assoc()) {
                                                 <li>
                                                         <div class="row">
