@@ -1,7 +1,21 @@
 <?php
 if (!isset($_SESSION)){
 	session_start(); //Start session_start
-} ?>
+}
+
+$followers="SELECT * FROM fm_follows;";
+$qresult = $conn->query($followers);
+
+ if (mysqli_num_rows($qresult) > 0){
+
+	 e
+ }
+
+
+ else{
+
+ }
+ else echo "checked='unchecked'"?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -84,7 +98,7 @@ if (!isset($_SESSION)){
                                                                 <div class=\"col-md-3 col-sm-2  ml-auto mr-auto\">
                                                                         <div class=\"form-check\">
                                                                                 <label class=\"form-check-label\">
-                                                                                        <input name=\"followbox\" class=\"form-check-input\" type=\"checkbox\" value=\"\" unchecked>
+                                                                                        <input name=\"followbox\" class=\"form-check-input\" type=\"checkbox\" value=\"\" "if (mysqli_num_rows($qresult) > 0){echo 'checked='checked'';} ">
                                                                                         <span class=\"form-check-sign\"></span>
                                                                                 </label>
                                                                         </div>
