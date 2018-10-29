@@ -76,14 +76,14 @@ if (!isset($_SESSION)){
                                                 <li>
                                                         <div class="row">
                                                                 <div class="col-md-2 col-sm-2 ml-auto mr-auto">
-                                                                        <img src=<?php echo "$row['image_url']";  ?>  alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                                                        <img src="<?php echo "$row['image_url']";  ?>"  alt="Circle Image" class="img-circle img-no-padding img-responsive">
                                                                 </div>
                                                                 <div class="col-md-7 col-sm-4  ml-auto mr-auto">
-                                                                       <h6> <?php echo "$row['first_name'] . ' ' . $row['last_name']" ?> <br/><small> <?php echo "$row['title']"; ?>  </small></h6>;
+                                                                       <h6> <?php echo "$row['first_name'] . ' ' . $row['last_name']"; ?> <br/><small> <?php echo "$row['title']"; ?>  </small></h6>
                                                               </div>
                                                                 <div class="col-md-3 col-sm-2  ml-auto mr-auto">
                                                                         <div class="form-check">
-                                                                                <label class=\"form-check-label\">
+                                                                                <label class="form-check-label">
                                                                                         <input class="form-check-input" type="checkbox" value="" unchecked>
                                                                                         <span class="form-check-sign"></span>
                                                                                 </label>
