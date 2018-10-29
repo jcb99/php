@@ -72,7 +72,7 @@ if (!isset($_SESSION)){
                                           //Execute the SQL Query
                                           $result = $conn->query($sql);
 
-                                             while ($row = $result->fetch_assoc()) { ?>
+                                             //while ($row = $result->fetch_assoc()) { ?>
                                                 <li>
                                                         <div class="row">
                                                                 <div class="col-md-2 col-sm-2 ml-auto mr-auto">
