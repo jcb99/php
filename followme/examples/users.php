@@ -88,17 +88,17 @@ $qresult = $conn->query($followers);
                                                               echo "</div>
                                                                 <div class=\"col-md-3 col-sm-2  ml-auto mr-auto\">
                                                                         <div class=\"form-check\">
-                                                                                <label class=\"form-check-label\">
-                                                                                        <input name=\"followbox\" class=\"form-check-input\" type=\"checkbox\" value=\"\" " . if (mysqli_num_rows($qresult) > 0){echo 'checked';} >
+                                                                                <label class=\"form-check-label\">"?>
+                                                                                        <input name=\"followbox\" class=\"form-check-input\" type=\"checkbox\" value=\"\" <?php if (mysqli_num_rows($qresult) > 0){echo 'checked';} ?>  >
 
-                                                                                    echo    "<span class=\"form-check-sign\"></span>
+                                                                                      "<span class=\"form-check-sign\"></span>
                                                                                 </label>
                                                                         </div>
                                                                 </div>
                                                         </div>
                                                 </li>
                                                 <hr />";
-                                              }?>
+                                              }
                                                 <hr />
                                         </ul>
                                 </div>
