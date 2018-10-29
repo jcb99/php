@@ -89,15 +89,15 @@ $qresult = $conn->query($followers);
                                                                 <div class=\"col-md-3 col-sm-2  ml-auto mr-auto\">
                                                                         <div class=\"form-check\">
                                                                                 <label class=\"form-check-label\">"?>
-                                                                                        <input name=\"followbox\" class=\"form-check-input\" type=\"checkbox\" value=\"\" <?php if (mysqli_num_rows($qresult) > 0){echo 'checked';} ?>  >
+                                                                                        <input name=\"followbox\" class=\"form-check-input\" type=\"checkbox\" value=\"\" <?php if (mysqli_num_rows($qresult) > 0){echo 'checked';} ?>>
 
-                                                                                      "<span class=\"form-check-sign\"></span>
+                                                                                      <span class=\"form-check-sign\"></span>
                                                                                 </label>
                                                                         </div>
                                                                 </div>
                                                         </div>
                                                 </li>
-                                                <hr />";
+                                                <hr />
                                               }
                                                 <hr />
                                         </ul>
