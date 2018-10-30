@@ -79,7 +79,7 @@ if (!isset($_SESSION)){
                                              while ($row = $result->fetch_assoc()) { ?>
                                                 <li>
 																									<?php $follo = $row['followed_by'];
-																									echo $follo;
+																									echo "this is the value of follo " . $follo;
 																									 ?>
                                                         <div class="row">
                                                                 <div class="col-md-2 col-sm-2 ml-auto mr-auto">
