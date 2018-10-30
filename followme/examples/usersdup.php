@@ -75,6 +75,7 @@ if (!isset($_SESSION)){
 																					$follows_result=$conn->query($follows);
 
 																					$followed_user=$row['followed_user'];
+																					var_dump($followed_user);
 																					$followed_by=$row['followed_by'];
 
 
