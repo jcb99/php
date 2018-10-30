@@ -75,9 +75,7 @@ if (!isset($_SESSION)){
                                           $result = $conn->query($sql);
 																					$follows_result=$conn->query($follows);
 
-																					$followed_user=$row['followed_user'];
-																					var_dump($followed_user);
-																					$followed_by=$row['followed_by'];
+
 
 
                                              while ($row = $result->fetch_assoc()) { ?>
@@ -94,7 +92,7 @@ if (!isset($_SESSION)){
                                                                 <div class="col-md-3 col-sm-2  ml-auto mr-auto">
                                                                         <div class="form-check">
                                                                                 <label class="form-check-label">
-                                                                                        <input class="form-check-input" type="checkbox" value="" <?php if ($row['followed_user'] == $_SESSION['user_id']){echo "checked";} else{echo "unchecked";} ?>>
+                                                                                        <input class="form-check-input" type="checkbox" value="" <?php if ($follows_result!=""){echo "checked";} else{echo "unchecked";} ?>>
                                                                                         <span class="form-check-sign"></span>
                                                                                 </label>
                                                                         </div>
