@@ -75,9 +75,22 @@ if (!isset($_SESSION)){
                                           $result = $conn->query($sql);
 																					$follows_result=$conn->query($follows);
 
-																					while($){
+																					while($row = $follows_result->fetch_assoc()){
 
+																					$follow_array[]=$row['followed_user'];
+																					$row[0];
 																					}
+
+																					while($row = $follows_result->fetch_assoc()){
+																					if (in_array($row['followed_user'], $follow_array)){
+																						echo "Hi";
+																					}
+
+																					else {
+																						echo "Hello";
+																					}
+
+																				}
 
                                              while ($row = $result->fetch_assoc()) { ?>
 
