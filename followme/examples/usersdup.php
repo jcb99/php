@@ -72,7 +72,7 @@ if (!isset($_SESSION)){
                                           //Execute the SQL Query
                                           $theresult = $conn->query($followsql);
 
-                                             while ($row = $theresult->fetch_assoc()) { ?>
+                                             while ($row = $theresult->fetch_assoc()) { ?><?php }?>
                                                 <li>
                                                         <div class="row">
                                                                 <div class="col-md-2 col-sm-2 ml-auto mr-auto">
@@ -94,7 +94,7 @@ if (!isset($_SESSION)){
                                                         </div>
                                                 </li>
                                                 <hr />
-                                            <?php}?>
+
                                                 <hr />
                                         </ul>
                                 </div>
