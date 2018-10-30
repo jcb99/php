@@ -71,7 +71,7 @@ if (!isset($_SESSION)){
 
                                           //Execute the SQL Query
                                           $result = $conn->query($sql);
-																					$
+
 
                                              while ($row = $result->fetch_assoc()) { ?>
                                                 <li>
