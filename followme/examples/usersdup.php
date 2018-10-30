@@ -74,6 +74,7 @@ if (!isset($_SESSION)){
                                           //Execute the SQL Query
                                           $result = $conn->query($sql);
 																					$follows_result=$conn->query($follows);
+																					var_dump($follows_result);
 
 
 
