@@ -69,7 +69,7 @@ if (!isset($_SESSION)){
                                           require('sitedbconn.php');
                                           $sql = "SELECT * FROM fm_users";
 																					$thisuser=$_SESSION['user_id'];
-																					$follows="SELECT followed_by FROM fm_follows WHERE followed_user=$thisuser";
+																					$follows="SELECT followed_user FROM fm_follows WHERE followed_user=$thisuser";
 
                                           //Execute the SQL Query
                                           $result = $conn->query($sql);
