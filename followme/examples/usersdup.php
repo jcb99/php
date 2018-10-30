@@ -76,7 +76,9 @@ if (!isset($_SESSION)){
 																					$follows_result=$conn->query($follows);
 
 
-                                             while ($row = $result->fetch_assoc()) { ?>
+                                             while ($row = $result->fetch_row()) { ?>
+
+
                                                 <li>
 
                                                         <div class="row">
