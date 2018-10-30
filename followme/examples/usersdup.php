@@ -89,7 +89,7 @@ if (!isset($_SESSION)){
                                                                 <div class="col-md-3 col-sm-2  ml-auto mr-auto">
                                                                         <div class="form-check">
                                                                                 <label class="form-check-label">
-                                                                                        <input class="form-check-input" type="checkbox" value="" <?php if ($row['user_id'] == $user_id){echo "checked";} else{echo "unchecked";} ?>>
+                                                                                        <input class="form-check-input" type="checkbox" value="" <?php if ($row['user_id'] == $_SESSION['user_id']){echo "checked";} else{echo "unchecked";} ?>>
                                                                                         <span class="form-check-sign"></span>
                                                                                 </label>
                                                                         </div>
