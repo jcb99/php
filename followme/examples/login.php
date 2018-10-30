@@ -17,7 +17,7 @@ if(isset ($_POST['email']) && isset ($_POST['password'])){
     while ($row = $result->fetch_assoc()){
       if(password_verify($password, $row['password'])){
         $_SESSION['email'] = $email;
-        $_SESSION['user_id'] = $user_id;
+        $_SESSION['user_id'] = $row['user_id'];
         $_SESSION['first_name'] = $row['first_name'];
         $_SESSION['last_name'] = $row['last_name'];
         $_SESSION['description'] = $row['description'];
