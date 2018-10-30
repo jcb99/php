@@ -69,18 +69,17 @@ if (!isset($_SESSION)){
                                           require('sitedbconn.php');
                                           $sql = "SELECT * FROM fm_users";
 																					$thisuser=$_SESSION['user_id'];
-																					$follows="SELECT * FROM fm_follows";
+																					$follows="SELECT followed_by FROM fm_follows WHERE followed_user=$thisuser";
 
                                           //Execute the SQL Query
                                           $result = $conn->query($sql);
 																					$follows_result=$conn->query($follows);
 																					var_dump($follows_result);
 
-
-
-
                                              while ($row = $result->fetch_assoc()) { ?>
                                                 <li>
+																									<?php $follo = $row['followed_by'];
+																									$auser=$row['user_id']; ?>
                                                         <div class="row">
                                                                 <div class="col-md-2 col-sm-2 ml-auto mr-auto">
                                                                         <img src="<?php echo $row['image_url']; ?>" alt="Circle Image" class="img-circle img-no-padding img-responsive">
@@ -93,7 +92,7 @@ if (!isset($_SESSION)){
                                                                 <div class="col-md-3 col-sm-2  ml-auto mr-auto">
                                                                         <div class="form-check">
                                                                                 <label class="form-check-label">
-                                                                                        <input class="form-check-input" type="checkbox" value="" <?php if ($follows_result!=""){echo "checked";} else{echo "unchecked";} ?>>
+                                                                                        <input class="form-check-input" type="checkbox" value="" <?php if ($follo=$auser){echo "checked";} else{echo "unchecked";} ?>>
                                                                                         <span class="form-check-sign"></span>
                                                                                 </label>
                                                                         </div>
