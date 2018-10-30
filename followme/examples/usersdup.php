@@ -74,14 +74,11 @@ if (!isset($_SESSION)){
                                           //Execute the SQL Query
                                           $result = $conn->query($sql);
 																					$follows_result=$conn->query($follows);
-																					var_dump($follows_result);
+
 
                                              while ($row = $result->fetch_assoc()) { ?>
                                                 <li>
-																									<?php
-																									$follo = $row['followed_by'];
-																									echo "this is the value of follo " . $follo;
-																									 ?>
+																								
                                                         <div class="row">
                                                                 <div class="col-md-2 col-sm-2 ml-auto mr-auto">
                                                                         <img src="<?php echo $row['image_url']; ?>" alt="Circle Image" class="img-circle img-no-padding img-responsive">
