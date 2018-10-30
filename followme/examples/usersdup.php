@@ -67,12 +67,12 @@ if (!isset($_SESSION)){
                                         <ul class="list-unstyled follows">
                                           <?php
                                           require('sitedbconn.php');
-                                          $sql = "SELECT * FROM fm_follows";
+                                          $followsql = "SELECT * FROM fm_follows";
 
                                           //Execute the SQL Query
-                                          $result = $conn->query($sql);
+                                          $theresult = $conn->query($followsql);
 
-                                             //while ($row = $result->fetch_assoc()) { ?>
+                                             while ($row = $theresult->fetch_assoc()) { ?>
                                                 <li>
                                                         <div class="row">
                                                                 <div class="col-md-2 col-sm-2 ml-auto mr-auto">
@@ -94,7 +94,7 @@ if (!isset($_SESSION)){
                                                         </div>
                                                 </li>
                                                 <hr />
-                                            <?php//}?>
+                                            <?php}?>
                                                 <hr />
                                         </ul>
                                 </div>
