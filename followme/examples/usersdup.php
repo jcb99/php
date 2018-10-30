@@ -68,9 +68,11 @@ if (!isset($_SESSION)){
                                           <?php
                                           require('sitedbconn.php');
                                           $sql = "SELECT * FROM fm_users";
+																					$follows="SELECT * FROM fm_follows";
 
                                           //Execute the SQL Query
                                           $result = $conn->query($sql);
+																					$follows_result=$conn->query($follows);
 
 
                                              while ($row = $result->fetch_assoc()) { ?>
@@ -87,7 +89,7 @@ if (!isset($_SESSION)){
                                                                 <div class="col-md-3 col-sm-2  ml-auto mr-auto">
                                                                         <div class="form-check">
                                                                                 <label class="form-check-label">
-                                                                                        <input class="form-check-input" type="checkbox" value="" <?php if (mysqli_num_rows($result) > 0){echo "checked";} ?>>
+                                                                                        <input class="form-check-input" type="checkbox" value="" <?php if (mysqli_num_rows($follows_result) > 0){echo "checked";} ?>>
                                                                                         <span class="form-check-sign"></span>
                                                                                 </label>
                                                                         </div>
