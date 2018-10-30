@@ -67,12 +67,13 @@ if (!isset($_SESSION)){
                                         <ul class="list-unstyled follows">
                                           <?php
                                           require('sitedbconn.php');
-                                          $followsql = "SELECT * FROM fm_users";
+                                          $sql = "SELECT * FROM fm_users";
 
                                           //Execute the SQL Query
-                                          $theresult = $conn->query($followsql);
+                                          $result = $conn->query($sql);
+																					$
 
-                                             while ($row = $theresult->fetch_assoc()) { ?>
+                                             while ($row = $result->fetch_assoc()) { ?>
                                                 <li>
                                                         <div class="row">
                                                                 <div class="col-md-2 col-sm-2 ml-auto mr-auto">
@@ -86,7 +87,7 @@ if (!isset($_SESSION)){
                                                                 <div class="col-md-3 col-sm-2  ml-auto mr-auto">
                                                                         <div class="form-check">
                                                                                 <label class="form-check-label">
-                                                                                        <input class="form-check-input" type="checkbox" value="" <?php if (mysqli_num_rows($theresult) > 0){echo "checked";} ?>>
+                                                                                        <input class="form-check-input" type="checkbox" value="" <?php if (mysqli_num_rows($result) > 0){echo "checked";} ?>>
                                                                                         <span class="form-check-sign"></span>
                                                                                 </label>
                                                                         </div>
