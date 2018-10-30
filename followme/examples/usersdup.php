@@ -75,8 +75,11 @@ if (!isset($_SESSION)){
                                           $result = $conn->query($sql);
 																					$follows_result=$conn->query($follows);
 
+																					while($){
 
-                                             while ($row = $result->fetch_row()) { ?>
+																					}
+
+                                             while ($row = $result->fetch_assoc()) { ?>
 
 
                                                 <li>
