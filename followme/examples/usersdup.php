@@ -78,7 +78,8 @@ if (!isset($_SESSION)){
 
                                              while ($row = $result->fetch_assoc()) { ?>
                                                 <li>
-																									<?php $follo = $row['followed_by'];
+																									<?php
+																									$follo = $row['followed_by'];
 																									echo "this is the value of follo " . $follo;
 																									 ?>
                                                         <div class="row">
@@ -93,7 +94,7 @@ if (!isset($_SESSION)){
                                                                 <div class="col-md-3 col-sm-2  ml-auto mr-auto">
                                                                         <div class="form-check">
                                                                                 <label class="form-check-label">
-                                                                                        <input class="form-check-input" type="checkbox" value="" <?php if (array_search("$follo", $follows_result)){echo "checked";} else{echo "unchecked";} ?>>
+                                                                                        <input class="form-check-input" type="checkbox" value="" <?php if ($row = $follows_result->fetch_assoc()){echo "checked";} else{echo "unchecked";} ?>>
                                                                                         <span class="form-check-sign"></span>
                                                                                 </label>
                                                                         </div>
