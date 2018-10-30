@@ -79,7 +79,8 @@ if (!isset($_SESSION)){
                                              while ($row = $result->fetch_assoc()) { ?>
                                                 <li>
 																									<?php $follo = $row['followed_by'];
-																									$auser=$row['user_id']; ?>
+																									echo $follo;
+																									 ?>
                                                         <div class="row">
                                                                 <div class="col-md-2 col-sm-2 ml-auto mr-auto">
                                                                         <img src="<?php echo $row['image_url']; ?>" alt="Circle Image" class="img-circle img-no-padding img-responsive">
