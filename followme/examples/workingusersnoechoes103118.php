@@ -69,6 +69,9 @@ if (!isset($_SESSION)){
                                           require('sitedbconn.php');
                                           $followsql = "SELECT * FROM fm_users";
 
+																					$thisuser=$_SESSION['user_id'];
+																					$follows="SELECT followed_user FROM fm_follows WHERE followed_by=$thisuser";
+																					
                                           //Execute the SQL Query
                                           $theresult = $conn->query($followsql);
 																					$follows_result=$conn->query($follows);
@@ -77,7 +80,7 @@ if (!isset($_SESSION)){
 																					 $follow_array[]=$row['followed_user'];
 
 																					 }
-																					 
+
                                              while ($row = $theresult->fetch_assoc()) { ?>
                                                 <li>
                                                         <div class="row">
