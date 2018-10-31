@@ -71,14 +71,13 @@ if (!isset($_SESSION)){
 
 																					$thisuser=$_SESSION['user_id'];
 																					$follows="SELECT followed_user FROM fm_follows WHERE followed_by=$thisuser";
-																					
+
                                           //Execute the SQL Query
                                           $theresult = $conn->query($followsql);
 																					$follows_result=$conn->query($follows);
 
 																					while($row = $follows_result->fetch_assoc()){
 																					 $follow_array[]=$row['followed_user'];
-
 																					 }
 
                                              while ($row = $theresult->fetch_assoc()) { ?>
