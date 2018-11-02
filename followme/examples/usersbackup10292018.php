@@ -71,6 +71,25 @@ if (!isset($_SESSION)){
 
                                           //Execute the SQL Query
                                           $result = $conn->query($sql);
+																					$thisuser=$_SESSION['user_id'];
+																					$follows="SELECT followed_user FROM fm_follows WHERE followed_by=$thisuser";
+
+
+																					$follows_result=$conn->query($follows);
+
+																					// while($row = $follows_result->fetch_assoc()){
+																					// $follow_array[]=$row['followed_user'];
+																					//
+																					// }
+																					//
+																					// while($row = $follows_result->fetch_assoc()){
+																					// if (in_array($row['followed_user'], $follow_array)){
+																					// 	echo "Hi";
+																					// }
+																					//
+																					// else {
+																					// 	echo "Hello";
+																					// }
 
                                             while ($row = $result->fetch_assoc()) {
                                                 echo "<li>
