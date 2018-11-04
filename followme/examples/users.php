@@ -107,16 +107,6 @@ if (!isset($_SESSION)){
 
 																								<?php
 
-																								if(isset($_POST['beginfollowing'])) {
-
-																								if(IsChecked('follow_checkbox', 62)){
-
-																									$insertsql="INSERT INTO fm_follows (followed_user, followed_by) VALUES (62, $thisuser);";
-																									echo "The value of insert SQL is" . $insertsql;
-																									$aresult=$conn->query($insertsql);
-																									var_dump($aresult);
-																					        }
-																								}
 																					  function IsChecked($check_follow,$value)
 																					    {
 																								require('sitedbconn.php');
@@ -132,8 +122,6 @@ if (!isset($_SESSION)){
 																					                if($chkval == $value)
 																					                {
 																					                  return true;
-
-
 																					                }
 
 
@@ -141,6 +129,18 @@ if (!isset($_SESSION)){
 																					        }
 																					        return false;
 																					    }
+
+
+																								if(isset($_POST['beginfollowing'])) {
+
+																								if(IsChecked('follow_checkbox', 62)){
+
+																									$insertsql="INSERT INTO fm_follows (followed_user, followed_by) VALUES (62, $thisuser);";
+																									echo "The value of insert SQL is" . $insertsql;
+																									$aresult=$conn->query($insertsql);
+																									var_dump($aresult);
+																					        }
+																								}
 
 																						?>
 
