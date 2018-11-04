@@ -110,13 +110,15 @@ if (!isset($_SESSION)){
 																								if(isset($_POST['beginfollowing'])) {
 																									$auserid=$row['user_id'];
 
+																									echo "A user id is " .  $auserid;
+
 																								if(IsChecked('follow_checkbox', $auserid)){
 																										echo "checked";
 																					            $insertsql="INSERT INTO fm_follows (followed_user, followed_by) values ($auserid, $thisuser);";
 																											$conn->query($insertsql);
 																					        }
 																								}
-																					  function IsChecked($check_follow,$value)
+																					  function IsChecked($check_follow, $value)
 																					    {
 
 																					        if(!empty($_POST[$check_follow]))
