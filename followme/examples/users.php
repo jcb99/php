@@ -113,7 +113,7 @@ if (!isset($_SESSION)){
 																					            $insertsql="INSERT INTO fm_follows (followed_user, followed_by) values ($auserid, $thisuser)";
 																											$conn->query($insertsql);
 																					        }
-
+																								}
 																					  function IsChecked($check_follow,$value)
 																					    {
 																					        if(!empty($_POST[$check_follow]))
@@ -129,7 +129,7 @@ if (!isset($_SESSION)){
 																					        return false;
 																					    }
 
-																						}?>
+																						?>
 
 
                                         </ul>
