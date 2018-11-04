@@ -110,8 +110,6 @@ if (!isset($_SESSION)){
 
 																					  function IsChecked($check_follow,$value)
 																					    {
-																								$followsql = "SELECT * FROM fm_users";
-																								$theresult = $conn->query($followsql);
 																								require('sitedbconn.php');
 																								// $thisuser=$_SESSION['user_id'];
 																								// echo $thisuser . "is the value of thisuser";
@@ -120,11 +118,11 @@ if (!isset($_SESSION)){
 																					        if(!empty($_POST[$check_follow]))
 																					        {
 
-																					            foreach($_POST[$check_follow] as $chkval)
+																					            foreach($_POST[$check_follow] as $check_val)
 																					            {
-																												echo "The value of chkval is" . $chkval;
+																												echo "The value of check_val is" . $check_val;
 																												echo "The value of value is " . $value;
-																					                if($chkval == $value)
+																					                if($check_val == $value)
 																					                {
 																														echo "it made it here";
 																					                  return true;
@@ -140,16 +138,16 @@ if (!isset($_SESSION)){
 
 
 																								if(isset($_POST['beginfollowing'])) {
-																									while ($row = $theresult->fetch_assoc()) {
-																								if(IsChecked('follow_checkbox', $row['user_id'])){
 
-																									$insertsql="INSERT INTO fm_follows (followed_user, followed_by) VALUES ($row['user_id'], $thisuser);";
+																								if(IsChecked('follow_checkbox', 63)){
+
+																									$insertsql="INSERT INTO fm_follows (followed_user, followed_by) VALUES (59, $thisuser);";
 																									echo "The value of insert SQL is" . $insertsql;
 																									$aresult=$conn->query($insertsql);
 																									var_dump($aresult);
 																					        }
 																								}
-																							}
+
 																						?>
 
 
