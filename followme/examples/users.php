@@ -103,8 +103,8 @@ if (!isset($_SESSION)){
                                                 </li>
                                                 <hr />
 																								<?php }?>
-                                                <hr />
-																								
+                                                
+
                                         </ul>
 
                                 </div>
