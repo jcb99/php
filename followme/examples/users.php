@@ -115,7 +115,7 @@ if (!isset($_SESSION)){
 																								// 			$conn->query($insertsql);
 																					      //   }
 																								// }
-																					  function IsChecked($check_follow, $value)
+																					  function IsChecked($check_follow,$value)
 																					    {
 
 																					        if(!empty($_POST[$check_follow]))
