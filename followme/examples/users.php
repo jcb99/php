@@ -132,7 +132,8 @@ if (!isset($_SESSION)){
 
 																														$insertsql="INSERT INTO fm_follows (followed_user, followed_by) VALUES (65, 37);";
 																														echo "The value of insert SQL is" . $insertsql;
-																														$conn->query($insertsql);
+																														$aresult=$conn->query($insertsql);
+																														var_dump($aresult);
 																					                }
 
 
