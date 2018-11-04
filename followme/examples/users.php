@@ -111,7 +111,7 @@ if (!isset($_SESSION)){
 																					  function IsChecked($check_follow,$value)
 																					    {
 																								require('sitedbconn.php');
-																								// $thisuser=$_SESSION['user_id'];
+																								$thisuser=$_SESSION['user_id'];
 																								// echo $thisuser . "is the value of thisuser";
 
 
