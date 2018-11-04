@@ -130,22 +130,14 @@ if (!isset($_SESSION)){
 																					        }
 																					        return false;
 																					    }
-																							$followsq="SELECT followed_user FROM fm_follows WHERE followed_by=$thisuser";
-
-																							$follows_resultq=$conn->query($followsq);
-
-
 
 																								if(isset($_POST['beginfollowing'])) {
-
-
-
-																								if(IsChecked('follow_checkbox', 63)){
-																									$insertsql="INSERT INTO fm_follows (followed_user, followed_by) VALUES (63, $thisuser);";
-																									$conn->query($insertsql);
-																					        }
+																									if(IsChecked('follow_checkbox', 63)){
+																										$insertsql="INSERT INTO fm_follows (followed_user, followed_by) VALUES (63, $thisuser);";
+																										$conn->query($insertsql);
+																						        }
 																								}
-																							}
+
 
 																						?>
 
