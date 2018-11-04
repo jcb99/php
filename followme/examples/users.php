@@ -138,10 +138,10 @@ if (!isset($_SESSION)){
 
 
 
-																							while ($row = $theresult->fetch_assoc()) {
-																								if(isset($_POST['beginfollowing'])) {
 
-																								if(IsChecked('follow_checkbox', 63)){
+																								if(isset($_POST['beginfollowing'])) {
+																									while ($row = $theresult->fetch_assoc()) {
+																								if(IsChecked('follow_checkbox', $row['user_id'])){
 
 																									$insertsql="INSERT INTO fm_follows (followed_user, followed_by) VALUES ($row['user_id'], $thisuser);";
 																									echo "The value of insert SQL is" . $insertsql;
