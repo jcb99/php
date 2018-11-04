@@ -64,6 +64,7 @@ if (!isset($_SESSION)){
 
                         <div class="row">
                                 <div class="col-md-6 ml-auto mr-auto">
+																	<form class="register-form" action="" method="post">
                                         <ul class="list-unstyled follows">
                                           <?php
                                           require('sitedbconn.php');
@@ -107,9 +108,8 @@ if (!isset($_SESSION)){
 																								<?php
 
 																								if(isset($_POST['beginfollowing'])) {
-																								if(IsChecked('follow_checkbox', $row['user_id']))
-																					        {
-																										$auserid=$row['user_id'];
+																								if(IsChecked('follow_checkbox', $row['user_id'])){
+																											$auserid=$row['user_id'];
 																					            $insertsql="INSERT INTO fm_follows (followed_user, followed_by) values ($auserid, $thisuser)";
 																											$conn->query($insertsql);
 																					        }
@@ -135,7 +135,7 @@ if (!isset($_SESSION)){
                                         </ul>
 
 																		<div class="row" style="width: 22.5%; margin: 0 auto;">
-																				<form class="register-form" action="" method="post">
+
 																						<button class="btn btn-danger btn-block btn-round" name="beginfollowing">Begin Following!</button>
 																				</form>
 																		</div>
