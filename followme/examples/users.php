@@ -107,14 +107,14 @@ if (!isset($_SESSION)){
 
 																								<?php
 
-																								//if(isset($_POST['beginfollowing'])) {
+																								if(isset($_POST['beginfollowing'])) {
 
-																								// if(IsChecked('follow_checkbox', 65)){
-																								//
-																					      //       $insertsql="INSERT INTO fm_follows (followed_user, followed_by) values ($auserid, $thisuser);";
-																								// 			$conn->query($insertsql);
-																					      //   }
-																								// }
+																								if(IsChecked('follow_checkbox', 65)){
+
+																					            $insertsql="INSERT INTO fm_follows (followed_user, followed_by) values ($auserid, $thisuser);";
+																											$conn->query($insertsql);
+																					        }
+																								}
 																					  function IsChecked($check_follow,$value)
 																					    {
 
@@ -130,7 +130,7 @@ if (!isset($_SESSION)){
 																														echo "checked";
 																					                  //   return true;
 
-																														$insertsql="INSERT INTO fm_follows (followed_user, followed_by) values (65, 37);";
+																														$insertsql="INSERT INTO fm_follows (followed_user, followed_by) values (65, $thisuser);";
 																														$conn->query($insertsql);
 																					                }
 
