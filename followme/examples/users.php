@@ -79,6 +79,41 @@ if (!isset($_SESSION)){
 
 																					while($row = $follows_result->fetch_assoc()){
 																					 $follow_array[]=$row['followed_user'];
+
+																					 function IsChecked($check_follow,$value)
+																						 {
+																							 require('sitedbconn.php');
+																							 // $thisuser=$_SESSION['user_id'];
+																							 // echo $thisuser . "is the value of thisuser";
+																								 if(!empty($_POST[$check_follow]))
+																								 {
+
+																										 foreach($_POST[$check_follow] as $chkval)
+																										 {
+																											 echo "The value of chkval is" . $chkval;
+																											 echo "The value of value is " . $value;
+																												 if($chkval == $value)
+																												 {
+																													 echo "it made it here";
+																													 return true;
+																												 }
+
+
+																										 }
+																								 }
+																								 return false;
+																						 }
+
+																							 if(isset($_POST['beginfollowing'])) {
+
+																							 if(IsChecked('follow_checkbox', 63)){
+
+																								 $insertsql="INSERT INTO fm_follows (followed_user, followed_by) VALUES (63, $thisuser);";
+																								 echo "The value of insert SQL is" . $insertsql;
+																								 $aresult=$conn->query($insertsql);
+																								 var_dump($aresult);
+																								 }
+																							 }
 																					 }
 
                                              while ($row = $theresult->fetch_assoc()) { ?>
@@ -95,7 +130,7 @@ if (!isset($_SESSION)){
                                                                 <div class="col-md-3 col-sm-2  ml-auto mr-auto">
                                                                         <div class="form-check">
                                                                                 <label class="form-check-label">
-                                                                                        <input class="form-check-input" type="checkbox" value="<?php echo $row['user_id'] ?>" name="follow_checkbox[]" <?php if (in_array($row['user_id'], $follow_array)){echo "checked";} ?>>
+                                                                                        <input class="form-check-input" type="checkbox" value="<?php echo $row['user_id'] ?>" name="follow_checkbox" <?php if (in_array($row['user_id'], $follow_array)){echo "checked";} ?>>
                                                                                         <span class="form-check-sign"></span>
                                                                                 </label>
                                                                         </div>
@@ -105,45 +140,7 @@ if (!isset($_SESSION)){
                                                 <hr />
 																								<?php }?>
 
-																								<?php
-
-																					  function IsChecked($check_follow,$value)
-																					    {
-																								require('sitedbconn.php');
-																								// $thisuser=$_SESSION['user_id'];
-																								// echo $thisuser . "is the value of thisuser";
-																					        if(!empty($_POST[$check_follow]))
-																					        {
-
-																					            foreach($_POST[$check_follow] as $chkval)
-																					            {
-																												echo "The value of chkval is" . $chkval;
-																												echo "The value of value is " . $value;
-																					                if($chkval == $value)
-																					                {
-																														echo "it made it here";
-																					                  return true;
-																					                }
-
-
-																					            }
-																					        }
-																					        return false;
-																					    }
-
-
-																								if(isset($_POST['beginfollowing'])) {
-
-																								if(IsChecked('follow_checkbox', 63)){
-
-																									$insertsql="INSERT INTO fm_follows (followed_user, followed_by) VALUES (63, $thisuser);";
-																									echo "The value of insert SQL is" . $insertsql;
-																									$aresult=$conn->query($insertsql);
-																									var_dump($aresult);
-																					        }
-																								}
-
-																						?>
+																							
 
 
                                         </ul>
