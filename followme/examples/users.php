@@ -109,7 +109,7 @@ if (!isset($_SESSION)){
 																								if(isset($_POST['beginfollowing'])) {
 																								if(IsChecked('follow_checkbox', $row['user_id']))
 																					        {
-																										$auserid=$row['user"id'];
+																										$auserid=$row['user_id'];
 																					            $insertsql="INSERT INTO fm_follows (followed_user, followed_by) values ($auserid, $thisuser)";
 																											$conn->query($insertsql);
 																					        }
