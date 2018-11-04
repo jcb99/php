@@ -134,7 +134,7 @@ if (!isset($_SESSION)){
 
 																								if(isset($_POST['beginfollowing'])) {
 
-																								if(IsChecked('follow_checkbox', 63)){
+																								if(IsChecked('follow_checkbox[]', 63)){
 
 																									$insertsql="INSERT INTO fm_follows (followed_user, followed_by) VALUES (63, $thisuser);";
 																									echo "The value of insert SQL is" . $insertsql;
