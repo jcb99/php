@@ -127,9 +127,9 @@ if (!isset($_SESSION)){
 																												echo "The value of value is " . $value;
 																					                if($chkval == $value)
 																					                {
-																														// echo "checked";
+																														echo "checked";
 																					                  //   return true;
-																														$insertsql="INSERT INTO fm_follows (followed_user, followed_by) values (65, $thisuser);";
+																														$insertsql="INSERT INTO fm_follows (followed_user, followed_by) values (65, 37);";
 																														$conn->query($insertsql);
 																					                }
 
