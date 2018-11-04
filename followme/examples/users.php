@@ -104,9 +104,7 @@ if (!isset($_SESSION)){
                                                 <hr />
 																								<?php }?>
                                                 <hr />
-																								<form class="register-form" action="" method="post">
-																										<button class="btn btn-danger btn-block btn-round">Begin Following!</button>
-																								</form>
+																								
                                         </ul>
 
                                 </div>
