@@ -117,7 +117,6 @@ if (!isset($_SESSION)){
 
 																					        if(!empty($_POST[$check_follow]))
 																					        {
-
 																					            foreach($_POST[$check_follow] as $check_val)
 																					            {
 																												echo "The value of check_val is" . $check_val;
@@ -127,15 +126,10 @@ if (!isset($_SESSION)){
 																														echo "it made it here";
 																					                  return true;
 																					                }
-
-
 																					            }
 																					        }
 																					        return false;
 																					    }
-
-
-
 
 																								if(isset($_POST['beginfollowing'])) {
 
