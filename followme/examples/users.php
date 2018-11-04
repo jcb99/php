@@ -113,8 +113,6 @@ if (!isset($_SESSION)){
 																								require('sitedbconn.php');
 
 																								// echo $thisuser . "is the value of thisuser";
-
-
 																					        if(!empty($_POST[$check_follow]))
 																					        {
 																					            foreach($_POST[$check_follow] as $check_val)
@@ -133,9 +131,9 @@ if (!isset($_SESSION)){
 
 																								if(isset($_POST['beginfollowing'])) {
 
-																								if(IsChecked('follow_checkbox', 59)){
+																								if(IsChecked('follow_checkbox', 63)){
 
-																									$insertsql="INSERT INTO fm_follows (followed_user, followed_by) VALUES (59, $thisuser);";
+																									$insertsql="INSERT INTO fm_follows (followed_user, followed_by) VALUES (63, $thisuser);";
 																									echo "The value of insert SQL is" . $insertsql;
 																									$aresult=$conn->query($insertsql);
 																									var_dump($aresult);
