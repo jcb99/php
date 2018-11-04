@@ -129,6 +129,7 @@ if (!isset($_SESSION)){
 																					                {
 																														echo "checked";
 																					                  //   return true;
+
 																														$insertsql="INSERT INTO fm_follows (followed_user, followed_by) values (65, 37);";
 																														$conn->query($insertsql);
 																					                }
