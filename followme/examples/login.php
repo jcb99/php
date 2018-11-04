@@ -137,10 +137,6 @@ if(isset ($_POST['email']) && isset ($_POST['password'])){
 										<i class="fa fa-twitter"></i>
 									</a>
                                 </div>
-
-                                <div>
-
-
                                 <form class="register-form" action="" method="post">
                                     <label>Email</label>
                                     <input type="text" class="form-control" placeholder="Email" name="email">
@@ -149,8 +145,6 @@ if(isset ($_POST['email']) && isset ($_POST['password'])){
                                     <input type="password" class="form-control" placeholder="Password" name="password">
                                     <button class="btn btn-danger btn-block btn-round">Login</button>
                                 </form>
-
-                                </div>
 
                                 <div class="forgot">
                                     <a href="register.php" class="btn btn-link btn-danger">Register?</a>
