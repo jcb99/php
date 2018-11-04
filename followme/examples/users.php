@@ -140,9 +140,10 @@ if (!isset($_SESSION)){
 
 
 																								while($row = $follows_result->fetch_assoc()){
-																								$follow_array[]=$row['followed_user'];
+																								$thefollow_array[]=$row['followed_user'];
 																								if(IsChecked('follow_checkbox', $row['followed_user'])){
 																									$afolloweduser=$row['followed_user'];
+																									echo "This is the value of " . $afolloweduser;
 																									$insertsql="INSERT INTO fm_follows (followed_user, followed_by) VALUES ($afolloweduser, $thisuser);";
 																									echo "The value of insert SQL is" . $insertsql;
 																									$aresult=$conn->query($insertsql);
