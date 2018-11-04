@@ -81,8 +81,7 @@ if (!isset($_SESSION)){
 																					 $follow_array[]=$row['followed_user'];
 																					 }
 
-                                             while ($row = $theresult->fetch_assoc()) {
-																							 ?>
+                                             while ($row = $theresult->fetch_assoc()) { ?>
                                                 <li>
                                                         <div class="row">
                                                                 <div class="col-md-2 col-sm-2 ml-auto mr-auto">
@@ -110,12 +109,9 @@ if (!isset($_SESSION)){
 
 																					  function IsChecked($check_follow,$value)
 																					    {
-																								$followsql = "SELECT * FROM fm_users";
-																								$theresult = $conn->query($followsql);
 																								require('sitedbconn.php');
 																								// $thisuser=$_SESSION['user_id'];
 																								// echo $thisuser . "is the value of thisuser";
-																								
 																					        if(!empty($_POST[$check_follow]))
 																					        {
 
