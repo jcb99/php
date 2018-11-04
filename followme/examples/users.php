@@ -103,12 +103,16 @@ if (!isset($_SESSION)){
                                                 </li>
                                                 <hr />
 																								<?php }?>
-                                                
+
 
                                         </ul>
 
                                 </div>
                         </div>
+
+												<form class="register-form" action="" method="post">
+														<button class="btn btn-danger btn-block btn-round">Begin Following!</button>
+												</form>
 
                 </div>
 
