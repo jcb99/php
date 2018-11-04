@@ -106,7 +106,7 @@ if (!isset($_SESSION)){
 
 
                                         </ul>
-																				<div class="row" style="width: 20%; margin: 0 auto;">
+																				<div class="row" style="width: 28%; margin: 0 auto;">
 
 																				<form class="register-form" action="" method="post">
 																						<button class="btn btn-danger btn-block btn-round">Begin Following!</button>
