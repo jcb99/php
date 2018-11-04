@@ -119,6 +119,7 @@ if (!isset($_SESSION)){
 																					    {
 																								require('sitedbconn.php');
 																								$thisuser=$_SESSION['user_id'];
+																								echo $thisuser . "is the value of thisuser";
 																					        if(!empty($_POST[$check_follow]))
 																					        {
 
