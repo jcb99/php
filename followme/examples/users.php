@@ -131,9 +131,10 @@ if (!isset($_SESSION)){
 																					        return false;
 																					    }
 																							$followsq="SELECT followed_user FROM fm_follows WHERE followed_by=$thisuser";
+																							echo $thisuser . "before is the value of this useer";
 																							$follows_resultq=$conn->query($followsq);
 
-																							
+
 
 																								if(isset($_POST['beginfollowing'])) {
 
