@@ -124,9 +124,10 @@ if (!isset($_SESSION)){
 
 																					            foreach($_POST[$check_follow] as $chkval)
 																					            {
-																												echo "checked";
+
 																					                if($chkval == $value)
 																					                {
+																														echo "checked";
 																					                    return true;
 																					                }
 																					            }
