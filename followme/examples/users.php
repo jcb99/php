@@ -121,6 +121,7 @@ if (!isset($_SESSION)){
 																												echo "The value of value is " . $value;
 																					                if($chkval == $value)
 																					                {
+																														echo "it made it here";
 																					                  return true;
 																					                }
 
