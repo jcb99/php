@@ -104,26 +104,7 @@ if (!isset($_SESSION)){
                                                 <hr />
 																								<?php }?>
 
-																								<?php
-																								if(IsChecked('follow_checkbox', $row['user_id']))
-																					        {
-																					            $insertsql="INSERT INTO fm_follows (followed_user, followed_by) values ($row['user_id'], $thisuser)";
-																											$conn->query($insertsql);
-																					        }
-																					  function IsChecked($check_follow,$value)
-																					    {
-																					        if(!empty($_POST[$check_follow]))
-																					        {
-																					            foreach($_POST[$check_follow] as $chkval)
-																					            {
-																					                if($chkval == $value)
-																					                {
-																					                    return true;
-																					                }
-																					            }
-																					        }
-																					        return false;
-																					    } ?>
+																								
 
 
                                         </ul>
