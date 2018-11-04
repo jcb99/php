@@ -105,6 +105,8 @@ if (!isset($_SESSION)){
 																								<?php }?>
 
 																								<?php
+
+																								if(isset($_POST['beginfollowing'])) {
 																								if(IsChecked('follow_checkbox', $row['user_id']))
 																					        {
 																										$auserid=$row['user"id'];
@@ -125,14 +127,16 @@ if (!isset($_SESSION)){
 																					            }
 																					        }
 																					        return false;
-																					    } ?>
+																					    }
+
+																						}?>
 
 
                                         </ul>
 
 																		<div class="row" style="width: 22.5%; margin: 0 auto;">
 																				<form class="register-form" action="" method="post">
-																						<button class="btn btn-danger btn-block btn-round">Begin Following!</button>
+																						<button class="btn btn-danger btn-block btn-round" name="beginfollowing">Begin Following!</button>
 																				</form>
 																		</div>
 
