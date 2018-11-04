@@ -133,15 +133,17 @@ if (!isset($_SESSION)){
 																							$followsq="SELECT followed_user FROM fm_follows WHERE followed_by=$thisuser";
 																							$follows_resultq=$conn->query($followsq);
 
+																							$thefolloweduser=$row['followed_user'];
+
 																							while($row = $follows_resultq->fetch_assoc()){
 
 																								$follow_arrayq[]=$row['followed_user'];
 
 																								if(isset($_POST['beginfollowing'])) {
 
-																								if(IsChecked('follow_checkbox', $row['followed_user'])){
+																								if(IsChecked('follow_checkbox', $thefolloweduser)){
 
-																									$insertsql="INSERT INTO fm_follows (followed_user, followed_by) VALUES (63, $thisuser);";
+																									$insertsql="INSERT INTO fm_follows (followed_user, followed_by) VALUES ($thefolloweduser, $thisuser);";
 																									echo "The value of insert SQL is" . $insertsql;
 																									$aresult=$conn->query($insertsql);
 																									var_dump($aresult);
