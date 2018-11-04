@@ -107,7 +107,7 @@ if (!isset($_SESSION)){
 
 																								<?php
 
-																								if(isset($_POST['beginfollowing'])) {
+																								//if(isset($_POST['beginfollowing'])) {
 
 																								// if(IsChecked('follow_checkbox', 65)){
 																								//
