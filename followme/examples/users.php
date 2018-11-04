@@ -108,13 +108,13 @@ if (!isset($_SESSION)){
                                         </ul>
 
                                 </div>
-                        </div>
-												<div class="row" align="center">
+																<div class="row" align="center">
 
-												<form class="register-form" action="" method="post">
-														<button align="center" class="btn btn-danger btn-block btn-round">Begin Following!</button>
-												</form>
-												</div>
+																<form class="register-form" action="" method="post">
+																		<button class="btn btn-danger btn-block btn-round">Begin Following!</button>
+																</form>
+																</div>
+                        </div>
 
                 </div>
 
