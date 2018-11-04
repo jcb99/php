@@ -109,7 +109,7 @@ if (!isset($_SESSION)){
 
                                 </div>
                         </div>
-												<div class="row" align="center">
+												<div align="center">
 
 												<form class="register-form" action="" method="post">
 														<button class="btn btn-danger btn-block btn-round">Begin Following!</button>
