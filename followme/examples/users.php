@@ -141,7 +141,6 @@ if (!isset($_SESSION)){
 
 
 																								if(IsChecked('follow_checkbox', 63)){
-
 																									$insertsql="INSERT INTO fm_follows (followed_user, followed_by) VALUES (63, $thisuser);";
 																									$conn->query($insertsql);
 																					        }
