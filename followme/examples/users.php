@@ -94,7 +94,7 @@ if (!isset($_SESSION)){
                                                                 <div class="col-md-3 col-sm-2  ml-auto mr-auto">
                                                                         <div class="form-check">
                                                                                 <label class="form-check-label">
-                                                                                        <input class="form-check-input" type="checkbox" value="<?php echo $row['user_id'] ?>" name="<?php echo $row['user_id'] ?>" <?php if (in_array($row['user_id'], $follow_array)){echo "checked";} ?>>
+                                                                                        <input class="form-check-input" type="checkbox" value="<?php echo $row['user_id'] ?>" name="follow_checkbox" <?php if (in_array($row['user_id'], $follow_array)){echo "checked";} ?>>
                                                                                         <span class="form-check-sign"></span>
                                                                                 </label>
                                                                         </div>
@@ -103,6 +103,27 @@ if (!isset($_SESSION)){
                                                 </li>
                                                 <hr />
 																								<?php }?>
+
+																								<?php
+																								if(IsChecked('follow_checkbox', $row['user_id']))
+																					        {
+																					            $insertsql="INSERT INTO fm_follows (followed_user, followed_by) values ($row['user_id'], $thisuser)";
+																											$conn->query($insertsql);
+																					        }
+																					  function IsChecked($check_follow,$value)
+																					    {
+																					        if(!empty($_POST[$check_follow]))
+																					        {
+																					            foreach($_POST[$check_follow] as $chkval)
+																					            {
+																					                if($chkval == $value)
+																					                {
+																					                    return true;
+																					                }
+																					            }
+																					        }
+																					        return false;
+																					    } ?>
 
 
                                         </ul>
