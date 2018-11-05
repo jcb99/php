@@ -17,7 +17,7 @@ require('sitedbconn.php');
 
 			// foreach($_POST[$check_follow] as $check_value)
 			// {
-				echo "The value of check_value is" . $check_value;
+				//echo "The value of check_value is" . $check_value;
 				echo "The value of value is " . $value;
 					if($_POST[$check_follow] == $value)
 					{
