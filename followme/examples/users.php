@@ -7,6 +7,7 @@ if (!isset($_SESSION)){
 
 function IsChecked($check_follow,$value)
 {
+
 require('sitedbconn.php');
 // $thisuser=$_SESSION['user_id'];
 // echo $thisuser . "is the value of thisuser";
@@ -14,6 +15,7 @@ require('sitedbconn.php');
 	{
 
 		echo $_POST[$check_follow] . "this is the value of postcheckfollow";
+		echo "The value of dollarsign value is " . $value;
 
 			// foreach($_POST[$check_follow] as $check_value)
 			// {
