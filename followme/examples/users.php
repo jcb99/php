@@ -115,11 +115,13 @@ if (!isset($_SESSION)){
 																					        if(!empty($_POST[$check_follow]))
 																					        {
 
-																					            foreach($_POST[$check_follow] as $chkval)
+																										echo $_POST[$check_follow] . "this is the value of postcheckfollow";
+
+																					            foreach($_POST[$check_follow] as $check_value)
 																					            {
-																												echo "The value of chkval is" . $chkval;
+																												echo "The value of check_value is" . $check_value;
 																												echo "The value of value is " . $value;
-																					                if($chkval == $value)
+																					                if($check_value == $value)
 																					                {
 																														echo "it made it here";
 																					                  return true;
