@@ -133,7 +133,7 @@ if (!isset($_SESSION)){
 																								//outside of the while loop create a foreach loop to check through each checkbox to see if check_value was changed to unchecked
 																								//inside the foreach loop contains an if statement. If the check_value is unchecked and it is in the array of currently followed users then return true
 
-																								//////////////CALL IsChecked FUNCTION/////////////
+																								//////////////CALL IsUnchecked FUNCTION/////////////
 																								//If the save changes button has been clicked (isset) then continue
 																								//inside that if statement is another if statement. if IsUnchecked function is true given the parameters (follow_checkbox and the user_id) then run delete query for that user id as the followed_user and the currently signed in user as the follower
 
