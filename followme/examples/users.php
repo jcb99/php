@@ -146,12 +146,12 @@ require('sitedbconn.php');
 
 																							 if(isset($_POST['beginfollowing'])) {
 
-																							 	// if(IsChecked('follow_checkbox', $row['user_id'])){
-																								// 	$auserid=$row['user_id'];
-																							 	// 	$insertsql="INSERT INTO fm_follows (followed_user, followed_by) VALUES ($auserid, $thisuser);";
-																							 	// 	$conn->query($insertsql);
-																								//
-																							 	// 	}
+																							 	if(IsChecked('follow_checkbox', $row['user_id'])){
+																									$auserid=$row['user_id'];
+																							 		$insertsql="INSERT INTO fm_follows (followed_user, followed_by) VALUES ($auserid, $thisuser);";
+																							 		$conn->query($insertsql);
+
+																							 		}
 
 																									if(IsUnchecked('follow_checkbox', $row['user_id'])){
 																										$auserid=$row['user_id'];
