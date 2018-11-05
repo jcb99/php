@@ -13,6 +13,7 @@ require('sitedbconn.php');
 // echo $thisuser . "is the value of thisuser";
 	if(!empty($_POST[$check_follow]))
 	{
+		echo "The value of post check follow is" . $_POST[$check_follow];
 
 		echo $_POST[$check_follow] . "this is the value of postcheckfollow";
 		echo "The value of dollarsign value is " . $value;
