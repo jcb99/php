@@ -146,7 +146,8 @@ require('sitedbconn.php');
                                                         </div>
                                                 </li>
                                                 <hr />
-																								<?php }?>
+																								<?php }
+																								$conn->query($follows)?>
 
 
 
