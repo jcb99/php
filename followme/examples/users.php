@@ -123,7 +123,7 @@ require('sitedbconn.php');
 																									$auserid=$row['user_id'];
 																							 		$insertsql="INSERT INTO fm_follows (followed_user, followed_by) VALUES ($auserid, $thisuser);";
 																							 		$conn->query($insertsql);
-																									$conn->query($follows);
+
 																							 		}
 																							 }?>
                                                 <li>
@@ -148,6 +148,7 @@ require('sitedbconn.php');
                                                 </li>
                                                 <hr />
 																								<?php }
+																								$conn->query($followsql);
 
 																								?>
 
