@@ -109,18 +109,17 @@ if (!isset($_SESSION)){
 																								//Function that checks to see if a box is checked
 																								//takes in the value of the checkbox (value is user_id) and the checkbox_name
 																								//Require the DB Connection
-																								//Run select query and store in a result.
-																								// Retrieve result of all the users who are being followed by the signed in user
-																								//Create an array of those users who are already being followed by the signed in user by using a while loop
-																								//outside of the while loop create a foreach loop to check through all checkboxes to see if check_value was submitted
-																								//inside the foreach loop contains an if statement. If the check_value is not in the array of currently followed users and it is checked then return true
+																								//Run a select query to retreieve all of the users who are being followed by the signed in user and store in a result
+																								//Create an array from that query's result by using a while loop
+																								//outside of the while loop create a foreach loop to check through each checkbox to see if check_value was submitted
+																								//inside the foreach loop contains an if statement. If the check_value is checked and it is not in the array of currently followed users then return true
 
 
 
 
-																								//////////////CALL FUNCTION/////////////
+																								//////////////CALL IsChecked FUNCTION/////////////
 																								//If the begin following button has been clicked (isset) then continue
-																								//if IsChecked function is true given the parameters (follow_checkbox and the user_id) then run insert query for that user id as the followed_user and the current user as the follower
+																								//inside that if statement is another if statement. if IsChecked function is true given the parameters (follow_checkbox and the user_id) then run insert query for that user id as the followed_user and the currently signed in user as the follower
 
 
 
