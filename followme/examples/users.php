@@ -5,23 +5,51 @@ if (!isset($_SESSION)){
 
 
 
-function IsChecked($check_follow,$value)
-{
+function IsChecked($check_follow,$value){
 
 require('sitedbconn.php');
 // $thisuser=$_SESSION['user_id'];
 // echo $thisuser . "is the value of thisuser";
 	if(!empty($_POST[$check_follow]))
 	{
-		echo "The value of post check follow is" . $_POST[$check_follow];
+		//echo "The value of post check follow is" . $_POST[$check_follow];
 
-		echo $_POST[$check_follow] . "this is the value of postcheckfollow";
-		echo "The value of dollarsign value is " . $value;
+		//echo $_POST[$check_follow] . "this is the value of postcheckfollow";
+		//echo "The value of dollarsign value is " . $value;
 
 			// foreach($_POST[$check_follow] as $check_value)
 			// {
 				//echo "The value of check_value is" . $check_value;
-				echo "The value of value is " . $value;
+				//echo "The value of value is " . $value;
+					//if($value in $_POST[$check_follow])
+					if (in_array($value, $_POST[$check_follow]))
+					{
+						//echo "it made it here";
+						return true;
+					}
+
+
+			//}
+	}
+	return false;
+}
+
+function IsUnchecked($check_follow,$value){
+
+require('sitedbconn.php');
+// $thisuser=$_SESSION['user_id'];
+// echo $thisuser . "is the value of thisuser";
+	if(!empty($_POST[$check_follow]))
+	{
+		//echo "The value of post check follow is" . $_POST[$check_follow];
+
+		//echo $_POST[$check_follow] . "this is the value of postcheckfollow";
+		//echo "The value of dollarsign value is " . $value;
+
+			// foreach($_POST[$check_follow] as $check_value)
+			// {
+				//echo "The value of check_value is" . $check_value;
+				//echo "The value of value is " . $value;
 					//if($value in $_POST[$check_follow])
 					if (in_array($value, $_POST[$check_follow]))
 					{
@@ -34,7 +62,6 @@ require('sitedbconn.php');
 	}
 	return false;
 }
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -123,9 +150,15 @@ require('sitedbconn.php');
 																									$auserid=$row['user_id'];
 																							 		$insertsql="INSERT INTO fm_follows (followed_user, followed_by) VALUES ($auserid, $thisuser);";
 																							 		$conn->query($insertsql);
-																									$conn->query($followsql);
 
 																							 		}
+
+																									if(IsUnchecked('follow_checkbox', $row['user_id'])){
+																										$auserid=$row['user_id'];
+																								 		$delsql="DELETE FROM fm_follows WHERE followed_user=$auserid && followed_by=$thisuser;";
+																								 		$conn->query($delsql);
+
+																								 		}
 																							 }?>
                                                 <li>
                                                         <div class="row">
