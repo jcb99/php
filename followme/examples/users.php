@@ -22,7 +22,7 @@ require('sitedbconn.php');
 			// {
 				//echo "The value of check_value is" . $check_value;
 				echo "The value of value is " . $value;
-					if($value in $_POST[$check_follow])
+					//if($value in $_POST[$check_follow])
 					if (in_array($value, $_POST[$check_follow]))
 					{
 						echo "it made it here";
