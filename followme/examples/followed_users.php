@@ -124,7 +124,7 @@ if (!isset($_SESSION)){
 
 
 																								////////////////////////REMOVING OF USERS////////////////////
-																								////////////////////IsUnhecked FUNCTION//////////////
+																								////////////////////IsUnchecked FUNCTION//////////////
 																								//Function that checks to see if a box is unchecked
 																								//takes in the value of the checkbox (value is user_id) and the checkbox_name
 																								//Require the DB Connection
