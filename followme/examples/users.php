@@ -146,7 +146,8 @@ require('sitedbconn.php');
                                                         </div>
                                                 </li>
                                                 <hr />
-																								<?php }	?>
+																								<?php }
+																								header('Location: profile.php');?>
                                         </ul>
 
 																		<div class="row" style="width: 22.5%; margin: 0 auto;">
