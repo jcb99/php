@@ -6,26 +6,26 @@ if (!isset($_SESSION)){
 function IsChecked($check_follow,$value){
 require('sitedbconn.php');
 
-	if(!empty($_POST[$check_follow]))
-	{
+	// if(!empty($_POST[$check_follow]))
+	// {
 		if (in_array($value, $_POST[$check_follow]))
 		{
 			return true;
 		}
-	}
+	// }
 	return false;
 }
 
 function IsUnchecked($check_follow,$value){
 require('sitedbconn.php');
 
-	if(!empty($_POST[$check_follow]))
-	{
+	// if(!empty($_POST[$check_follow]))
+	// {
 		if (!in_array($value, $_POST[$check_follow]))
 		{
 			return true;
 		}
-	}
+	// }
 	return false;
 }
 
