@@ -149,7 +149,7 @@ require('sitedbconn.php');
                                                         </div>
                                                 </li>
                                                 <hr />
-																								<?php $conn->query($followsql) }
+																								<?php $conn->query($followsql); }
 
 
 																								?>
