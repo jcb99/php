@@ -117,15 +117,14 @@ require('sitedbconn.php');
 																									$auserid=$row['user_id'];
 																							 		$insertsql="INSERT IGNORE INTO fm_follows (followed_user, followed_by) VALUES ($auserid, $thisuser);";
 																							 		$conn->query($insertsql);
-																									$conn->query($follows);
-
+																									$follows_result=$conn->query($follows);
 																							 		}
 
 																									if(IsUnchecked('follow_checkbox', $row['user_id'])){
 																										$auserid=$row['user_id'];
 																								 		$delsql="DELETE FROM fm_follows WHERE followed_user=$auserid && followed_by=$thisuser;";
 																								 		$conn->query($delsql);
-																										$conn->query($follows);
+																										$follows_result=$conn->query($follows);
 																								 		}
 																							 }?>
                                                 <li>
@@ -149,14 +148,7 @@ require('sitedbconn.php');
                                                         </div>
                                                 </li>
                                                 <hr />
-																								<?php $conn->query($followsql); }
-
-
-																								?>
-
-
-
-
+																								<?php }	?>
                                         </ul>
 
 																		<div class="row" style="width: 22.5%; margin: 0 auto;">
