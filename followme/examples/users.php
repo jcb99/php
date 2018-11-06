@@ -111,7 +111,7 @@ require('sitedbconn.php');
 
                                              while ($row = $theresult->fetch_assoc()) {
 
-																							 if(isset($_POST['beginfollowing'])) {
+																							 if(isset($_POST['savebutton'])) {
 
 																							 	if(IsChecked('follow_checkbox', $row['user_id'])){
 																									$auserid=$row['user_id'];
@@ -153,7 +153,7 @@ require('sitedbconn.php');
 
 																		<div class="row" style="width: 22.5%; margin: 0 auto;">
 
-																						<button class="btn btn-danger btn-block btn-round" name="beginfollowing">Begin Following!</button>
+																						<button class="btn btn-danger btn-block btn-round" name="savebutton">Save Changes</button>
 																				</form>
 																		</div>
 
