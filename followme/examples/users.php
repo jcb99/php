@@ -146,8 +146,7 @@ require('sitedbconn.php');
                                                         </div>
                                                 </li>
                                                 <hr />
-																								<?php }
-																								$follows_result=$conn->query($follows);	?>
+																								<?php }	?>
                                         </ul>
 
 																		<div class="row" style="width: 22.5%; margin: 0 auto;">
