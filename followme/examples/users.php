@@ -115,7 +115,7 @@ require('sitedbconn.php');
 
 																							 	if(IsChecked('follow_checkbox', $row['user_id'])){
 																									$auserid=$row['user_id'];
-																							 		$insertsql="INSERT INTO fm_follows (followed_user, followed_by) VALUES ($auserid, $thisuser);";
+																							 		$insertsql="INSERT IGNORE INTO fm_follows (followed_user, followed_by) VALUES ($auserid, $thisuser);";
 																							 		$conn->query($insertsql);
 																									$conn->query($follows);
 
@@ -149,7 +149,7 @@ require('sitedbconn.php');
                                                         </div>
                                                 </li>
                                                 <hr />
-																								<?php }
+																								<?php $conn->query($follows); }
 
 
 																								?>
