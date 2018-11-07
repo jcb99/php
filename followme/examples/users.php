@@ -131,7 +131,6 @@ require('sitedbconn.php');
                                                                         <div class="form-check">
                                                                                 <label class="form-check-label">
                                                                                         <input class="form-check-input" type="checkbox" value="<?php echo $row['user_id'] ?>" name="follow_checkbox[]" <?php if (in_array($row['user_id'], $follow_array)){echo "checked";} ?>>
-																																												<?php echo $_POST['follow_checkbox'] . "is the value of post checkbox"; ?>
                                                                                         <span class="form-check-sign"></span>
                                                                                 </label>
                                                                         </div>
