@@ -107,14 +107,14 @@ require('sitedbconn.php');
 																									$auserid=$row['user_id'];
 																							 		$insertsql="INSERT IGNORE INTO fm_follows (followed_user, followed_by) VALUES ($auserid, $thisuser);";
 																							 		$conn->query($insertsql);
-																									//header('Location: users.php');
+																									header('Location: users.php');
 																							 		}
 
 																									if(IsUnchecked('follow_checkbox', $row['user_id'])){
 																										$auserid=$row['user_id'];
 																								 		$delsql="DELETE FROM fm_follows WHERE followed_user=$auserid && followed_by=$thisuser;";
 																								 		$conn->query($delsql);
-																										//header('Location: users.php');
+																										header('Location: users.php');
 																								 		}
 																							 }?>
                                                 <li>
@@ -131,9 +131,6 @@ require('sitedbconn.php');
                                                                         <div class="form-check">
                                                                                 <label class="form-check-label">
                                                                                         <input class="form-check-input" type="checkbox" value="<?php echo $row['user_id'] ?>" name="follow_checkbox[]" <?php if (in_array($row['user_id'], $follow_array)){echo "checked";} ?>>
-																																												<?php
-																																												$theprint=$_POST['follow_checkbox'];
-																																												print_r($theprint); ?>
                                                                                         <span class="form-check-sign"></span>
                                                                                 </label>
                                                                         </div>
