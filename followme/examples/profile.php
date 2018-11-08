@@ -50,8 +50,9 @@ session_start(); //Start session_start
 	            <ul class="navbar-nav ml-auto">
 	                <li class="nav-item">
 	                    <a href="login.php" class="nav-link">Login</a>
-											<a href="users.php" class="nav-link">&nbsp;Find Users</a>
 	                </li>
+
+									<li><a href="users.php" class="nav-link">&nbsp;Find Users&nbsp;</a></li>
 
 									<li class="nav-item">
 											<a href="#" class="nav-link">
