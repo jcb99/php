@@ -180,10 +180,11 @@ require('sitedbconn.php');
 
 																</div>
 												</li>
+												<hr>
 											</ul>
 										</div>
 									</div>
-									
+
 											<?php }
 									}
 									if ($follow_array==""){
