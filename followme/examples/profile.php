@@ -164,6 +164,9 @@ require('sitedbconn.php');
 											 while ($row = $theresult->fetch_assoc()) {
 											 if (in_array($row['user_id'], $follow_array)){
 											  ?>
+												<div class="row">
+																<div class="col-md-6 ml-auto mr-auto">
+																	<ul class="list-unstyled follows">
 												<li>
 																<div class="row">
 																				<div class="col-md-2 col-sm-2 ml-auto mr-auto">
@@ -177,6 +180,10 @@ require('sitedbconn.php');
 
 																</div>
 												</li>
+											</ul>
+										</div>
+									</div>
+									
 											<?php }
 									}
 									if ($follow_array==""){
