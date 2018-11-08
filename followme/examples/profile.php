@@ -1,6 +1,6 @@
 <?php
 session_start(); //Start session_start
-
+require('sitedbconn.php');
 //Uses the $_SESSION['email'] POST variable to display the email in the nav bar at the top (Welcome $_SESSION['image_url'])
 
 //Modify fm_users to image_url...load it to the $_SESSION['email'] variable
@@ -148,7 +148,44 @@ session_start(); //Start session_start
                         </div>
                     </div>
                     <div class="tab-pane text-center" id="following" role="tabpanel">
-                        <h3 class="text-muted">Not following anyone yet :(</h3>
+											<?php
+											$thisuser=$_SESSION['user_id'];
+
+											$followsql = "SELECT * FROM fm_users";
+											$follows="SELECT followed_user FROM fm_follows WHERE followed_by=$thisuser";
+
+											$theresult = $conn->query($followsql);
+											$follows_result=$conn->query($follows);
+
+											while($row = $follows_result->fetch_assoc()){
+											 $follow_array[]=$row['followed_user'];
+											 }
+
+											 while ($row = $theresult->fetch_assoc()) {
+											 if (in_array($row['user_id'], $follow_array)){
+											  ?>
+												<li>
+																<div class="row">
+																				<div class="col-md-2 col-sm-2 ml-auto mr-auto">
+																								<img src="<?php echo $row['image_url']; ?>" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+																				</div>
+																				<div class="col-md-7 col-sm-4  ml-auto mr-auto">
+																							 <h6> <?php echo $row['first_name'];
+																							 echo " ";
+																							 echo $row['last_name']; ?> <br/><small> <?php echo $row['title']; ?>  </small></h6>
+																			</div>
+																				<div class="col-md-3 col-sm-2  ml-auto mr-auto">
+																								<div class="form-check">
+																												<label class="form-check-label">
+																																<input class="form-check-input" type="checkbox" value="<?php echo $row['user_id'] ?>" name="follow_checkbox[]" <?php if (in_array($row['user_id'], $follow_array)){echo "checked";} ?>>
+																																<span class="form-check-sign"></span>
+																												</label>
+																								</div>
+																				</div>
+																</div>
+												</li>
+											<?php }} ?>
+												<h3 class="text-muted">Not following anyone yet :(</h3>
                         <button class="btn btn-warning btn-round">Find artists</button>
                     </div>
                 </div>
