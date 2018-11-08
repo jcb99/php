@@ -174,13 +174,7 @@ require('sitedbconn.php');
 																							 echo " ";
 																							 echo $row['last_name']; ?> <br/><small> <?php echo $row['title']; ?>  </small></h6>
 																			</div>
-																				<div class="col-md-3 col-sm-2  ml-auto mr-auto">
-																								<div class="form-check">
-																												<label class="form-check-label">
-																																<span class="form-check-sign"></span>
-																												</label>
-																								</div>
-																				</div>
+
 																</div>
 												</li>
 											<?php }
