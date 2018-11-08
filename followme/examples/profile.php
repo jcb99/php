@@ -177,7 +177,6 @@ require('sitedbconn.php');
 																				<div class="col-md-3 col-sm-2  ml-auto mr-auto">
 																								<div class="form-check">
 																												<label class="form-check-label">
-																																<input class="form-check-input" type="checkbox" value="<?php echo $row['user_id'] ?>" name="follow_checkbox[]" <?php if (in_array($row['user_id'], $follow_array)){echo "checked";} ?>>
 																																<span class="form-check-sign"></span>
 																												</label>
 																								</div>
