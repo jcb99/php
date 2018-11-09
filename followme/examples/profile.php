@@ -148,13 +148,6 @@ require('sitedbconn.php');
 										}?>
 										</div>
 
-
-
-
-
-
-
-
                     <div class="tab-pane" id="following" role="tabpanel">
 											<?php
 											$thisuser=$_SESSION['user_id'];
