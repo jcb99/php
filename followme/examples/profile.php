@@ -196,7 +196,7 @@ require('sitedbconn.php');
 											<?php }
 									}
 									if ($follow_array==""){
-											echo "<h3 class=\"text-muted\">Not following anyone yet :(</h3>";
+											echo "<h3 class=\"text-muted\">You have no followers... :(</h3>";
 										}?>
                     </div>
                 </div>
