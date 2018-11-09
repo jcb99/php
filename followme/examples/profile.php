@@ -111,17 +111,17 @@ require('sitedbconn.php');
 											<?php
 											$thisuser=$_SESSION['user_id'];
 
-											$followsql = "SELECT * FROM fm_users";
-											$follows="SELECT followed_by FROM fm_follows WHERE followed_user=$thisuser";
+											$thefollowsql = "SELECT * FROM fm_users";
+											$followed_by="SELECT followed_by FROM fm_follows WHERE followed_user=$thisuser";
 
-											$theresult = $conn->query($followsql);
-											$follows_result=$conn->query($follows);
+											$aresult = $conn->query($thefollowsql);
+											$followedby_result=$conn->query($followed_by);
 
-											while($row = $follows_result->fetch_assoc()){
+											while($row = $followedby_result->fetch_assoc()){
 											 $follow_array[]=$row['followed_user'];
 											 }
 
-											 while ($row = $theresult->fetch_assoc()) {
+											 while ($row = $aresult->fetch_assoc()) {
 											 if (in_array($row['user_id'], $follow_array)){
 												?>
 												<div class="row">
