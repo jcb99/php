@@ -147,7 +147,7 @@ require('sitedbconn.php');
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane" id="following" role="tabpanel">
+                    <div class="tab-pane text-center" id="following" role="tabpanel">
 											<?php
 											$thisuser=$_SESSION['user_id'];
 
