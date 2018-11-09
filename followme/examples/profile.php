@@ -118,7 +118,7 @@ require('sitedbconn.php');
 											$followedby_result=$conn->query($followed_by);
 
 											while($row = $followedby_result->fetch_assoc()){
-											 $follow_array[]=$row['followed_user'];
+											 $follow_array[]=$row['followed_by'];
 											 }
 
 											 while ($row = $aresult->fetch_assoc()) {
