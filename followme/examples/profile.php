@@ -169,10 +169,10 @@ require('sitedbconn.php');
 																	<ul class="list-unstyled follows">
 												<li>
 																<div class="row">
-																				<div class="col-md-2 col-sm-2 ml-auto mr-auto">
+																				<div class="col-md-2 col-sm-2 ml-auto mr-0">
 																								<img src="<?php echo $row['image_url']; ?>" alt="Circle Image" class="img-circle img-no-padding img-responsive">
 																				</div>
-																				<div class="col-md-7 col-sm-4  ml-auto mr-auto">
+																				<div class="col-md-7 col-sm-4  ml-0 mr-0">
 																							 <h6> <?php echo $row['first_name'];
 																							 echo " ";
 																							 echo $row['last_name']; ?> <br/><small> <?php echo $row['title']; ?>  </small></h6>
