@@ -8,7 +8,22 @@ require('sitedbconn.php');
 //Modify the fm_users table to include first and last name....Use the session variable first name and last name
 //Modify fm_users to add title and then load it to the $_SESSION['title']
 //Modify fm_users to add description and then load it to the $_SESSION['description']?>
+<?php
+$thisuser=$_SESSION['user_id'];
 
+$thefollowsql = "SELECT * FROM fm_users";
+$followed_by="SELECT followed_by FROM fm_follows WHERE followed_user=$thisuser";
+
+$aresult = $conn->query($thefollowsql);
+$followedby_result=$conn->query($followed_by);
+
+while($row = $followedby_result->fetch_assoc()){
+ $follow_array[]=$row['followed_by'];
+ }
+
+ while ($row = $aresult->fetch_assoc()) {
+ if (in_array($row['user_id'], $follow_array)){
+	?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -104,22 +119,7 @@ require('sitedbconn.php');
                 <div class="tab-content following">
 
 										<div class="tab-pane" id="follows" role="tabpanel">
-											<?php
-											$thisuser=$_SESSION['user_id'];
 
-											$thefollowsql = "SELECT * FROM fm_users";
-											$followed_by="SELECT followed_by FROM fm_follows WHERE followed_user=$thisuser";
-
-											$aresult = $conn->query($thefollowsql);
-											$followedby_result=$conn->query($followed_by);
-
-											while($row = $followedby_result->fetch_assoc()){
-											 $follow_array[]=$row['followed_by'];
-											 }
-
-											 while ($row = $aresult->fetch_assoc()) {
-											 if (in_array($row['user_id'], $follow_array)){
-												?>
 												<div class="row">
 																<div class="col-md-6 ml-auto mr-auto">
 																	<ul class="list-unstyled follows">
