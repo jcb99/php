@@ -21,7 +21,16 @@ $followedby_result=$conn->query($followed_by);
 while($row = $followedby_result->fetch_assoc()){
  $follow_array[]=$row['followed_by'];
  }
-	?>
+
+ $followsql2 = "SELECT * FROM fm_users";
+ $follows2="SELECT followed_user FROM fm_follows WHERE followed_by=$thisuser";
+
+ $theresult2 = $conn->query($followsql2);
+ $follows_result2=$conn->query($follows2);
+
+ while($row = $follows_result2->fetch_assoc()){
+	$follow_array2[]=$row['followed_user'];
+	}	?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -116,7 +125,7 @@ while($row = $followedby_result->fetch_assoc()){
                 <!-- Tab panes -->
                 <div class="tab-content following">
 
-										<div class="tab-pane" id="follows" role="tabpanel">
+										<div class="tab-pane toggle" id="follows" role="tabpanel">
 
 										<?php  	while ($row = $aresult->fetch_assoc()) {
 											if (in_array($row['user_id'], $follow_array)){ ?>
@@ -150,17 +159,9 @@ while($row = $followedby_result->fetch_assoc()){
 
                     <div class="tab-pane" id="following" role="tabpanel">
 											<?php
-											$thisuser=$_SESSION['user_id'];
+											//$thisuser=$_SESSION['user_id'];
 
-											$followsql2 = "SELECT * FROM fm_users";
-											$follows2="SELECT followed_user FROM fm_follows WHERE followed_by=$thisuser";
 
-											$theresult2 = $conn->query($followsql2);
-											$follows_result2=$conn->query($follows2);
-
-											while($row = $follows_result2->fetch_assoc()){
-											 $follow_array2[]=$row['followed_user'];
-											 }
 
 											 while ($row = $theresult2->fetch_assoc()) {
 											 if (in_array($row['user_id'], $follow_array2)){
