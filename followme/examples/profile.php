@@ -155,8 +155,8 @@ while($row = $followedby_result->fetch_assoc()){
 											$followsql2 = "SELECT * FROM fm_users";
 											$follows2="SELECT followed_user FROM fm_follows WHERE followed_by=$thisuser";
 
-											$theresult2 = $conn->query($followsql);
-											$follows_result2=$conn->query($follows);
+											$theresult2 = $conn->query($followsql2);
+											$follows_result2=$conn->query($follows2);
 
 											while($row = $follows_result2->fetch_assoc()){
 											 $follow_array2[]=$row['followed_user'];
