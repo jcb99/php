@@ -84,7 +84,7 @@ require('sitedbconn.php');
                     <div class="col-md-6 ml-auto mr-auto text-center">
                         <p><?php echo $_SESSION['description']; ?></p>
                         <br />
-                        <a href="editprofile.php"><btn class="btn btn-outline-default btn-round"><i class="fa fa-cog"></i>Edit Profile</btn></a>
+                        <btn class="btn btn-outline-default btn-round"><i class="fa fa-cog"></i> Settings</btn>
                     </div>
                 </div>
                 <br/>
