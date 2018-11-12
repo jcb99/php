@@ -152,18 +152,18 @@ while($row = $followedby_result->fetch_assoc()){
 											<?php
 											$thisuser=$_SESSION['user_id'];
 
-											$followsql = "SELECT * FROM fm_users";
-											$follows="SELECT followed_user FROM fm_follows WHERE followed_by=$thisuser";
+											$followsql2 = "SELECT * FROM fm_users";
+											$follows2="SELECT followed_user FROM fm_follows WHERE followed_by=$thisuser";
 
-											$theresult = $conn->query($followsql);
-											$follows_result=$conn->query($follows);
+											$theresult2 = $conn->query($followsql);
+											$follows_result2=$conn->query($follows);
 
-											while($row = $follows_result->fetch_assoc()){
-											 $follow_array[]=$row['followed_user'];
+											while($row = $follows_result2->fetch_assoc()){
+											 $follow_array2[]=$row['followed_user'];
 											 }
 
-											 while ($row = $theresult->fetch_assoc()) {
-											 if (in_array($row['user_id'], $follow_array)){
+											 while ($row = $theresult2->fetch_assoc()) {
+											 if (in_array($row['user_id'], $follow_array2)){
 											  ?>
 												<div class="row">
 																<div class="col-md-6 ml-auto mr-auto">
@@ -188,7 +188,7 @@ while($row = $followedby_result->fetch_assoc()){
 
 											<?php }
 									}
-									if ($follow_array==""){
+									if ($follow_array2==""){
 											echo "<h3 align=\"center\" class=\"text-muted\">Not following anyone yet :(</h3>";
 										}?>
                     </div>
