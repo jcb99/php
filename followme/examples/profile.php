@@ -114,7 +114,7 @@ while($row = $followedby_result->fetch_assoc()){
                     <div class="nav-tabs-wrapper">
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#follows" role="tab">Followers</a>
+                                <a class="nav-link active" data-toggle="tab" href="#follows" role="tab">Followers</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#following" role="tab">Following</a>
@@ -125,7 +125,7 @@ while($row = $followedby_result->fetch_assoc()){
                 <!-- Tab panes -->
                 <div class="tab-content following">
 
-										<div class="tab-pane toggle" id="follows" role="tabpanel">
+										<div class="tab-pane" id="follows" role="tabpanel">
 
 										<?php  	while ($row = $aresult->fetch_assoc()) {
 											if (in_array($row['user_id'], $follow_array)){ ?>
