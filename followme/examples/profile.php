@@ -21,9 +21,6 @@ $followedby_result=$conn->query($followed_by);
 while($row = $followedby_result->fetch_assoc()){
  $follow_array[]=$row['followed_by'];
  }
-
- while ($row = $aresult->fetch_assoc()) {
- if (in_array($row['user_id'], $follow_array)){
 	?>
 <!doctype html>
 <html lang="en">
@@ -121,6 +118,8 @@ while($row = $followedby_result->fetch_assoc()){
 
 										<div class="tab-pane" id="follows" role="tabpanel">
 
+										<?php  	while ($row = $aresult->fetch_assoc()) {
+											if (in_array($row['user_id'], $follow_array)){ ?>
 												<div class="row">
 																<div class="col-md-6 ml-auto mr-auto">
 																	<ul class="list-unstyled follows">
