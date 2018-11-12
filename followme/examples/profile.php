@@ -9,28 +9,6 @@ require('sitedbconn.php');
 //Modify fm_users to add title and then load it to the $_SESSION['title']
 //Modify fm_users to add description and then load it to the $_SESSION['description']?>
 
-<?php
-$thisuser=$_SESSION['user_id'];
-
-$thefollowsql = "SELECT * FROM fm_users";
-$followed_by="SELECT followed_by FROM fm_follows WHERE followed_user=$thisuser";
-
-$aresult = $conn->query($thefollowsql);
-$followedby_result=$conn->query($followed_by);
-
-while($row = $followedby_result->fetch_assoc()){
- $follow_array[]=$row['followed_by'];
- }
-
- $followsql2 = "SELECT * FROM fm_users";
- $follows2="SELECT followed_user FROM fm_follows WHERE followed_by=$thisuser";
-
- $theresult2 = $conn->query($followsql2);
- $follows_result2=$conn->query($follows2);
-
- while($row = $follows_result2->fetch_assoc()){
-	$follow_array2[]=$row['followed_user'];
-	}	?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -114,7 +92,7 @@ while($row = $followedby_result->fetch_assoc()){
                     <div class="nav-tabs-wrapper">
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#follows" role="tab">Followers</a>
+                                <a class="nav-link" data-toggle="tab" href="#follows" role="tab">Followers</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#following" role="tab">Following</a>
@@ -127,7 +105,20 @@ while($row = $followedby_result->fetch_assoc()){
 
 										<div class="tab-pane" id="follows" role="tabpanel">
 
-										<?php  	while ($row = $aresult->fetch_assoc()) {
+										<?php
+										$thisuser=$_SESSION['user_id'];
+
+										$thefollowsql = "SELECT * FROM fm_users";
+										$followed_by="SELECT followed_by FROM fm_follows WHERE followed_user=$thisuser";
+
+										$aresult = $conn->query($thefollowsql);
+										$followedby_result=$conn->query($followed_by);
+
+										while($row = $followedby_result->fetch_assoc()){
+										 $follow_array[]=$row['followed_by'];
+										 }
+
+										 while ($row = $aresult->fetch_assoc()) {
 											if (in_array($row['user_id'], $follow_array)){ ?>
 												<div class="row">
 																<div class="col-md-6 ml-auto mr-auto">
@@ -159,9 +150,17 @@ while($row = $followedby_result->fetch_assoc()){
 
                     <div class="tab-pane" id="following" role="tabpanel">
 											<?php
-											//$thisuser=$_SESSION['user_id'];
+											$thisuser=$_SESSION['user_id'];
 
+											$followsql2 = "SELECT * FROM fm_users";
+											$follows2="SELECT followed_user FROM fm_follows WHERE followed_by=$thisuser";
 
+											$theresult2 = $conn->query($followsql2);
+											$follows_result2=$conn->query($follows2);
+
+											while($row = $follows_result2->fetch_assoc()){
+											 $follow_array2[]=$row['followed_user'];
+											 }
 
 											 while ($row = $theresult2->fetch_assoc()) {
 											 if (in_array($row['user_id'], $follow_array2)){
