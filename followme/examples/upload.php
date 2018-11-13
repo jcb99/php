@@ -50,10 +50,10 @@
         $ret = "Sorry! It appears your file type is not supported! Only JPEGs, PNGs, and GIFs may be used for your profile picture!";
     }
 
-    if ($_FILES['upload']['size'] > 1000000) {
-      $uploadVerification = false;
-      $ret = "This file is too large. Please upload a smaller file.";
-    }
+    // if ($_FILES['upload']['size'] > 1000000) {
+    //   $uploadVerification = false;
+    //   $ret = "This file is too large. Please upload a smaller file.";
+    // }
 
 
 //If the target file name already exists the $uploadVerification will be false and will not upload the file and won't execute the code below
@@ -76,9 +76,3 @@
    <br>
    <input type="submit" name="Submit">
  </form>
-
- <h5 style="color: red;">
-   <?php
-    if ($ret) {echo $ret;}
-   ?>
- </h5>
