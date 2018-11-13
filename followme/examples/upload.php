@@ -65,12 +65,3 @@
 
   }
  ?>
-
- Upload your file.
-
- <form action = "" method="post" enctype="multipart/form-data">
-   <!-- We must have the enctype="multipart/form-data in order for the browser to understand that this isn't just normal post data..Otherwise the form won't work"  -->
-   <input type="file" name="upload">
-   <br>
-   <!-- <input type="submit" name="Submit"> -->
- </form>
