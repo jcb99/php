@@ -59,8 +59,9 @@
     if ($uploadVerification) { //if this value is true
         $thisuser=$_SESSION('user_id');
         move_uploaded_file($_FILES['upload']['tmp_name'], $target_file); //moves the uploaded file from memory to this location
-        $newpicture="UPDATE fm_users SET img_url=$target_file WHERE user_id=$thisuser;";
+        $newpicture="UPDATE fm_users SET image_url=$target_file WHERE user_id=$thisuser;";
         $conn->query($newpicture);
+        header('Location: profile.php');
     }
 
   }
