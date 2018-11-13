@@ -85,6 +85,7 @@ require('sitedbconn.php');
                         <p><?php echo $_SESSION['description']; ?></p>
                         <br />
                         <a href="editprofile.php"><btn class="btn btn-outline-default btn-round"><i class="fa fa-cog"></i>Edit Profile</btn></a>
+												<btn class="btn btn-outline-default btn-round"><i class="fa fa-cog"></i>Change Profile Picture</btn>
                     </div>
                 </div>
                 <br/>
