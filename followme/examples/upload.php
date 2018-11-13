@@ -56,9 +56,9 @@
 
 
 //If the target file name already exists the $uploadVerification will be false and will not upload the file and won't execute the code below
-    // if ($uploadVerification) { //if this value is true
-    //     move_uploaded_file($_FILES['upload']['tmp_name'], $target_file); //moves the uploaded file from memory to this location
-    // }
+    if ($uploadVerification) { //if this value is true
+        move_uploaded_file($_FILES['upload']['tmp_name'], $target_file); //moves the uploaded file from memory to this location
+    }
 
   }
  ?>
