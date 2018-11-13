@@ -110,7 +110,7 @@ header('Location: profile.php');
 						<div class="row">
 								<div class="col-md-8 ml-auto mr-auto">
 										<h2 class="text-center">Edit Profile</h2>
-										<form class="contact-form" action="" method="post">
+										<form class="contact-form" action="" method="post" enctype="multipart/form-data">
 												<div class="row">
 
 
@@ -149,6 +149,7 @@ header('Location: profile.php');
 
 												<label>Description</label>
 												<textarea class="form-control" rows="4" placeholder="Tell everyone a little bit about you..." name="description"><?php echo $_SESSION['description'];?></textarea>
+												<br>
 												<?php require('upload.php'); ?>
 												<div class="row">
 														<div class="col-md-4 ml-auto mr-auto text-center">
