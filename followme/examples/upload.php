@@ -55,7 +55,7 @@
     }
 
     if ($uploadVerification) {
-      $thisuser=$_SESSION('user_id');
+       $thisuser=$_SESSION['user_id'];
         move_uploaded_file($_FILES['upload']['tmp_name'], $target_file);
         $newpicture="UPDATE fm_users SET image_url='$target_file' WHERE user_id=$thisuser;";
 
