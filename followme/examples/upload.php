@@ -25,8 +25,7 @@
 
     $uploadVerification = true;
 
-    // $thisuser=$_SESSION('user_id');
-    // echo $thisuser;
+
 
     //Check to see if the file already exists..if it does it sets the uploadVerification to false and it wont enter the if statement for if($uploadVerification == true)
     if (file_exists($target_file)){
@@ -56,8 +55,9 @@
     }
 
     if ($uploadVerification) {
+      $thisuser=$_SESSION('user_id');
         move_uploaded_file($_FILES['upload']['tmp_name'], $target_file);
-        $newpicture="UPDATE fm_users SET image_url='$target_file' WHERE user_id=37;";
+        $newpicture="UPDATE fm_users SET image_url='$target_file' WHERE user_id=$thisuser;";
 
         $conn->query($newpicture);
         var_dump($newpicture);
