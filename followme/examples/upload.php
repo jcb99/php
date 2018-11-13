@@ -57,7 +57,7 @@
 
     if ($uploadVerification) {
         move_uploaded_file($_FILES['upload']['tmp_name'], $target_file);
-        $newpicture="UPDATE fm_users SET image_url=$target_file WHERE user_id=37;";
+        $newpicture="UPDATE fm_users SET image_url='$target_file' WHERE user_id=37;";
 
         $conn->query($newpicture);
         var_dump($newpicture);
