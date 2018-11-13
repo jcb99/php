@@ -30,30 +30,30 @@
     }
 
     //Checks the file type to see if it is an approved type
-    // $file_type = $_FILES['upload']['type'];
+    $file_type = $_FILES['upload']['type'];
 
-    // switch ($file_type) { //Switch case for the file types that are allowed to be uploaded
-    //   case 'image/jpeg':
-    //     $uploadVerification = true;
-    //     break;
-    //
-    //   case 'image/png':
-    //     $uploadVerification = true;
-    //     break;
-    //
-    //   case 'image/gif':
-    //     $uploadVerification = true;
-    //     break;
-    //
-    //   default:
-    //     $uploadVerification = false;
-    //     $ret = "Sorry! It appears your file type is not supported! Only JPEGs, PNGs, and GIFs may be used for your profile picture!";
-    // }
+    switch ($file_type) { //Switch case for the file types that are allowed to be uploaded
+      case 'image/jpeg':
+        $uploadVerification = true;
+        break;
 
-    // if ($_FILES['upload']['size'] > 1000000) {
-    //   $uploadVerification = false;
-    //   $ret = "This file is too large. Please upload a smaller file.";
-    // }
+      case 'image/png':
+        $uploadVerification = true;
+        break;
+
+      case 'image/gif':
+        $uploadVerification = true;
+        break;
+
+      default:
+        $uploadVerification = false;
+        $ret = "Sorry! It appears your file type is not supported! Only JPEGs, PNGs, and GIFs may be used for your profile picture!";
+    }
+
+    if ($_FILES['upload']['size'] > 1000000) {
+      $uploadVerification = false;
+      $ret = "This file is too large. Please upload a smaller file.";
+    }
 
 
 //If the target file name already exists the $uploadVerification will be false and will not upload the file and won't execute the code below
