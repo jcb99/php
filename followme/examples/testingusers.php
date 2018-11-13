@@ -19,7 +19,6 @@ require('sitedbconn.php');
 		}
 }
 
-require('sitedbconn.php');
 $followsql = "SELECT * FROM fm_users";
 
 $thisuser=$_SESSION['user_id'];
