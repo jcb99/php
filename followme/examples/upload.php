@@ -60,8 +60,6 @@
         $newpicture="UPDATE fm_users SET image_url='$target_file' WHERE user_id=$thisuser;";
         $conn->query($newpicture);
         $_SESSION['image_url']=$target_file;
-        // $updatepic="SELECT image_url from fm_users WHERE user_id=$thisuser;";
-        // $conn->query($updatepic);
         header('Location: profile.php');
     }
 
@@ -74,5 +72,5 @@
    <!-- We must have the enctype="multipart/form-data in order for the browser to understand that this isn't just normal post data..Otherwise the form won't work"  -->
    <input type="file" name="upload">
    <br>
-   <input type="submit" name="Submit">
+   <!-- <input type="submit" name="Submit"> -->
  </form>
