@@ -58,10 +58,10 @@
        $thisuser=$_SESSION['user_id'];
         move_uploaded_file($_FILES['upload']['tmp_name'], $target_file);
         $newpicture="UPDATE fm_users SET image_url='$target_file' WHERE user_id=$thisuser;";
-
         $conn->query($newpicture);
-        var_dump($newpicture);
-        //header('Location: profile.php');
+        $updatepic="SELECT image_url from fm_users;";
+        $conn->query($updatepic);
+        header('Location: profile.php');
     }
 
   }
