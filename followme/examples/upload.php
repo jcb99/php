@@ -19,7 +19,6 @@
 
     $target_dir = "uploads/" . $_SESSION['user_id'] . "/"; //the target directory of the file...will be on the server in the same PHP directory as this file...we must append the "/" because we are uploading this to a directory
     $target_file = $target_dir . basename($_FILES['upload']['name']);
-    echo $target_file; //The actual file name is pulled from the basename...The basename function pulls the rest of the file path out and keeps just the name and extension
 
     $uploadVerification = true;
 
@@ -58,7 +57,7 @@
 
 //If the target file name already exists the $uploadVerification will be false and will not upload the file and won't execute the code below
     if ($uploadVerification) { //if this value is true
-        $thisuser=$_SESSION('user_id');
+        //$thisuser=$_SESSION('user_id');
         move_uploaded_file($_FILES['upload']['tmp_name'], $target_file); //moves the uploaded file from memory to this location
         // $newpicture="UPDATE fm_users SET image_url=$target_file WHERE user_id=$thisuser;";
         // $conn->query($newpicture);
