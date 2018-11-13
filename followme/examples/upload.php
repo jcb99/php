@@ -53,8 +53,8 @@
     }
 
     if ($uploadVerification) {
-
         move_uploaded_file($_FILES['upload']['tmp_name'], $target_file); //moves the uploaded file from memory to this location
+        echo $target_file;
         $newpicture="UPDATE fm_users SET image_url=$target_file WHERE user_id=37;";
         $conn->query($newpicture);
         header('Location: profile.php');
