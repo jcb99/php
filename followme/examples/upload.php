@@ -4,7 +4,7 @@
   }
 
   if (!isset($_SESSION['email'])){
-  header('Location: password.php');
+  header('Location: login.php');
   }
 
   if (isset($_FILES['upload'])) { //This checks to see if post data has been submitted into upload....In the form below the input type is called upload..Thats what we're referring to
