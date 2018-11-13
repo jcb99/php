@@ -59,7 +59,7 @@
         move_uploaded_file($_FILES['upload']['tmp_name'], $target_file);
         $newpicture="UPDATE fm_users SET image_url='$target_file' WHERE user_id=$thisuser;";
         $conn->query($newpicture);
-        $updatepic="SELECT image_url from fm_users;";
+        $updatepic="SELECT image_url from fm_users WHERE user_id=$thisuser;";
         $conn->query($updatepic);
         header('Location: profile.php');
     }
