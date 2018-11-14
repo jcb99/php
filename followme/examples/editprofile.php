@@ -149,6 +149,7 @@ header('Location: profile.php');
 												<textarea class="form-control" rows="4" placeholder="Tell everyone a little bit about you..." name="description"><?php echo $_SESSION['description'];?></textarea>
 
 												<label>Profile Picture</label><br>
+												<i class="nc-icon nc-album-02"></i>
 												<?php require('upload.php'); ?>
 												<input type="file" name="upload">
 												<div class="row">
