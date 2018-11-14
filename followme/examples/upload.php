@@ -23,7 +23,7 @@
     $target_dir = "uploads/" . $_SESSION['user_id'] . "/"; //the target directory of the file...will be on the server in the same PHP directory as this file...we must append the "/" because we are uploading this to a directory
     $target_file = $target_dir . basename($_FILES['upload']['name']);
 
-    $uploadVerification = true;
+    //$uploadVerification = true;
 
 
 
