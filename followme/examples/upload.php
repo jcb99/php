@@ -46,7 +46,7 @@
         move_uploaded_file($_FILES['upload']['tmp_name'], $target_file);
         $newpicture="UPDATE fm_users SET image_url='$target_file' WHERE user_id=$thisuser;";
         $conn->query($newpicture);
-        $_SESSION['image_url']=$target_file;
+        //$_SESSION['image_url']=$target_file;
         header('Location: profile.php');
     }
  ?>

@@ -40,7 +40,7 @@ if (isset($_SESSION['email']) && isset($_POST['savebutton']))   {
 			 $_SESSION['last_name'] = $row['last_name'];
 			 $_SESSION['description'] = $row['description'];
 			 $_SESSION['title'] = $row['title'];
-			 //$_SESSION['image_url'] = $row['image_url'];
+			 $_SESSION['image_url'] = $row['image_url'];
 		 }
 header('Location: profile.php');
 }
@@ -149,7 +149,7 @@ header('Location: profile.php');
 
 												<label>Description</label>
 												<textarea class="form-control" rows="4" placeholder="Tell everyone a little bit about you..." name="description"><?php echo $_SESSION['description'];?></textarea>
-												
+
 												<label>Profile Picture</label><br>
 												<?php require('upload.php'); ?>
 												<input type="file" name="upload">
