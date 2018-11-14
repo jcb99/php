@@ -35,12 +35,10 @@ if (isset($_SESSION['email']) && isset($_POST['savebutton']))   {
 	$result = $conn->query($sql);
 
 	 while ($row = $result->fetch_assoc()){
-			 //$_SESSION['email'] = $email;
 			 $_SESSION['first_name'] = $row['first_name'];
 			 $_SESSION['last_name'] = $row['last_name'];
 			 $_SESSION['description'] = $row['description'];
 			 $_SESSION['title'] = $row['title'];
-			 $_SESSION['image_url'] = $row['image_url'];
 		 }
 header('Location: profile.php');
 }
