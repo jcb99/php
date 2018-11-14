@@ -146,10 +146,10 @@ header('Location: profile.php');
 												</div>
 
 												<label>Description</label>
+												<i class="nc-icon nc-book-bookmark"></i>
 												<textarea class="form-control" rows="4" placeholder="Tell everyone a little bit about you..." name="description"><?php echo $_SESSION['description'];?></textarea>
 
-												<label>Profile Picture</label><br>
-												<i class="nc-icon nc-album-2"></i>
+												<label>Profile Picture</label><i class="nc-icon nc-image"></i><br>
 												<?php require('upload.php'); ?>
 												<input type="file" name="upload">
 												<div class="row">
