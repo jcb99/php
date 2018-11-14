@@ -23,14 +23,9 @@
     $target_dir = "uploads/" . $_SESSION['user_id'] . "/"; //the target directory of the file...will be on the server in the same PHP directory as this file...we must append the "/" because we are uploading this to a directory
     $target_file = $target_dir . basename($_FILES['upload']['name']);
 
-    //$uploadVerification = true;
-
-
-
     //Check to see if the file already exists..if it does it sets the uploadVerification to false and it wont enter the if statement for if($uploadVerification == true)
     if (file_exists($target_file)){
         $uploadVerification = false;
-        $ret = "This file already exists.";
     }
 
     //Checks the file type to see if it is an approved type
@@ -51,7 +46,6 @@
 
       default:
         $uploadVerification = false;
-        $ret = "Sorry! It appears your file type is not supported! Only JPEGs, PNGs, and GIFs may be used for your profile picture!";
     }
 
     if ($uploadVerification) {
@@ -62,10 +56,5 @@
         $_SESSION['image_url']=$target_file;
         header('Location: profile.php');
     }
-
-    else{
-      echo $ret;
-    }
-
   }
  ?>
