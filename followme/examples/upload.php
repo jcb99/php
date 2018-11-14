@@ -10,8 +10,6 @@
   header('Location: login.php');
   }
 
-  //if (isset($_FILES['upload'])) { //This checks to see if post data has been submitted into upload....In the form below the input type is called upload..Thats what we're referring to
-
     if (!file_exists("uploads")){ //if the uploads directory does not exist, create it
         mkdir("uploads/");
     }
@@ -51,5 +49,4 @@
         $_SESSION['image_url']=$target_file;
         header('Location: profile.php');
     }
-  //}
  ?>
