@@ -23,10 +23,10 @@
     $target_dir = "uploads/" . $_SESSION['user_id'] . "/"; //the target directory of the file...will be on the server in the same PHP directory as this file...we must append the "/" because we are uploading this to a directory
     $target_file = $target_dir . basename($_FILES['upload']['name']);
 
-    //Check to see if the file already exists..if it does it sets the uploadVerification to false and it wont enter the if statement for if($uploadVerification == true)
-    if (file_exists($target_file)){
-        $uploadVerification = false;
-    }
+    // //Check to see if the file already exists..if it does it sets the uploadVerification to false and it wont enter the if statement for if($uploadVerification == true)
+    // if (file_exists($target_file)){
+    //     $uploadVerification = false;
+    // }
 
     //Checks the file type to see if it is an approved type
     $file_type = $_FILES['upload']['type'];
