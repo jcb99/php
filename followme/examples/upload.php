@@ -63,5 +63,9 @@
         header('Location: profile.php');
     }
 
+    else{
+      echo $ret;
+    }
+
   }
  ?>
