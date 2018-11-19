@@ -55,7 +55,7 @@ require('sitedbconn.php');
                                    <span class="navbar-toggler-bar"></span>
                                    <span class="navbar-toggler-bar"></span>
                </button>
-               <a class="navbar-brand" href="#">Follow Me</a>
+               <a class="navbar-brand" href="profile.php">Follow Me</a>
                         </div>
                         <div class="collapse navbar-collapse" id="navbarToggler">
                     <ul class="navbar-nav ml-auto">

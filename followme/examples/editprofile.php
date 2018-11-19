@@ -79,7 +79,7 @@ header('Location: profile.php');
 								<span class="navbar-toggler-bar"></span>
 								<span class="navbar-toggler-bar"></span>
 	            </button>
-	            <a class="navbar-brand" href="#">Follow Me</a>
+	            <a class="navbar-brand" href="profile.php">Follow Me</a>
 			</div>
 			<div class="collapse navbar-collapse" id="navbarToggler">
 	            <ul class="navbar-nav ml-auto">
@@ -88,7 +88,7 @@ header('Location: profile.php');
 	                </li>
 
 									<li class="nav-item">
-											<a href="#" class="nav-link">
+											<a href="profile.php" class="nav-link">
 												Welcome<?php
 												echo " " . $_SESSION['email']; //WE need to use the session variable here because we don't have a variable called email on this page
 												  ?></a>
