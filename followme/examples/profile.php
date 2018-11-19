@@ -56,7 +56,7 @@ require('sitedbconn.php');
 
 									<li class="nav-item">
 											<a href="#" class="nav-link">
-												Welcome<?php
+												<?php
 												echo " " . $_SESSION['email']; //WE need to use the session variable here because we don't have a variable called email on this page
 												  ?></a>
 									</li>
@@ -85,7 +85,7 @@ require('sitedbconn.php');
                         <p><?php echo $_SESSION['description']; ?></p>
                         <br />
                         <a href="editprofile.php"><btn class="btn btn-outline-default btn-round"><i class="fa fa-cog"></i>Edit Profile</btn></a><br />
-												
+
                     </div>
                 </div>
                 <br/>
